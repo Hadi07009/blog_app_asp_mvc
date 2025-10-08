@@ -1,0 +1,161 @@
+﻿@model BootstrapERP.Models.VisitorsMessage
+@{
+    ViewBag.Title = "Contact";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span> <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-12" style="font-family:Lato, Calibri, Helvetica, Roboto">
+            <input type="checkbox" id="checkboxMyDiv" class="checkbox-success" onclick="myFunction();"> Find location on Google map
+        </div>
+        <div class="clearfix"></div>
+        <div id="myDIV" style="display:none;padding-top:15px" class="col-sm-12">
+            <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+            @*<iframe width="100%" scrolling="no" height="400px" frameborder="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed" marginwidth="0" marginheight="0"></iframe>*@
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6594066056623!2d90.40653601427985!3d23.795139878951847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c711f4f2f66f%3A0x3fcdf0c41c881427!2sLink3%20Technologies%20Limited%20(support)!5e0!3m2!1sen!2sbd!4v1590990153160!5m2!1sen!2sbd" width="100%" scrolling="no" height="400px" frameborder="0" marginwidth="0" marginheight="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Let's Get In Touch!</h3>
+            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            @*@using (Html.BeginForm("Index", "Contact"))*@
+            @using (Html.BeginForm("Index", "Contact", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                @*<form action="contact-form-submission.php" method="POST" role="form">*@
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="input1">Name <span style="color:red;font-weight:900">*</span></label>
+                        @Html.TextBoxFor(model => model.Name, new { style = "width:100%;", @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        @*<input type="text" id="input1" class="form-control" name="contact_name" required>*@
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input2">Email Address <span style="color:red;font-weight:900">*</span></label>
+                        @Html.TextBoxFor(model => model.EmailAddress, new { style = "width:100%;", @class = "form-control", @required = true, pattern = "^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" })
+                        @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                        @*<input type="email" id="input2" class="form-control" name="contact_email" required>*@
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input3">Phone Number <span style="color:red;font-weight:900">*</span></label>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { style = "width:100%;", @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                        @*<input type="phone" id="input3" class="form-control" name="contact_phone" required>*@
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="input1">Type <span style="color:red;font-weight:900">*</span></label>
+                        @Html.DropDownList("messageEmailType", null, new { type = "text", @class = "form-control" })
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input2">Category<span style="color:red;font-weight:900">*</span></label>
+                        @Html.DropDownList("messageEmailCategorie", null, new { type = "text", @class = "form-control" })
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input3">Sub Category<span style="color:red;font-weight:900">*</span></label>
+                        @Html.DropDownList("messageEmailSubCategorie", null, htmlAttributes: new { type = "text", @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Cc</label>
+                        @Html.TextBoxFor(model => model.CcEmailAddress, new { style = "width:100%;", @class = "form-control", })
+                        @Html.ValidationMessageFor(model => model.CcEmailAddress, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Subject <span style="color:red;font-weight:900">*</span></label>
+                        @Html.TextBoxFor(model => model.MessageSubject, new { style = "width:100%;", @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.MessageSubject, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Message <span style="color:red;font-weight:900">*</span></label>
+                        <textarea id="input4" rows="6" class="form-control" name="contact_message" required></textarea>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input type="hidden" value="contact" name="save">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+                @*</form>*@
+            }
+        </div>
+
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Link3 Technologies Ltd.</h3>
+            <h4>Software Department</h4>
+            <p>
+                33, SMC Tower, Level 05.<br>
+                Banani, Dhaka 1213, Bangladesh<br>
+            </p>
+            <p><i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (555) 984-3600</p>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a></p>
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div><!-- /.row -->
+</div>
+
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#messageEmailCategorie").change(function () {
+            $("#messageEmailSubCategorie").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetMessageEmailSubCategorie", "Contact")',
+                dataType: 'json',
+                data: { id: $("#messageEmailCategorie").val() },
+                success: function (queryContentRelatedTo) {
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#messageEmailSubCategorie").append('<option value="' + state.Value + '">' +
+                            state.Text + '</option>');
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+</script>

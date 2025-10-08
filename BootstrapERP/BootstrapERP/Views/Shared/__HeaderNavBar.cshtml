@@ -1,0 +1,91 @@
+﻿@model BootstrapERP.Models.HeaderNavBar
+@using System.Data;
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+        @*<li id="contentEntry">
+                @Html.ActionLink("Content Approval", "Index", "BlogContentApproval")
+            </li>
+            <li id="contentEntry">
+                @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
+            </li>*@
+        <li id="Search" style="margin-top:-3px" class="hapText">
+            <a href="@Url.Action("Index", "SearchArticle")"><img src="~/Images/searchIcon.png" alt=""></a>
+        </li>
+        <li id="About" class="hapText">
+            @Html.ActionLink("About", "Index", "AboutUs")
+        </li>
+        <li id="contact" class="hapText">
+            @Html.ActionLink("Contact", "Index", "Contact")
+        </li>
+        @if (ViewBag.LogginUserStatus == "")
+        {
+            <li id="CreateAccount" class="hapText">
+                @Html.ActionLink("Create an account", "CreateUserHome", "UserProfileHome")
+            </li>
+            <li id="Signin" class="hapText">
+                @Html.ActionLink("Sign in", "GetLogin", "HomePageLogin", new { caseNo = 1, targetURL = "" }, htmlAttributes: null)
+
+            </li>
+        }
+        else
+        {
+            foreach (DataRow rowNo in Model.DtNodes.Rows)
+            {
+                var PNodeTypeIDTemp = rowNo["PNodeTypeID"].ToString();
+                var NodeTypeIDTemp = rowNo["NodeTypeID"].ToString();
+                var ActivityNameTemp = rowNo["ActivityName"].ToString();
+                var ControllerTitleTemp = rowNo["ControllerTitle"].ToString();
+                var ActionTitleTemp = rowNo["ActionTitle"].ToString();
+                <li id="blogRoot" class="dropdown">
+                    @if (@PNodeTypeIDTemp == "111")
+                    {
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> @ActivityNameTemp </span><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @foreach (DataRow childNo in Model.DtNodes.Rows)
+                            {
+                                var PNodeTypeIDTempC = childNo["PNodeTypeID"].ToString();
+                                var NodeTypeIDTempC = childNo["NodeTypeID"].ToString();
+                                var ActivityNameTempC = childNo["ActivityName"].ToString();
+                                var ControllerTitleTempC = childNo["ControllerTitle"].ToString();
+                                var ActionTitleTempC = childNo["ActionTitle"].ToString();
+
+                                if (@NodeTypeIDTemp == @PNodeTypeIDTempC)
+                                {
+                                    <li id=@NodeTypeIDTempC class="hapText">
+                                        @Html.ActionLink(@ActivityNameTempC, @ActionTitleTempC, @ControllerTitleTempC)
+                                    </li>
+                                }
+
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+
+            <li id="myAccount" class="dropdown auth-drp" style="margin-top:-10px;" >
+                <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="~/Images/logo_120_100.png" alt="user_auth" class="user-auth-img img-circle" /><span class="user-online-status"></span></a>
+                <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                    <li>
+                        <a href="@Url.Action("Index", "Profile")"><i class="zmdi zmdi-account"></i><span class="hapText">&nbsp;&nbsp; Profile update</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("ChangePassword", "HomePageLogin")"><i class="zmdi zmdi-card"></i><span class="hapText">&nbsp;&nbsp; Change Password</span></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "UserSession")"><i class="zmdi zmdi-settings"></i><span class="hapText">&nbsp;&nbsp; Session Info</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="zmdi zmdi-email"></i><span class="hapText">&nbsp;&nbsp; Inbox</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="@Url.Action("Index", "HomePageLogout")"><i class="zmdi zmdi-power"></i><span class="hapText">&nbsp;&nbsp; Log Out</span></a>
+                    </li>
+                </ul>
+            </li>
+        }
+    </ul>
+</div>
+
+@*<a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="~/Images/logo_120_100.png" alt="user_auth" class="user-auth-img img-circle" /><span class="user-online-status"></span></a>*@

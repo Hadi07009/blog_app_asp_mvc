@@ -1,0 +1,86 @@
+﻿@model BootstrapERP.Models.NodeList
+@{
+    ViewBag.Title = "Edit Node";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:550px">
+            @using (Html.BeginForm("SubsistNode", "DefaultNode"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group ">
+                            <label for="input1" class="labelcss">Parent Node</label>
+                            @Html.DropDownList("DefaultNode", null, new { type = "text", @class = "form-control", @disabled = "disabled" })
+                            @Html.HiddenFor(model => model.NodeTypeID, new { style = "width:100%;", @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group ">
+                            <label for="input1" class="labelcss">Current Title</label>
+                            @Html.TextBoxFor(model => model.ActivityName, new { style = "width:100%;", @class = "form-control", @disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.ActivityName, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group ">
+                            <label for="input1" class="labelcss">Title</label>
+                            @Html.TextBoxFor(model => model.ActivityName, new { style = "width:100%;", @class = "form-control", @required = true })
+                            @Html.ValidationMessageFor(model => model.ActivityName, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group ">
+                            <label for="input1" class="labelcss">Position</label><br />
+                            @Html.DropDownList("NodePositions", null, new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group ">
+                            <label for="input1" class="labelcss">Controller Title</label><br />
+                            @Html.TextBoxFor(model => model.ControllerTitle, new { style = "width:100%;", @class = "form-control", @required = true })
+                            @Html.ValidationMessageFor(model => model.ControllerTitle, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label for="input1" class="labelcss">Action Title</label><br />
+                            @Html.TextBoxFor(model => model.ActionTitle, new { style = "width:100%;", @class = "form-control", @required = true })
+                            @Html.ValidationMessageFor(model => model.ActionTitle, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group ">
+                            <button  type="submit" name="updateNode" class="btn btn-success btn-anim"><i class="fa fa-pencil-square-o"></i><span class="btn-text">Update</span> </button>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back to List", "Index", "DefaultNode")
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3"></div>
+
+                </div>
+                <div class="clearfix"></div>
+
+            }
+        </div>
+
+
+    </div>
+</div>
+
+
+

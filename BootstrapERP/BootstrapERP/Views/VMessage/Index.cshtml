@@ -1,0 +1,216 @@
+﻿@model BootstrapERP.Models.VisitorsMessage
+@using System.Data;
+@{
+    ViewBag.Title = "Visitors Message";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:550px">
+            @using (Html.BeginForm("Index", "VMessage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row" style="padding-top:5px;padding-left:10px;">
+                    <label for="input2" class="labelcss">Select and click search for find messages</label>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Type</label>
+                                @Html.DropDownList("messageEmailType", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Category</label>
+                                @Html.DropDownList("messageEmailCategorie", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Sub Category</label>
+                                @Html.DropDownList("messageEmailSubCategorie", null, htmlAttributes: new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">From Date</label><br />
+                                @Html.TextBoxFor(model => model.FromDate, new { @type = "date", style = "width:100%;", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">To Date</label><br />
+                                @Html.TextBoxFor(model => model.ToDate, new { @type = "date", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Action</label>
+                                @Html.DropDownList("emailActionType", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                <button class="btn  btn-info" type="submit" name="actionSearch">Search</button>
+                                <button class="btn btn-danger" type="submit" name="actionClear">Clear</button>
+                            </div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                @*<button class="btn btn-success" type="submit" style="width:100%" name="actionClear">Clear</button> *@
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+
+                            </div>
+                        </div>
+
+                        <!-- /.row -->
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                if (Model.DtMessages.Rows.Count > 0)
+                {
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by email" title="Type in an email" , style="width:100%;" class="form-control">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div style="overflow-x: auto;overflow-y: auto;padding-top:5px">
+                            <label for="input2" class="labelcss">Search results</label>
+                        </div>
+                        <div style="overflow-x: auto;overflow-y: auto;">
+                            <table id="customers">
+                                <tr>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Name</label>
+                                    </th>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Email</label>
+                                    </th>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Entry Date</label>
+                                    </th>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Message</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1"></label>
+                                    </th>
+                                </tr>
+                                @foreach (DataRow rowNo in Model.DtMessages.Rows)
+                                {
+                                    var @visitorsID = rowNo["VisitorsID"].ToString();
+                                    var @messageID = rowNo["MessageID"].ToString();
+                                    var @fullName = rowNo["Name"].ToString() == null ? "" : rowNo["Name"].ToString();
+                                    var @Email = rowNo["EmailAddress"].ToString() == null ? "" : rowNo["EmailAddress"].ToString();
+                                    var @EntryDate = rowNo["EntryDate"].ToString() == null ? "" : rowNo["EntryDate"].ToString();
+                                    var @messageTextFull = rowNo["MessageText"].ToString() == null ? "" : rowNo["MessageText"].ToString();
+                                    var @messageText = @messageTextFull.Length > 50 ? @messageTextFull.Substring(0, 50) + " . . ." : @messageTextFull;
+                                    var @messageSubject = rowNo["MessageSubject"].ToString() == null ? "" : rowNo["MessageSubject"].ToString();
+                                    var @ccEmail = rowNo["CCEmail"].ToString() == null ? "" : rowNo["CCEmail"].ToString();
+                                    <tr>
+                                        <td nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => @fullName)
+                                        </td>
+                                        <td nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => @Email)
+                                        </td>
+                                        <td nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => @EntryDate)
+
+                                        </td>
+                                        <td nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => @messageText)
+                                        </td>
+                                        <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                            <p>
+                                                <a style="text-decoration:none" href="@Url.Action("Index", "VMessageReply",new { @name =@fullName
+                                                                                         ,@emailAddress =@Email, @entryDate= @EntryDate
+                                                                                     ,@vmessage =@messageText, @visitorsID=@visitorsID
+                                                                                     ,@messageID =@messageID
+                                                                                     ,@messageSubjectTest =@messageSubject
+                                                                                     ,@ccEmailAddress =@ccEmail})">@Html.Raw("Reply")</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                }
+            }
+        </div>
+
+    </div><!-- /.row -->
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#messageEmailCategorie").change(function () {
+            $("#messageEmailSubCategorie").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetMessageEmailSubCategorie", "Contact")',
+                dataType: 'json',
+                data: { id: $("#messageEmailCategorie").val() },
+                success: function (queryContentRelatedTo) {
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#messageEmailSubCategorie").append('<option value="' + state.Value + '">' +
+                            state.Text + '</option>');
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("customers");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+

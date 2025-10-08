@@ -1,0 +1,69 @@
+﻿@model BootstrapERP.Models.SiteBanner
+@using System.Data;
+
+@{
+    ViewBag.Title = "Banner Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText">@ViewBag.Title </span> <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-sm-12" >
+            @using (Html.BeginForm("Index", "Banner", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-lg-8">
+                    <label for="input1" class="labelcss">Title</label><br />
+                    @Html.TextBoxFor(model => model.BannerTitle, new { style = "width:100%;", @class = "form-control", @required = true })
+                    @Html.ValidationMessageFor(model => model.BannerTitle, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-8">
+                    <label for="input4" class="labelcss">Image</label>
+                    <input name="file" type="file" required />
+                    @if (@Model.BannerImageURL != null)
+                    {
+                        <a class="title" name="AttachedImage">@Model.BannerImageURL.Remove(0, 17)</a>
+                    }
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-8">
+                    <label for="input1" class="labelcss">Remarks</label><br />
+                    @Html.TextBoxFor(model => model.BannerRemarks, new { style = "width:100%;", @class = "form-control",  })
+                    @Html.ValidationMessageFor(model => model.BannerRemarks, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+                <div class="clearfix"></div>
+                
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <button  type="submit" name="saveBanner"  class="btn btn-primary btn-anim"><i class="fa fa-pencil"></i><span class="btn-text">Save</span></button>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back", "Index", "BannerList")
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:265px"></div>
+
+</div>
+

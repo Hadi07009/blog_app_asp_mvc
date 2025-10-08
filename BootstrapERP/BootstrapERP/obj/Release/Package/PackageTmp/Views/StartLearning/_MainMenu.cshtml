@@ -1,0 +1,50 @@
+﻿@*font-size:18px;line-height: 23px;color:black;font-family:Tahoma;*@
+
+<ul id="navigation" class="list-unstyled components" >
+    @*<ul id="ulCategory">*@
+        @model IEnumerable<BootstrapERP.Models.tblStartLearning>
+
+
+        @foreach (var item in Model)
+        {
+            <li>
+                <a class="sidebarMinimize" style="text-decoration:none;" href="@Url.Action("NodeDetails", "StartLearning", new { @id = (item.NodeTypeID),@parentID=(item.PNodeTypeID)})">@item.ActivityName.ToString()</a>
+                
+
+            </li>
+        }
+
+    </ul>
+
+    
+
+    <script type="text/javascript">
+        
+
+    @*class="@(item.NodeTypeID == ViewBag.Current ? "active" : "") "*@
+    //class="sidebarMinimize"
+    //alert - danger
+
+    //var url = window.location;
+    //alert(url);
+
+    //function getEventTarget(e) {
+    //    e = e || window.event;
+    //    return e.target || e.srcElement;
+    //}
+
+    //var ul = document.getElementById('navigation');
+    //ul.onclick = function (event) {
+    //    var target = getEventTarget(event);
+    //    alert(target.innerHTML);
+
+
+    //};
+    </script>
+
+
+
+    <style>
+    </style>
+
+

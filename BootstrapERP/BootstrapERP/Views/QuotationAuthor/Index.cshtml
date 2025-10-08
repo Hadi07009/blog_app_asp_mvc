@@ -1,0 +1,92 @@
+﻿@model BootstrapERP.Models.QuoteAuthor
+@{
+    ViewBag.Title = "Author Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText">@ViewBag.Title </span> <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            @using (Html.BeginForm("Index", "QuotationAuthor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Full Name</label><br />
+                    @Html.TextBoxFor(model => model.AuthorFullName, new { style = "width:100%;", @class = "form-control", @required = true })
+                    @Html.ValidationMessageFor(model => model.AuthorFullName, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Author Type</label>
+                    @Html.DropDownList("AuthorTypeID", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Gender</label>
+                    @Html.DropDownList("GenderID", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Religion</label>
+                    @Html.DropDownList("ReligionID", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Famous For</label>
+                    @Html.DropDownList("FamousForID", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Nationality</label><br />
+                    @Html.TextBoxFor(model => model.Nationality, new { style = "width:100%;", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Date of Birth</label><br />
+                    @*@Html.TextBoxFor(model => model.DateOfBirth, new { @type = "date", @class = "form-control datepicker", @Value = Convert.ToDateTime(Model.DateOfBirth).ToString("yyyy-MM-dd"), data_date_format = "yyyy-MM-dd" })*@
+                    @Html.TextBoxFor(model => model.DateOfBirth, new { @type = "date", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                    @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Date Died</label><br />
+                    @*@Html.TextBoxFor(model => model.DateDied, new { @type = "date", @class = "form-control datepicker", @Value = Convert.ToDateTime(Model.DateDied).ToString("yyyy-MM-dd"), data_date_format = "yyyy-MM-dd" })*@
+                    @Html.TextBoxFor(model => model.DateDied, new { @type = "date", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                    @Html.ValidationMessageFor(model => model.DateDied, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <button type="submit" name="saveAuthor" class="btn btn-primary btn-anim"><i class="fa fa-pencil"></i><span class="btn-text">Save</span></button>&nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back", "Index", "QuotationEntry")
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:15px"></div>
+
+</div>
+
+

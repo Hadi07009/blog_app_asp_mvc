@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="393c3739dd824a0b9728607d3837a003" Name="Diagram1" ShowGrid="true" SnapToGrid="true" DisplayType="true" ZoomLevel="58">
+        <EntityTypeShape EntityType="dbERPSolutionModel.uUserProfileTemp" Width="2.25" PointX="3.625" PointY="0.875" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.EmployeeTitle" Width="2.75" PointX="6.25" PointY="0.625" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.tblStartLearning" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnCourseCategory" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnCourseContentType" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnCourseType" Width="1.875" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnLearningPath" Width="2.875" PointX="7.625" PointY="4.625" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnProviderName" Width="2.625" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.lrnCourseLevel" Width="2.625" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.siteApplicationSetup" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.siteContentCategory" Width="3.25" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.siteContentRelatedTo" Width="2.25" PointX="11.375" PointY="8.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.siteContentType" Width="1.5" PointX="8.375" PointY="11.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.SiteContentRecord" Width="2.75" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.siteContentEntryTemp" Width="2.375" PointX="4.375" PointY="9.25" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogContentCategory" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogContentRelatedTo" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogActionType" Width="1.5" PointX="3.375" PointY="13.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uRoleTypeSetup" Width="1.5" PointX="5.375" PointY="13.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.suDefaultNodeList" Width="3.75" PointX="13.375" PointY="13" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uDefaultNodeList" Width="1.5" PointX="15.375" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uNodePosition" Width="1.5" PointX="7.375" PointY="15.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uNodeType" Width="1.5" PointX="16.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uRoleSetup" Width="1.5" PointX="9.375" PointY="16.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.uUserTypeSetup" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogAuthorTypeSetup" Width="1.5" PointX="3.375" PointY="17.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogFamousForSetup" Width="1.5" PointX="17.375" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.DataUsedSetup" Width="1.5" PointX="17.375" PointY="8.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.GenderSetup" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.MaritalStatusSetup" Width="1.5" PointX="11.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.orgBranch" Width="1.5" PointX="18.375" PointY="12.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.orgDepartment" Width="1.5" PointX="13.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.orgSection" Width="1.5" PointX="15.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.orgTeam" Width="1.5" PointX="17.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.PaymentType" Width="1.5" PointX="19.375" PointY="4.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.ReligionSetup" Width="1.5" PointX="5.375" PointY="19.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.RoleTypeSetup" Width="1.5" PointX="19.375" PointY="8.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.ServiceCategoryType" Width="1.5" PointX="19.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.blogQuoteAuthor" Width="1.5" PointX="7.375" PointY="20.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.BrowserNameSetup" Width="1.5" PointX="20.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.CountryNameSetup" Width="1.5" PointX="20.375" PointY="12.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.DeviceTypeSetup" Width="1.5" PointX="20.375" PointY="15.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.AllUser" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.MessageEmailCategory" Width="1.5" PointX="21.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.MessageEmailSubCategory" Width="1.5" PointX="21.375" PointY="7.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.MessageEmailType" Width="1.5" PointX="21.375" PointY="18.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.MessageEmailActionType" Width="1.5" PointX="9.375" PointY="22.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.orgDesignation" Width="1.5" PointX="22.375" PointY="11.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.BusinessNatureSetup" Width="1.5" PointX="19.375" PointY="22.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.DistrictSetupView" Width="1.5" PointX="21.375" PointY="22.75" />
+        <EntityTypeShape EntityType="dbERPSolutionModel.OwnershipSetup" Width="1.5" PointX="23.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

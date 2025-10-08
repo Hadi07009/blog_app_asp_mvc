@@ -1,0 +1,208 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+
+@using System.Data;
+@{
+    ViewBag.Title = "blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string @url = "http://27.147.194.139/blogsite/SiteContentDisplay/BlogDescription?contentDetailID=" + Html.DisplayFor(model => model.ContentID);
+
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-lg-9">
+            <p>
+                <div style="text-align:left">
+                    @Html.Raw(@ViewBag.FullName) | @Html.Raw(Model.ContentEntryDate.ToString("D")) | @Html.Raw(ViewBag.ContentCategoryTitle)
+                </div>
+            </p>
+
+            <p class="lead"><h1>@Html.Raw(Model.ContentTitle)</h1></p>
+            <p class="lead"><h3>@Html.Raw(Model.ContentDetailSubTitle)</h3></p>
+            <!-- the actual blog post: title/author/date/content -->
+
+            <span style="display:inline" class="x-weight-semibold"></span>
+            <ul style="list-style:none;display:flex;padding-left:5px;width:100%;padding-top:5px;">
+                <li style="display:inline;">
+                    <a href="https://twitter.com/share"
+                       data-url=@url.ToString()
+                       data-text="Enter Data text here"
+                       data-size="medium" data-count="none" target="_blank" class="twitter-share-button">
+                        Tweet
+                    </a>
+                </li>
+                <li style="display:inline;padding-left:10px;">
+                    <script type="IN/Share" medium="true" data-onsuccess="lnksuccess" data-onerror="error" data-url=@url.ToString()>
+
+                    </script>
+                </li>
+                <li style="display:inline;margin-left:10px">
+                    <a href="https://www.facebook.com/sharer/sharer.php?
+           u=@Url.Encode(@url.ToString())&t=@Url.Encode(@url)"
+                       target="_blank">
+                        <img style="padding-bottom:10px" src="~/Images/facebookShare_1.png" alt="Facebook Logo">
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <img src="@Url.Content(Model.ContentDetailImageURL)" class="img-responsive" />
+            <hr>
+            <p class="blogDetailcss">@Html.Raw(Model.ContentDescription)</p>
+            @*<p class="lead">@Html.Raw(Model.ContentDescription)</p>*@
+            <div class="clearfix"></div>
+            <ul style="list-style:none;display:flex;padding-left:5px;width:100%;padding-top:5px;">
+                <li style="display:inline;">
+                    <a href="https://twitter.com/share"
+                       data-url=@url.ToString()
+                       data-text="Enter Data text here"
+                       data-size="medium" data-count="none" target="_blank" class="twitter-share-button">
+                        Tweet
+                    </a>
+                </li>
+                <li style="display:inline;padding-left:10px;">
+                    <script type="IN/Share" medium="true" data-onsuccess="lnksuccess" data-onerror="error" data-url=@url.ToString()>
+
+                    </script>
+                </li>
+                <li style="display:inline;margin-left:10px">
+                    <a href="https://www.facebook.com/sharer/sharer.php?
+           u=@Url.Encode(@url.ToString())&t=@Url.Encode(@url)"
+                       target="_blank">
+                        <img style="padding-bottom:10px" src="~/Images/facebookShare_1.png" alt="Facebook Logo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <!-- /well -->
+            <div class="well" style="width:100%;text-align:center">
+                <h4>Popular Blog Categories</h4>
+                <div class="row">
+                    <table id="contentCategory" style="width:100%;text-align:center">
+                        @foreach (System.Data.DataRow rowNo in Model.DtContentCategory.Rows)
+                        {
+                            <tr>
+                                <td nowrap="nowrap">
+                                    <a href="@Url.Action("BlogCategory", "SiteContentDisplay",new {@contentCategoryID = Convert.ToInt32(rowNo["ContentCategoryID"].ToString())})">@Html.Raw(rowNo["ContentCategoryTitle"].ToString())</a>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+            <!-- /well -->
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+            </div>
+            <!-- /well -->
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+            </div>
+            <!-- /well -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9" style="padding-bottom:10px">
+            <h3 style="font:bolder;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"> More in @Html.Raw(ViewBag.ContentCategoryTitle)  </h3>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-9" style="display:inline-block;text-align:left">
+
+            @foreach (DataRow rowNo in Model.DtBlogUniqueCategory.Rows)
+            {
+                var @ContentID = rowNo["ContentID"].ToString();
+                var @contentDetailImageURL = rowNo["ContentDetailImageURL"].ToString() == "" ? "~/ImagesUploaded/750x500.png" : rowNo["ContentDetailImageURL"].ToString();
+                var @contentTitle = rowNo["ContentDetailTitle"].ToString() == null ? "" : rowNo["ContentDetailTitle"].ToString();
+                var @fullName = rowNo["FullName"].ToString() == null ? "" : rowNo["FullName"].ToString();
+                var @contentEntryDate = Convert.ToDateTime(rowNo["EntryDate"].ToString());
+                var @contentIntroductoryText = rowNo["ContentIntroductoryText"].ToString() == null ? "" : rowNo["ContentIntroductoryText"].ToString();
+                string @hiphenUrl = @contentTitle.ToString().Replace(" ", "-").Replace(",", "").Replace(":", "");
+
+                <div class="col-md-4 portfolio-item" style="text-align:left;min-height:200px">
+                    <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ContentID)})">
+                        <img style="height:130px;width:auto" src="@Url.Content(@contentDetailImageURL)" class="img-responsive" />
+                    </a>
+                    <h4>
+                        <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ContentID),@ctitle =(@hiphenUrl)})">@Html.Raw(@contentTitle.Length > 40 ? @contentTitle.Substring(0, 40) + " . . ." : @contentTitle)</a>
+
+                    </h4>
+                </div>
+            }
+
+        </div>
+        <div class="col-md-3" style="display:inline-block">
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            <hr>
+        </div>
+    </div>
+    <div class="row" style="min-height:25px">
+
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <a style="text-decoration:none">Cookie jelly beans souffl icing. Gummi bears tootsie roll powder chupa chups cheesecake chocolate jelly-o lollipop lollipop. Halvah applicake chupa chups. Marshmallow chocolate jujubes icing lollipop gummi bears chupa chups pudding bonbon. Jelly beans jelly soufflé jujubes. Sesame snaps lollipop icing donut lemon drops soufflé.Donut caramels gingerbread. Sweet roll macaroon pastry cotton candy oat cake sesame snaps biscuit lemon drops dessert. Candy canes carrot cake danish carrot cake soufflé jelly chocolate cake muffin. Topping brownie donut. Oat cake marzipan dragée cheesecake. Donut chocolate cake jujubes tart dragée toffee.</a><br />
+        </div>
+    </div>
+</div>
+
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+
+
+
+
+<script>
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+
+
+    window.onload = function () {
+        twttr.events.bind('tweet', function (event) {
+            alert("Thanks for sharing on twitter");
+        });
+
+        twttr.events.bind('click', function (event) {
+            alert("You are going to share in twitter");
+        });
+    }
+
+    function lnksuccess(url) {
+        alert("url = " + url + "  shared successfully");
+    }
+    function lnkerror(url) {
+        alert("something goes wrong in url sharing");
+    }
+
+    $(".IN-widget span:first-of-type").css({
+        'border': '2px solid #DCDCDC',
+        '-webkit-border-radius': '3px',
+        '-moz-border-radius': '3px',
+        'border-radius': '3px'
+    });
+</script>
+

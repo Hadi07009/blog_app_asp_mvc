@@ -1,0 +1,115 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.viewTitle <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.viewTitle</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('@Url.Content(@ViewBag.ContentImageURL)');background-attachment: fixed;class="img-responsive"">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="min-height:15px;margin-top:15px">
+
+</div>
+@{
+    var contentImageURLPart1 = Model.ContentDetailImageURL == null ? string.Empty : Model.ContentDetailImageURL;
+}
+@if (contentImageURLPart1 != string.Empty)
+{
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('@Url.Content(contentImageURLPart1)');class=" img-responsive"">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="form-group col-md-6" style="padding-top:15px">
+                                        <h2>@Html.Raw(Model.ContentTitle)</h2>
+                                        <h4>@Html.Raw(Model.ContentDetailSubTitle)</h4>
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="container" style="min-height:100px;margin-top:15px">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            @Html.Raw(Model.ContentDescription)
+        </div>
+    </div>
+</div>
+<div class="container" style="min-height:15px;margin-top:5px">
+</div>
+@{
+    var contentImageURLPart2 = @ViewBag.ContentDetailImageURL == null ? string.Empty : @ViewBag.ContentDetailImageURL;
+}
+@if (contentImageURLPart2 != string.Empty)
+{
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('@Url.Content(contentImageURLPart2)');class=" img-responsive"">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+
+                                    </div>
+                                    <div class="form-group col-md-6" style="float:right;padding-top:15px">
+                                        <h2>@Html.Raw(@ViewBag.ContentDetailTitle)</h2>
+                                        <h4>@Html.Raw(@ViewBag.ContentDetailSubTitle)</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container" style="min-height:50px;margin-top:15px">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            @Html.Raw(@ViewBag.ContentDetailDescription)
+        </div>
+    </div>
+</div>
+
+
+
+

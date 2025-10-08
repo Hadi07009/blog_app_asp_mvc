@@ -1,0 +1,224 @@
+﻿@model BootstrapERP.Models.CompanyDetailsSetup
+@{
+    ViewBag.Title = "Edit Company";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-sm-12" style="min-height:500px">
+            @using (Html.BeginForm("Cedit", "CompanyProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Company Name <span style="color:red;font-weight:900">*</span></label>
+                    @Html.TextBoxFor(model => model.CompanyName, new { style = "width:100%;", @class = "form-control", @required = true })
+                    @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Email <span style="color:red;font-weight:900">*</span></label>
+                    @Html.TextBoxFor(model => model.CompanyEmail, new { style = "width:100%;", type = "email", @class = "form-control", pattern = "^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" , @required = true })
+                    @Html.ValidationMessageFor(model => model.CompanyEmail, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Mobile <span style="color:red;font-weight:900">*</span></label>
+                    @Html.TextBoxFor(model => model.CompanyMobile, new { style = "width:100%;", @class = "form-control", @required = true })
+                    @Html.ValidationMessageFor(model => model.CompanyMobile, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Short Name</label>
+                    @Html.TextBoxFor(model => model.CompanyShortName, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.CompanyShortName, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">BIN</label><br />
+                    @Html.TextBoxFor(model => model.LicenceID, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.LicenceID, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.CompanyID)                    
+                    @Html.HiddenFor(model => model.ImageURL)
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">VAT</label><br />
+                    @Html.TextBoxFor(model => model.VatNumber, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.VatNumber, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Business Type</label><br />
+                    @Html.DropDownList("businessTypey", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Ownership Type</label><br />
+                    @Html.DropDownList("bownership", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Slogun</label><br />
+                    <textarea id="input4" rows="6" class="form-control" name="company_slogun" >@Model.CompanySlogun</textarea>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Logo</label><br />
+                    <input name="file" type="file" />
+                    @Html.ValidationMessageFor(model => model.ImageURL, "", new { @class = "text-danger" })
+
+                    @if (Model.ImageURL != "")
+                    {
+                    <a class="title" name="AttachedImage">@Model.ImageURL.Remove(0, 17)</a>
+                    }
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12" style="text-align:center;background-color:#F1F3F4">
+                    <label for="input1" class="labelcss">Company Address</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">House</label>
+                    @Html.TextBoxFor(model => model.House, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.House, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Road</label>
+                    @Html.TextBoxFor(model => model.Road, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.Road, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Sector</label>
+                    @Html.TextBoxFor(model => model.Sector, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.Sector, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Landmark</label>
+                    @Html.TextBoxFor(model => model.Landmark, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.Landmark, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">District</label><br />
+                    @Html.DropDownList("districtList", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Phone</label><br />
+                    @Html.TextBoxFor(model => model.CompanyPhones, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.CompanyPhones, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Fax</label><br />
+                    @Html.TextBoxFor(model => model.CompanyFax, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.CompanyFax, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">URL</label><br />
+                    @Html.TextBoxFor(model => model.CompanyURL, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.CompanyURL, "", new { @class = "text-danger" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12" style="text-align:center;background-color:#F1F3F4">
+                    <label for="input1" class="labelcss">Contact Person</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Name</label>
+                    @Html.TextBoxFor(model => model.ContactPersonName, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.ContactPersonName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Designation</label>
+                    @Html.DropDownList("designationList", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Contact Number</label>
+                    @Html.TextBoxFor(model => model.ContactPersonContactNumber, new { style = "width:100%;", @class = "form-control",  })
+                    @Html.ValidationMessageFor(model => model.ContactPersonContactNumber, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12" style="text-align:center;background-color:#F1F3F4">
+                    <label for="input1" class="labelcss">Alternate Contact Person</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Name</label>
+                    @Html.TextBoxFor(model => model.AlternateContactPersonName, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.AlternateContactPersonName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Designation</label>
+                    @Html.DropDownList("dealternative", null, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Contact Number</label>
+                    @Html.TextBoxFor(model => model.AlternateContactPersonContactNumber, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.AlternateContactPersonContactNumber, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12" style="text-align:center;background-color:#F1F3F4">
+                    <label for="input1" class="labelcss">Alternate Contact Media</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Facebook ID</label>
+                    @Html.TextBoxFor(model => model.FaceBookID, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.FaceBookID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">LinkedIn ID</label>
+                    @Html.TextBoxFor(model => model.LinkedInID, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.LinkedInID, "", new { @class = "text-danger" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">Twitter ID</label>
+                    @Html.TextBoxFor(model => model.TwitterID, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.TwitterID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="input1" class="labelcss">YouTube ID</label>
+                    @Html.TextBoxFor(model => model.YouTubeID, new { style = "width:100%;", @class = "form-control", })
+                    @Html.ValidationMessageFor(model => model.YouTubeID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <button type="submit" name="updateCompany" class="btn btn-success btn-anim"><i class="fa fa-pencil-square-o"></i><span class="btn-text">Update</span> </button>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back", "Index", "CompanyProfile")
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:50px"></div>
+
+</div>
+

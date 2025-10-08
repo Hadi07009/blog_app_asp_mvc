@@ -1,0 +1,182 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+@{
+    ViewBag.Title = "BlogDesign";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="min-height:535px">
+    <br />
+    <div class="row">
+        <div class="col-md-9" style="display:inline-block" >
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID1) != 0)
+                {
+                    <div class="col-md-3">
+                        <p>
+                            <img src="@Url.Content(Model.ContentDetailImageURL)" class="img-responsive" />
+                        </p>
+
+                    </div>
+                    <div class="col-md-9">
+                        <h3>
+                            <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID1)})">@Html.Raw(Model.ContentTitle)</a>
+
+                        </h3>
+                        <p>
+                            @Html.Raw(@ViewBag.FullName1) | @Html.Raw(Model.ContentEntryDate.ToString("D"))
+                        </p>
+                        <p>@Html.Raw(Model.ContentIntroductoryText)</p>
+                        
+
+                    </div>
+                    
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID1) != 0)
+                {
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    @*<div class="col-md-3">
+
+                    </div>*@
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID2) != 0)
+                {
+                    <div class="col-md-3">
+                        <img src="@Url.Content(ViewBag.ContentDetailImageURL)" class="img-responsive" />
+                    </div>
+                    <div class="col-md-9">
+                        <h3>
+                            <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID2)})">@Html.Raw(@ViewBag.ContentDetailTitle)</a>
+
+                        </h3>
+                        <p>
+                            @Html.Raw(@ViewBag.FullName2) | @Html.Raw(@ViewBag.EntryDate2.ToString("D"))
+                        </p>
+                        <p>@Html.Raw(@ViewBag.ContentIntroductoryText)</p>
+                        
+
+                    </div>
+                    
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID2) != 0)
+                {
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID3) != 0)
+                {
+                    <div class="col-md-3">
+                        <img src="@Url.Content(ViewBag.ContentDetailImageURL3)" class="img-responsive" />
+                    </div>
+                    <div class="col-md-9">
+                        <h3>
+                            <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID3)})">@Html.Raw(@ViewBag.ContentDetailTitle3)</a>
+
+                        </h3>
+                        <p>
+                            @Html.Raw(@ViewBag.FullName3) | @Html.Raw(@ViewBag.EntryDate3.ToString("D"))
+                        </p>
+                        <p>@Html.Raw(@ViewBag.ContentIntroductoryText3)</p>
+                        
+
+                    </div>
+                    
+                }
+
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID3) != 0)
+                {
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID4) != 0)
+                {
+                    <div class="col-md-3">
+                        <img src="@Url.Content(ViewBag.ContentDetailImageURL4)" class="img-responsive" />
+                    </div>
+                    <div class="col-md-9">
+                        <h3>
+                            <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID4)})">@Html.Raw(@ViewBag.ContentDetailTitle4)</a>
+
+                        </h3>
+                        <p>
+                            @Html.Raw(@ViewBag.FullName4) | @Html.Raw(@ViewBag.EntryDate4.ToString("D"))
+                        </p>
+                        <p>@Html.Raw(@ViewBag.ContentIntroductoryText4)</p>
+                        
+
+                    </div>
+                    
+                }
+
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID4) != 0)
+                {
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    
+                }
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID5) != 0)
+                {
+                    <div class="col-md-3">
+                        <img src="@Url.Content(ViewBag.ContentDetailImageURL5)" class="img-responsive" />
+                    </div>
+                    <div class="col-md-9">
+                        <h3>
+                            <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID5)})">@Html.Raw(@ViewBag.ContentDetailTitle5)</a>
+
+                        </h3>
+                        <p>
+                            @Html.Raw(@ViewBag.FullName5) | @Html.Raw(@ViewBag.EntryDate5.ToString("D"))
+                        </p>
+                        <p>@Html.Raw(@ViewBag.ContentIntroductoryText5)</p>
+                        
+
+                    </div>
+                    
+                }
+
+            </div>
+            <div class="row">
+                @if (Convert.ToInt32(@ViewBag.ContentDetailID5) != 0)
+                {
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    
+                }
+            </div>
+        </div>
+        <div class="col-md-3" style="display:inline-block">
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+            </div>
+        </div>
+    </div>
+</div>

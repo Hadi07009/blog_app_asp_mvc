@@ -1,0 +1,150 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+@{
+    ViewBag.Title = "PortfolioDesign";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.viewTitle <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.viewTitle</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @{
+            var contentImageURLPart1 = Model.ContentDetailImageURL == null ? string.Empty : Model.ContentDetailImageURL;
+        }
+        @if (contentImageURLPart1 != string.Empty)
+        {
+            <div class="col-md-7">
+
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID1)})">
+                    <img src="@Url.Content(contentImageURLPart1)" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.Raw(Model.ContentTitle)</h3>
+                <h4>@Html.Raw(Model.ContentDetailSubTitle)</h4>
+                <p>@Html.Raw(Model.ContentIntroductoryText)</p>
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID1)})" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+            </div>
+        }
+    </div>
+    @if (Convert.ToInt32(@ViewBag.ContentDetailID2) != 0)
+    {
+        <hr>
+    }
+
+    <div class="row">
+        @{
+            var contentImageURLPart2 = @ViewBag.ContentDetailImageURL == null ? string.Empty : @ViewBag.ContentDetailImageURL;
+        }
+        @if (contentImageURLPart2 != string.Empty)
+        {
+            <div class="col-md-7">
+
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID2)})">
+                    <img src="@Url.Content(contentImageURLPart2)" class="img-responsive" />
+                </a>
+
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.Raw(@ViewBag.ContentDetailTitle)</h3>
+                <h4>@Html.Raw(@ViewBag.ContentDetailSubTitle)</h4>
+                <p>@Html.Raw(@ViewBag.ContentIntroductoryText)</p>
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID2)})" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+            </div>
+        }
+    </div>
+    @if (Convert.ToInt32(@ViewBag.ContentDetailID3) != 0)
+    {
+        <hr>
+    }
+
+    <div class="row">
+        @{
+            var contentImageURLPart3 = @ViewBag.ContentDetailImageURL3 == null ? string.Empty : @ViewBag.ContentDetailImageURL3;
+        }
+        @if (contentImageURLPart3 != string.Empty)
+        {
+            <div class="col-md-7">
+
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID3)})">
+                    <img src="@Url.Content(contentImageURLPart3)" class="img-responsive" />
+                </a>
+
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.Raw(@ViewBag.ContentDetailTitle3)</h3>
+                <h4>@Html.Raw(@ViewBag.ContentDetailSubTitle3)</h4>
+                <p>@Html.Raw(@ViewBag.ContentIntroductoryText3)</p>
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID3)})" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+            </div>
+        }
+    </div>
+    @if (Convert.ToInt32(@ViewBag.ContentDetailID4) != 0)
+    {
+        <hr>
+    }
+
+    <div class="row">
+        @{
+            var contentImageURLPart4 = @ViewBag.ContentDetailImageURL4 == null ? string.Empty : @ViewBag.ContentDetailImageURL4;
+        }
+        @if (contentImageURLPart4 != string.Empty)
+        {
+            <div class="col-md-7">
+
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID4)})">
+                    <img src="@Url.Content(contentImageURLPart4)" class="img-responsive" />
+                </a>
+
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.Raw(@ViewBag.ContentDetailTitle4)</h3>
+                <h4>@Html.Raw(@ViewBag.ContentDetailSubTitle4)</h4>
+                <p>@Html.Raw(@ViewBag.ContentIntroductoryText4)</p>
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID4)})" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+            </div>
+        }
+    </div>
+    @if (Convert.ToInt32(@ViewBag.ContentDetailID5) != 0)
+    {
+        <hr>
+    }
+
+    <div class="row">
+        @{
+            var contentImageURLPart5 = @ViewBag.ContentDetailImageURL5 == null ? string.Empty : @ViewBag.ContentDetailImageURL5;
+        }
+        @if (contentImageURLPart5 != string.Empty)
+        {
+            <div class="col-md-7">
+
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID5)})">
+                    <img src="@Url.Content(contentImageURLPart5)" class="img-responsive" />
+                </a>
+
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.Raw(@ViewBag.ContentDetailTitle5)</h3>
+                <h4>@Html.Raw(@ViewBag.ContentDetailSubTitle5)</h4>
+                <p>@Html.Raw(@ViewBag.ContentIntroductoryText5)</p>
+                <a href="@Url.Action("PortfolioDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ViewBag.ContentDetailID5)})" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+            </div>
+        }
+    </div>
+    @if (Convert.ToInt32(@ViewBag.ContentDetailID5) != 0)
+    {
+        <hr>
+    }
+</div>
+
+

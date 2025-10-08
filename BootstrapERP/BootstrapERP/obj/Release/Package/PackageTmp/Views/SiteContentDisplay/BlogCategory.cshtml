@@ -1,0 +1,68 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+@using System.Data;
+@{
+    ViewBag.Title = "Blog Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-9" style="display:inline-block">
+
+            @foreach (DataRow rowNo in Model.DtBlogPostsTopStories.Rows)
+            {
+                var @ContentID = rowNo["ContentID"].ToString();
+                var @contentDetailImageURL = rowNo["ContentDetailImageURL"].ToString() == "" ? "~/ImagesUploaded/750x500.png" : rowNo["ContentDetailImageURL"].ToString();
+                var @contentTitle = rowNo["ContentDetailTitle"].ToString() == null ? "" : rowNo["ContentDetailTitle"].ToString();
+                var @fullName = rowNo["FullName"].ToString() == null ? "" : rowNo["FullName"].ToString();
+                var @contentEntryDate = Convert.ToDateTime(rowNo["EntryDate"].ToString());
+                var @contentIntroductoryText = rowNo["ContentIntroductoryText"].ToString() == null ? "" : rowNo["ContentIntroductoryText"].ToString();
+                string @hiphenUrl = @contentTitle.ToString().Replace(" ", "-").Replace(",", "").Replace(":", "");
+                <div class="row">
+                    @if (Convert.ToInt32(@ContentID) != 0)
+                    {
+                        <div class="col-md-3">
+                            <p>
+                                <img src="@Url.Content(@contentDetailImageURL)" class="img-responsive" />
+                            </p>
+
+                        </div>
+                        <div class="col-md-9">
+                            <h3>
+                                <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ContentID),@ctitle =(@hiphenUrl)})">@Html.Raw(@contentTitle)</a>
+
+                            </h3>
+                            <p>
+                                @Html.Raw(@fullName) | @Html.Raw(@contentEntryDate.ToString("D"))
+                            </p>
+                            <p>@Html.Raw(@contentIntroductoryText)</p>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            }
+
+        </div>
+        <div class="col-md-3" style="display:inline-block">
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,94 @@
+﻿@model BootstrapERP.Models.CompanyDetailsSetup
+@using System.Data;
+@{
+    ViewBag.Title = "Company Setup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:450px">
+            @using (Html.BeginForm("Index", "CompanyProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                if (Model.DtCompany.Rows.Count > 0)
+                {
+                    <div class="row">
+                        <div style="overflow-x: auto;overflow-y: auto;">
+                            <table id="customers">
+                                <tr>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:left">
+                                        <label for="input1">Company Name</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:left">
+                                        <label for="input1">Company Email</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Company Mobile</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Company website</label>
+                                    </th>
+
+                                </tr>
+                                @foreach (DataRow rowNo in Model.DtCompany.Rows)
+                                {
+                                    var @companyID = rowNo["CompanyID"].ToString();
+                                    var @companyName = rowNo["CompanyName"].ToString() == null ? "" : rowNo["CompanyName"].ToString();
+                                    var @companyEmail = rowNo["CompanyEmail"].ToString() == null ? "" : rowNo["CompanyEmail"].ToString();
+                                    var @companyMobile = rowNo["CompanyMobile"].ToString() == null ? "" : rowNo["CompanyMobile"].ToString();
+                                    var @companyURL = rowNo["CompanyURL"].ToString() == null ? "" : rowNo["CompanyURL"].ToString();
+                                    
+                                <tr>
+                                    <td nowrap="nowrap" style="vertical-align:middle;text-align:left">
+                                        <p>
+                                            <a style="text-decoration:none" href="@Url.Action("Cedit", "CompanyProfile",new { @cID =@companyID })">@Html.DisplayFor(modelItem => @companyName)</a>
+                                        </p>
+                                    </td>
+                                    <td nowrap="nowrap" style="vertical-align:middle;text-align:left">
+                                        <p>
+                                            @Html.DisplayFor(modelItem => @companyEmail)
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        <p>
+                                            @Html.DisplayFor(modelItem => @companyMobile)
+                                        </p>
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        <p>
+                                            <a style="text-decoration:none" target="_blank" href="@companyURL">@Html.DisplayFor(modelItem => @companyURL)</a>
+                                        </p>
+                                    </td>
+
+                                </tr>
+                                }
+
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                }
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+

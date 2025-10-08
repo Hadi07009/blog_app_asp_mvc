@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NReco.Dsm.WebForms</name>
+    </assembly>
+    <members>
+        <member name="T:NReco.Dsm.WebForms.ActionEventArgs">
+            <summary>
+            Web UI action context class.
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.ActionEventArgs.Args">
+            <summary>
+            Action event args
+            </summary>
+            <remarks>May be null.</remarks>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.ActionEventArgs.ActionName">
+            <summary>
+            Get or set action name
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.ActionDataSource">
+            <summary>
+            Action data source used for wrapping another data source for processing select/insert/update/delete operations through web action mechanism.
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.ActionDataSource.UnderlyingSource">
+            <summary>
+            Get instance of underlying data source
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:NReco.Dsm.WebForms.ComponentExpressionBuilder" -->
+        <member name="T:NReco.Dsm.WebForms.ActionView">
+            <summary>
+            Action form container (UI parameters container).
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.BindableView">
+            <summary>
+            Bindable view that enables Bind() expressions inside template transparently
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.CheckBoxList">
+            <summary>
+            Extends standard CheckBoxList with SelectedValues property that can be used with 2-way databinding.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.CompositeDictionary">
+            <summary>
+            Composite dictionary implementation
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.CompositeDictionary.UpdateSatellites">
+            <summary>
+            Update value if exist in satellite dictionary 
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.CompositeDictionary.Master">
+            <summary>
+            Get or set master dictionary instance
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.ControlUtils">
+            <summary>
+            Control class extensions.
+            </summary>
+        </member>
+        <member name="M:NReco.Dsm.WebForms.ControlUtils.GetParents``1(System.Web.UI.Control)">
+            <summary>
+            Returns control parents axis of specified type.
+            </summary>
+            <returns>control parents axis ordered from direct parent to control tree root</returns>
+        </member>
+        <member name="M:NReco.Dsm.WebForms.ControlUtils.GetChildren``1(System.Web.UI.Control)">
+            <summary>
+            Returns control childres of specified type.
+            </summary>
+            <remarks>
+            This method performs breadth-first search (that can avoid full subtree traversal for some cases)
+            and doesn't uses much memory even for huge subtrees.
+            </remarks>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.JavaScriptHolder">
+            <summary>
+            Special placeholder for javascript code blocks that correctly registers javascript inside update panel.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.Data.DalcRelationMapper">
+            <summary>
+            DALC-based relation mapper
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.Data.IRelationMapper">
+            <summary>
+            Data relation mapper interface
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.DataBindHolder">
+            <summary>
+            Special placeholder that performs databinding for itself.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.DataContextHolder">
+            <summary>
+            This class is used by NReco layout model transformation.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.ActionUserControl">
+            <summary>
+            Base class for UserControl that can handle UI actions
+            </summary>
+        </member>
+        <member name="T:NReco.Web.Site.IDataContextControl">
+            <summary>
+            Interface for data context-aware HTTP request handler.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.DataPager">
+            <summary>
+            Extends standard DataPager
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.DataPager.CustomTagKey">
+            <summary>
+            Get or set custom control tag that wraps whole pager HTML content
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.DropDownList">
+            <summary>
+            DropDownList with selection by value support
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.FilterView">
+            <summary>
+            Filter form container (usually used in conjunction with ListView).
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.FormView">
+            <summary>
+            FormView extended with ability to define dataitem context for insert mode.
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.FormView.InsertDataItem">
+            <summary>
+            Get or set dataitem object for insert mode.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.ListBox">
+            <summary>
+            Extends standard ListBox with SelectedValues property that can be used with 2-way databinding.
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.ListView">
+            <summary>
+            ListView extended with ability to define dataitem context for insert mode.
+            </summary>
+        </member>
+        <member name="F:NReco.Dsm.WebForms.ListView.performingSelectFlag">
+            <summary>
+            This flag is used for preveting ListView double-data selecting during explicit DataBind
+            NOTE: this ListView bug was fixed in System.Web.Extensions v4.0 so this workaround is for v3.5 only
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.ListView.InsertDataItem">
+            <summary>
+            Get or set dataitem object for insert mode.
+            </summary>
+        </member>
+        <member name="E:NReco.Dsm.WebForms.ListView.InitSelectArguments">
+            <summary>
+            Pre-select event that allows setting up default sorti
+            </summary>
+        </member>
+        <member name="T:NReco.Dsm.WebForms.VisibilityHolder">
+            <summary>
+            Special placeholder with special databinding logic (used for controlling placholder visibility).
+            </summary>
+        </member>
+        <member name="P:NReco.Dsm.WebForms.VisibilityHolder.DependentFromControls">
+            <summary>
+            Get or set list of controls (IDs) that force visibility refresh
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:NReco.Dsm.WebForms.LabelExpressionBuilder" -->
+        <member name="T:NReco.Dsm.WebForms.ComponentDataSource">
+            <summary>
+            Data source implementation based on component that implements IEnumerable
+            </summary>
+        </member>
+    </members>
+</doc>

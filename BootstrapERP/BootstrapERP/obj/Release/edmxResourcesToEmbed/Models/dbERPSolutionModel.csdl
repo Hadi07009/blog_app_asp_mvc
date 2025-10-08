@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbERPSolutionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbERPSolutionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="uUserProfileTemps" EntityType="dbERPSolutionModel.uUserProfileTemp" />
+    <EntitySet Name="EmployeeTitles" EntityType="dbERPSolutionModel.EmployeeTitle" />
+    <FunctionImport Name="spInitiateSecurityCode">
+      <Parameter Name="UserProfileID" Mode="In" Type="Guid" />
+      <Parameter Name="EntryUserID" Mode="In" Type="Guid" />
+      <Parameter Name="SecurityCode" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblStartLearnings" EntityType="dbERPSolutionModel.tblStartLearning" />
+    <EntitySet Name="lrnCourseCategories" EntityType="dbERPSolutionModel.lrnCourseCategory" />
+    <EntitySet Name="lrnCourseContentTypes" EntityType="dbERPSolutionModel.lrnCourseContentType" />
+    <EntitySet Name="lrnCourseTypes" EntityType="dbERPSolutionModel.lrnCourseType" />
+    <EntitySet Name="lrnLearningPaths" EntityType="dbERPSolutionModel.lrnLearningPath" />
+    <EntitySet Name="lrnProviderNames" EntityType="dbERPSolutionModel.lrnProviderName" />
+    <EntitySet Name="lrnCourseLevels" EntityType="dbERPSolutionModel.lrnCourseLevel" />
+    <EntitySet Name="siteApplicationSetups" EntityType="dbERPSolutionModel.siteApplicationSetup" />
+    <EntitySet Name="siteContentCategories" EntityType="dbERPSolutionModel.siteContentCategory" />
+    <EntitySet Name="siteContentRelatedToes" EntityType="dbERPSolutionModel.siteContentRelatedTo" />
+    <EntitySet Name="siteContentTypes" EntityType="dbERPSolutionModel.siteContentType" />
+    <EntitySet Name="SiteContentRecords" EntityType="dbERPSolutionModel.SiteContentRecord" />
+    <EntitySet Name="siteContentEntryTemps" EntityType="dbERPSolutionModel.siteContentEntryTemp" />
+    <FunctionImport Name="spInitiateSecurityCodeForgotPassword">
+      <Parameter Name="UserProfileID" Mode="In" Type="Guid" />
+      <Parameter Name="EntryUserID" Mode="In" Type="Guid" />
+      <Parameter Name="SecurityCode" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="blogContentCategories" EntityType="dbERPSolutionModel.blogContentCategory" />
+    <EntitySet Name="blogContentRelatedToes" EntityType="dbERPSolutionModel.blogContentRelatedTo" />
+    <EntitySet Name="blogActionTypes" EntityType="dbERPSolutionModel.blogActionType" />
+    <EntitySet Name="uRoleTypeSetups" EntityType="dbERPSolutionModel.uRoleTypeSetup" />
+    <EntitySet Name="suDefaultNodeLists" EntityType="dbERPSolutionModel.suDefaultNodeList" />
+    <EntitySet Name="uDefaultNodeLists" EntityType="dbERPSolutionModel.uDefaultNodeList" />
+    <EntitySet Name="uNodePositions" EntityType="dbERPSolutionModel.uNodePosition" />
+    <EntitySet Name="uNodeTypes" EntityType="dbERPSolutionModel.uNodeType" />
+    <EntitySet Name="uRoleSetups" EntityType="dbERPSolutionModel.uRoleSetup" />
+    <EntitySet Name="uUserTypeSetups" EntityType="dbERPSolutionModel.uUserTypeSetup" />
+    <EntitySet Name="blogAuthorTypeSetups" EntityType="dbERPSolutionModel.blogAuthorTypeSetup" />
+    <EntitySet Name="blogFamousForSetups" EntityType="dbERPSolutionModel.blogFamousForSetup" />
+    <EntitySet Name="DataUsedSetups" EntityType="dbERPSolutionModel.DataUsedSetup" />
+    <EntitySet Name="GenderSetups" EntityType="dbERPSolutionModel.GenderSetup" />
+    <EntitySet Name="MaritalStatusSetups" EntityType="dbERPSolutionModel.MaritalStatusSetup" />
+    <EntitySet Name="orgBranches" EntityType="dbERPSolutionModel.orgBranch" />
+    <EntitySet Name="orgDepartments" EntityType="dbERPSolutionModel.orgDepartment" />
+    <EntitySet Name="orgSections" EntityType="dbERPSolutionModel.orgSection" />
+    <EntitySet Name="orgTeams" EntityType="dbERPSolutionModel.orgTeam" />
+    <EntitySet Name="PaymentTypes" EntityType="dbERPSolutionModel.PaymentType" />
+    <EntitySet Name="ReligionSetups" EntityType="dbERPSolutionModel.ReligionSetup" />
+    <EntitySet Name="RoleTypeSetups" EntityType="dbERPSolutionModel.RoleTypeSetup" />
+    <EntitySet Name="ServiceCategoryTypes" EntityType="dbERPSolutionModel.ServiceCategoryType" />
+    <EntitySet Name="blogQuoteAuthors" EntityType="dbERPSolutionModel.blogQuoteAuthor" />
+    <EntitySet Name="BrowserNameSetups" EntityType="dbERPSolutionModel.BrowserNameSetup" />
+    <EntitySet Name="CountryNameSetups" EntityType="dbERPSolutionModel.CountryNameSetup" />
+    <EntitySet Name="DeviceTypeSetups" EntityType="dbERPSolutionModel.DeviceTypeSetup" />
+    <EntitySet Name="AllUsers" EntityType="dbERPSolutionModel.AllUser" />
+    <EntitySet Name="MessageEmailCategories" EntityType="dbERPSolutionModel.MessageEmailCategory" />
+    <EntitySet Name="MessageEmailSubCategories" EntityType="dbERPSolutionModel.MessageEmailSubCategory" />
+    <EntitySet Name="MessageEmailTypes" EntityType="dbERPSolutionModel.MessageEmailType" />
+    <EntitySet Name="MessageEmailActionTypes" EntityType="dbERPSolutionModel.MessageEmailActionType" />
+    <EntitySet Name="orgDesignations" EntityType="dbERPSolutionModel.orgDesignation" />
+    <EntitySet Name="BusinessNatureSetups" EntityType="dbERPSolutionModel.BusinessNatureSetup" />
+    <EntitySet Name="DistrictSetupViews" EntityType="dbERPSolutionModel.DistrictSetupView" />
+    <EntitySet Name="OwnershipSetups" EntityType="dbERPSolutionModel.OwnershipSetup" />
+  </EntityContainer>
+  <EntityType Name="uUserProfileTemp">
+    <Key>
+      <PropertyRef Name="UserProfileID" />
+    </Key>
+    <Property Name="UserProfileID" Type="Guid" Nullable="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="UserTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTitle">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDescription" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="tblStartLearning">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+      <PropertyRef Name="PNodeTypeID" />
+    </Key>
+    <Property Name="NodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lrnCourseCategory">
+    <Key>
+      <PropertyRef Name="CourseCategoryID" />
+    </Key>
+    <Property Name="CourseCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="CourseCategoryTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="BranchID" Type="Int32" />
+    <Property Name="ApplicationID" Type="Byte" />
+  </EntityType>
+  <EntityType Name="lrnCourseContentType">
+    <Key>
+      <PropertyRef Name="CourseContentTypeID" />
+    </Key>
+    <Property Name="CourseContentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="CourseContentTypeTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="lrnCourseType">
+    <Key>
+      <PropertyRef Name="CourseTypeID" />
+    </Key>
+    <Property Name="CourseTypeID" Type="Int32" Nullable="false" />
+    <Property Name="CourseTypeTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="lrnLearningPath">
+    <Key>
+      <PropertyRef Name="LearningPathID" />
+    </Key>
+    <Property Name="LearningPathID" Type="Int32" Nullable="false" />
+    <Property Name="LearningPathTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="lrnProviderName">
+    <Key>
+      <PropertyRef Name="ProviderID" />
+    </Key>
+    <Property Name="ProviderID" Type="Int32" Nullable="false" />
+    <Property Name="ProviderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="lrnCourseLevel">
+    <Key>
+      <PropertyRef Name="CourseLevelID" />
+    </Key>
+    <Property Name="CourseLevelID" Type="Int32" Nullable="false" />
+    <Property Name="CourseLevelTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="siteApplicationSetup">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="BranchID" Type="Int32" />
+    <Property Name="ApplicationTitle" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="siteContentCategory">
+    <Key>
+      <PropertyRef Name="ContentCategoryID" />
+    </Key>
+    <Property Name="ContentCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ContentTypeID" Type="Int32" />
+    <Property Name="ContentCategoryTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContentCategoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentCategoryImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContentRelatedToID" Type="Int32" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="siteContentRelatedTo">
+    <Key>
+      <PropertyRef Name="ContentRelatedToID" />
+    </Key>
+    <Property Name="ContentRelatedToID" Type="Int32" Nullable="false" />
+    <Property Name="ContentCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ContentTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContentDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="siteContentType">
+    <Key>
+      <PropertyRef Name="ContentTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="BranchID" Type="Int32" />
+    <Property Name="ApplicationID" Type="Int32" />
+    <Property Name="ContentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ContentTypeDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="SiteContentRecord">
+    <Key>
+      <PropertyRef Name="ContentID" />
+      <PropertyRef Name="ApplicationTitle" />
+      <PropertyRef Name="ContentTypeDescription" />
+      <PropertyRef Name="ContentTitle" />
+      <PropertyRef Name="EntryUserID" />
+    </Key>
+    <Property Name="ContentID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationTitle" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContentTypeDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentCategoryTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContentTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="siteContentEntryTemp">
+    <Key>
+      <PropertyRef Name="contentID" />
+    </Key>
+    <Property Name="contentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contentTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="contentImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="contentImageURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="contentDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="contentRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" />
+    <Property Name="contentParentID" Type="Int32" />
+    <Property Name="contentSubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="introductoryText" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="blogContentCategory">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ContentCategoryID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="ContentCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ContentCategoryTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContentCategoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentCategoryImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="blogContentRelatedTo">
+    <Key>
+      <PropertyRef Name="ContentCategoryID" />
+      <PropertyRef Name="ContentRelatedToID" />
+    </Key>
+    <Property Name="ContentCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="ContentRelatedToID" Type="Int32" Nullable="false" />
+    <Property Name="ContentRelatedToTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContentRelatedToDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContentRelatedToImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="blogActionType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ActionTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="ActionTypeID" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTypeTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="uRoleTypeSetup">
+    <Key>
+      <PropertyRef Name="RoleTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="RoleTypeID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="RoleTypeTitle" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+    <Property Name="PRoleTypeID" Type="Int32" />
+    <Property Name="NodeCheckValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="suDefaultNodeList">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SeqNo" Type="Int32" Nullable="false" />
+    <Property Name="NodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ControllerTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FormDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="FormName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ShowPosition" Type="Int32" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+    <Property Name="NodeCheckValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="uDefaultNodeList">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SeqNo" Type="Int32" Nullable="false" />
+    <Property Name="NodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ControllerTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FormDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="FormName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ShowPosition" Type="Int32" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="NodeCheckValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="uNodePosition">
+    <Key>
+      <PropertyRef Name="NodePositionID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="NodePositionID" Type="Int32" Nullable="false" />
+    <Property Name="NodePositionTitle" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="uNodeType">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="NodeTypeID" Type="Int32" Nullable="false" />
+    <Property Name="NodeTypeTitle" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="uRoleSetup">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="RoleTypeID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+    <Property Name="NodeCheckValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRoleID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="uUserTypeSetup">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="UserTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+    <Property Name="UserType" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="blogAuthorTypeSetup">
+    <Key>
+      <PropertyRef Name="AuthorTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="AuthorTypeID" Type="Int32" Nullable="false" />
+    <Property Name="AuthorTypeTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="blogFamousForSetup">
+    <Key>
+      <PropertyRef Name="FamousForID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="FamousForID" Type="Int32" Nullable="false" />
+    <Property Name="FamousForTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FamousForURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="DataUsedSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="GenderSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MaritalStatusSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="orgBranch">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="ParentEntityID" Type="Int32" Nullable="false" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="AddressTag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="EntityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HeadID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityCategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityOpeningDate" Type="DateTime" Precision="0" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="orgDepartment">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="ParentEntityID" Type="Int32" Nullable="false" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="AddressTag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="EntityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HeadID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityCategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityOpeningDate" Type="DateTime" Precision="0" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="orgSection">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="ParentEntityID" Type="Int32" Nullable="false" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="AddressTag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="EntityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HeadID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityCategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityOpeningDate" Type="DateTime" Precision="0" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="orgTeam">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="ParentEntityID" Type="Int32" Nullable="false" />
+    <Property Name="EntityID" Type="Int32" Nullable="false" />
+    <Property Name="AddressTag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="EntityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GroupEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HeadID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityCategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityOpeningDate" Type="DateTime" Precision="0" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="ReligionSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="RoleTypeSetup">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDescription" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="ServiceCategoryType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="Byte" Nullable="false" />
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDescription" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="blogQuoteAuthor">
+    <Key>
+      <PropertyRef Name="QuoteAuthorID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="BranchID" Type="Int32" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="QuoteAuthorID" Type="Int32" Nullable="false" />
+    <Property Name="AuthorTypeID" Type="Int32" />
+    <Property Name="AuthorFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="ReligionID" Type="Int32" />
+    <Property Name="FamousForID" Type="Int32" />
+    <Property Name="Nationality" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="DateDied" Type="DateTime" Precision="3" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="BrowserNameSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="BrowserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BrowserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginInfoID" Type="Guid" Nullable="false" />
+    <Property Name="SessionID" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CountryNameSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginInfoID" Type="Guid" Nullable="false" />
+    <Property Name="SessionID" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceTypeSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="DeviceType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeviceTypeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginInfoID" Type="Guid" Nullable="false" />
+    <Property Name="SessionID" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AllUser">
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+      <PropertyRef Name="EntryDate" />
+      <PropertyRef Name="UserProfileID" />
+    </Key>
+    <Property Name="UserIdentifier" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserProfileID" Type="Guid" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="UserProfileTypeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MessageEmailCategory">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="MessageCategoryID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="MessageCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="MessageCategoryTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MessageEmailSubCategory">
+    <Key>
+      <PropertyRef Name="MessageCategoryID" />
+      <PropertyRef Name="MessageSubCategoryID" />
+    </Key>
+    <Property Name="MessageCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="MessageSubCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="MessageSubCategoryTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MessageEmailType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="MessageTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="MessageTypeID" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MessageTypeTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MessageEmailActionType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ActionTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationID" Type="Int32" Nullable="false" />
+    <Property Name="ActionTypeID" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTypeTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="orgDesignation">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="FieldOfID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDescription" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="BusinessNatureSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="DistrictSetupView">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="OwnershipSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="FieldOfName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataUsed" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserID" Type="Guid" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateUserID" Type="Guid" />
+  </EntityType>
+</Schema>

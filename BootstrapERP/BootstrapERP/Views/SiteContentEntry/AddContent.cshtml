@@ -1,0 +1,49 @@
+﻿@model BootstrapERP.Models.LRNContentDetail
+
+@{
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    
+    @Html.ValidationSummary(true)
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="form-group col-lg-8">
+                            <label for="input1">Title</label>
+                            @Html.TextBoxFor(model => model.ContentDescription, new { type = "text", @class = "form-control",  })
+                            @Html.ValidationMessageFor(model => model.ContentDescription)
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input1">Image</label>
+                            <input type="file" name="file" id="file" style="width: 100%;" /> <br />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label for="input4">Description</label>
+                            @*@Html.TextAreaFor(m => m.ContentDescription, new { rows = "20", style = "resize:none;width:100%;", placeholder = Html.DisplayNameFor(m => m.ContentDescription), @class = "form-control input-lg textarea-editor" })*@
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="submit" value="Create" class="btn btn-success" />&nbsp;&nbsp;@Html.ActionLink("Back to List", "Index")
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div><!-- /.row -->
+        </div>
+        @*</div>*@
+}
+
+
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+    }

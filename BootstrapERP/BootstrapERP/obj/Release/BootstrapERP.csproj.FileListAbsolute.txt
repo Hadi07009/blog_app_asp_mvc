@@ -1,0 +1,624 @@
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Project\ERPSolution And Version Control\Project on VS 2017 & MVC\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Disk D\ProjectArchives\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Site Software\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Site Software\Site Admin\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\log4net.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Owin.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\log4net.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Project Archive\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+F:\Project Archive\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+F:\Project Archive\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+F:\Project Archive\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+F:\Project Archive\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Project\Blog Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Disk D\ProjectArchives\Blog System\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll.config
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\BootstrapERP.pdb
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\EntityFramework.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\GridMvc.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\log4net.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Mvp.Xml.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Data.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Ioc.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Vfs.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Application.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Application.Web.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Bootstrap.Summernote.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.Vfs.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Owin.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Razor.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\WebGrease.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\EntityFramework.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\EntityFramework.SqlServer.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\log4net.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Mvp.Xml.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Data.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Ioc.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NI.Vfs.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Application.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\NReco.Dsm.WebForms.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Helpers.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Mvc.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Optimization.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.Razor.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Deployment.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\System.Web.WebPages.Razor.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Newtonsoft.Json.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Antlr3.Runtime.pdb
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb

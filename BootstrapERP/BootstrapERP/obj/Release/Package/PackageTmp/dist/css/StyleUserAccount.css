@@ -1,0 +1,36 @@
+﻿
+@import url(material-design-iconic-font.min.css);
+@import url('font-awesome.min.css');
+
+.pr-0 {
+    padding-right: 0px !important;
+}
+.navbar.navbar-inverse.navbar-fixed-top .nav > li > a .user-auth-img {
+    height: 43px;
+    width: 43px;
+    vertical-align: middle;
+}
+.img-circle {
+    border-radius: 50%
+}
+
+.navbar.navbar-inverse.navbar-fixed-top .nav > li .dropdown-menu.user-auth-dropdown {
+    min-width: 175px;
+    text-transform: capitalize;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top .nav > li > a .user-online-status {
+    background: #469408;
+    border-radius: 50%;
+    bottom: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    position: absolute;
+    right: 0;
+    width: 10px;
+}
+.chat-cmplt-wrap.chat-for-widgets-1 .goto-back i.zmdi-account-add:before {
+    content: "\f2fa";
+}
+
+

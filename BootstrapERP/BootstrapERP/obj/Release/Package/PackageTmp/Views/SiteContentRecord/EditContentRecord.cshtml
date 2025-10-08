@@ -1,0 +1,256 @@
+﻿@model IEnumerable<BootstrapERP.Models.siteContentEntryTemp>
+
+@using BootstrapERP.Models
+
+@using System.Collections
+@using GridMvc.Html
+
+
+@{
+    ViewBag.Title = "Content Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            @using (Html.BeginForm("EditContentRecord", "SiteContentRecord", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group col-lg-6">
+                            <label for="input1">Application ID</label>
+                            @Html.DropDownList("ApplicationTitle", null, new { type = "text", @class = "form-control" })
+                            @*@Html.DropDownList("ApplicationTitle",  (IEnumerable<SelectListItem>)(SelectList)ViewBag.ApplicationTitle,  new { type = "text", @class = "form-control" })*@
+
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input1">Type</label>
+                            @Html.DropDownList("ContentType", null, new { type = "text", @class = "form-control" })
+                            @*<input type="text" id="input1" class="form-control" name="contact_name">*@
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input2">Category</label>
+                            @*<input type="email" id="input2" class="form-control" name="contact_email">*@
+                            @Html.DropDownList("ContentCategory", null, new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input2">Related To</label>
+                            @*<input type="email" id="input2" class="form-control" name="contact_email">*@
+                            @Html.DropDownList("ContentRelatedTo", null, new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="input4">Image</label>
+                            <input name="file" type="file" />
+                            <div class="clearfix"></div>
+                            @if (@ViewBag.ContentImageURL != null)
+                            {
+                                <a class="title" name="AttachedImage">@ViewBag.ContentImageURL.Remove(0, 17)</a>
+                            }
+                        </div>
+                        <div class="form-group col-lg-8">
+                            @*<label for="input4">Remarks</label>*@
+                            @*@Html.TextAreaFor(m => m.Item2.ContentDescription, new { rows = "20", style = "resize:none;width:100%;", placeholder = Html.DisplayNameFor(m => m.Item2.ContentDescription), @class = "form-control input-lg textarea-editor" })*@
+                            @*@Html.TextAreaFor(null, new { rows = "20", style = "resize:none;width:100%;", placeholder = Html.DisplayNameFor(string.Empty), @class = "form-control input-lg textarea-editor" })*@
+
+                        </div>
+                        <div class="clearfix"></div>
+                        @*<div class="form-group col-lg-8">
+                        @Html.ActionLink("New Content", "CreateContentRecord", "SiteContentRecord")
+                    </div>*@
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <div class="row wellHalf"  >
+                                <div class="col-lg-9 col-md-9" >
+                                    <p>For build your web site with Bootstrap!, Please add content and build your site.........</p>
+                                </div>
+                                <div class="col-lg-1 col-md-1" style="text-align:right" >
+                                    <a style="text-decoration:none;" href="@Url.Action("CreateContentRecord", "SiteContentRecord")">
+                                        <span style="width:150px;margin-left:0px" class="btnDancing btn-green fancy-button btn-0">Add Content</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="container">
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <table id="customers">
+                            @{
+                                int sno = 0;
+                            }
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td style="vertical-align:middle;text-align:center">
+                                    @{ sno++; }
+                                    @sno
+                                </td>
+                                <td style="vertical-align:middle;text-align:left">
+                                    @Html.DisplayFor(modelItem => item.contentTitle)
+                                </td>
+                                @*<td >
+            @Html.Raw(item.contentDescription)
+        </td>*@
+                                <td style="vertical-align:middle;text-align:center">
+                                    @Html.ActionLink("Edit", "EditContentDetail", "SiteContentRecord", new { id = item.contentID }, null) |
+                                    @Html.ActionLink("Delete", "DeleteContentDetail", "SiteContentRecord", new { id = item.contentID }, null)
+                                </td>
+                            </tr>
+                            }
+                        </table>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="row">
+                    <div class="form-group col-lg-8">
+                        <button class="btn btn-success" type="submit" name="contentSave">Save</button>&nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back to List", "Index", "SiteContentRecord")
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:325px"></div>
+
+</div>
+
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+
+
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //Dropdownlist Selectedchange event
+        $("#ApplicationTitle").change(function () {
+            $("#ContentType").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentType", "SiteContentEntry")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { id: $("#ApplicationTitle").val() },
+               // here we are get value of selected ApplicationTitle and passing same value as inputto json method GetStates.
+
+                success: function (queryContentType) {
+                    // states contains the JSON formatted list
+                    // of states passed from the controller
+
+                    $.each(queryContentType, function (i, state) {
+                        $("#ContentType").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+                    // here we are adding option for States
+
+                    });
+                },
+
+            });
+            return false;
+        })
+
+        $("#ContentType").change(function () {
+            $("#ContentCategory").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentCategory", "SiteContentEntry")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { id: $("#ContentType").val() },
+               // here we are get value of selected ContentType and passing same value as inputto json method GetStates.
+
+                success: function (queryContentCategory) {
+                    // states contains the JSON formatted list
+                    // of states passed from the controller
+
+                    $.each(queryContentCategory, function (i, state) {
+                        $("#ContentCategory").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+                    // here we are adding option for States
+
+                    });
+                },
+
+            });
+            return false;
+        })
+
+        $("#ContentCategory").change(function () {
+            $("#ContentRelatedTo").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentRelatedTo", "SiteContentEntry")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { id: $("#ContentCategory").val() },
+               // here we are get value of selected ContentCategory and passing same value as inputto json method GetStates.
+
+                success: function (queryContentRelatedTo) {
+                    // states contains the JSON formatted list
+                    // of states passed from the controller
+
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#ContentRelatedTo").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+                    // here we are adding option for States
+
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+
+</script>
+
+

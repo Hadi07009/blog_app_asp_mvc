@@ -1,0 +1,105 @@
+﻿@model IEnumerable<BootstrapERP.Models.ContentHeader>
+
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutlrnHub.cshtml";
+
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">Learning Hub <small>Course list</small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">Courses</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-8">
+            
+            @if (Model != null)
+            {
+                @Html.Grid(Model).Columns(columns =>
+           {
+               columns.Add(c => c.CourseID).Titled("Course ID").Css("collapse");
+               columns.Add(c=> c.CourseName).Titled("Course Title").Filterable(true);
+               columns.Add().Encoded(false).Sanitized(false).Titled("").SetWidth(60).RenderValueAs(o => @Html.ActionLink("Detail", "Index", "StartLearning",  new {  @selectedServiceID = o.CourseID  },new { style = "text-decoration:none !important;"}));
+           }).WithPaging(10).Sortable(true).EmptyText("No data found")
+            }
+
+
+        </div>
+        <div class="col-sm-4">
+            @*@using (Html.BeginForm())*@
+            @using (Html.BeginForm("Index", "LearningHub"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                <div class="form-group col-lg-12">
+                    <h4><label for="inputSearch">Search a Course</label></h4>
+                    <div style="float:left;width:70%">
+                        <input type="text" id="inputSearch" class="form-control" name="contact_search">
+                    </div>
+                    <div style="float:left;width:25%;margin-left:3px">
+                        <button class="btn CssBtnSearch" type="submit" name="searchButton">Search</button>
+                    </div>
+                </div>
+
+                @*<div class="well">*@
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    <h5>Advanced Search</h5>
+                </div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("CourseTypeTitle", (IEnumerable<SelectListItem>)(SelectList)ViewBag.CourseTypeTitle, new { type = "text", @class = "form-control" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("CourseCategoryIDS", (IEnumerable<SelectListItem>)(SelectList)ViewBag.CourseCategoryTitle, new { type = "text", @class = "form-control" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("LearningPathS", (IEnumerable<SelectListItem>)(SelectList)ViewBag.LearningPathTitle, new { type = "text", @class = "form-control" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("CourseProviderS", (IEnumerable<SelectListItem>)(SelectList)ViewBag.ProviderName, new { type = "text", @class = "form-control" })
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("CourseLevelS", (IEnumerable<SelectListItem>)(SelectList)ViewBag.CourseLevel, new { type = "text", @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    <button class="btn btn-primary" type="submit" name="advancedSearchButton">Search</button>
+                    @*<button class="btn btn-primary" type="submit">Search</button>*@
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+
+                </div>
+                @*</div>*@
+            }
+        </div>
+            </div><!-- /.row -->
+</div>
+<style>
+    .collapse {
+        display: none;
+    }
+
+    .bolded {
+        font-weight: bold;
+    }
+</style>

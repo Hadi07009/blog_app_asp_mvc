@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbERPSolutionModelStoreContainer" CdmEntityContainer="dbERPSolutionEntities">
+    <EntitySetMapping Name="uUserProfileTemps">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uUserProfileTemp">
+        <MappingFragment StoreEntitySet="uUserProfileTemp">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserTitle" ColumnName="UserTitle" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTitles">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.EmployeeTitle">
+        <MappingFragment StoreEntitySet="EmployeeTitle">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spInitiateSecurityCode" FunctionName="dbERPSolutionModel.Store.spInitiateSecurityCode" />
+    <EntitySetMapping Name="tblStartLearnings">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.tblStartLearning">
+        <MappingFragment StoreEntitySet="tblStartLearning">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="PNodeTypeID" ColumnName="PNodeTypeID" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnCourseCategories">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnCourseCategory">
+        <MappingFragment StoreEntitySet="lrnCourseCategory">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="CourseCategoryTitle" ColumnName="CourseCategoryTitle" />
+          <ScalarProperty Name="CourseCategoryID" ColumnName="CourseCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnCourseContentTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnCourseContentType">
+        <MappingFragment StoreEntitySet="lrnCourseContentType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="CourseContentTypeTitle" ColumnName="CourseContentTypeTitle" />
+          <ScalarProperty Name="CourseContentTypeID" ColumnName="CourseContentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnCourseTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnCourseType">
+        <MappingFragment StoreEntitySet="lrnCourseType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="CourseTypeTitle" ColumnName="CourseTypeTitle" />
+          <ScalarProperty Name="CourseTypeID" ColumnName="CourseTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnLearningPaths">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnLearningPath">
+        <MappingFragment StoreEntitySet="lrnLearningPath">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="LearningPathTitle" ColumnName="LearningPathTitle" />
+          <ScalarProperty Name="LearningPathID" ColumnName="LearningPathID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnProviderNames">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnProviderName">
+        <MappingFragment StoreEntitySet="lrnProviderName">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="ProviderID" ColumnName="ProviderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lrnCourseLevels">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.lrnCourseLevel">
+        <MappingFragment StoreEntitySet="lrnCourseLevel">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="CourseLevelTitle" ColumnName="CourseLevelTitle" />
+          <ScalarProperty Name="CourseLevelID" ColumnName="CourseLevelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteApplicationSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.siteApplicationSetup">
+        <MappingFragment StoreEntitySet="siteApplicationSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ApplicationTitle" ColumnName="ApplicationTitle" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteContentCategories">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.siteContentCategory">
+        <MappingFragment StoreEntitySet="siteContentCategory">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ContentRelatedToID" ColumnName="ContentRelatedToID" />
+          <ScalarProperty Name="ContentCategoryImage" ColumnName="ContentCategoryImage" />
+          <ScalarProperty Name="ContentCategoryDescription" ColumnName="ContentCategoryDescription" />
+          <ScalarProperty Name="ContentCategoryTitle" ColumnName="ContentCategoryTitle" />
+          <ScalarProperty Name="ContentTypeID" ColumnName="ContentTypeID" />
+          <ScalarProperty Name="ContentCategoryID" ColumnName="ContentCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteContentRelatedToes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.siteContentRelatedTo">
+        <MappingFragment StoreEntitySet="siteContentRelatedTo">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ContentImage" ColumnName="ContentImage" />
+          <ScalarProperty Name="ContentDescription" ColumnName="ContentDescription" />
+          <ScalarProperty Name="ContentTitle" ColumnName="ContentTitle" />
+          <ScalarProperty Name="ContentCategoryID" ColumnName="ContentCategoryID" />
+          <ScalarProperty Name="ContentRelatedToID" ColumnName="ContentRelatedToID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteContentTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.siteContentType">
+        <MappingFragment StoreEntitySet="siteContentType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ContentImage" ColumnName="ContentImage" />
+          <ScalarProperty Name="ContentTypeDescription" ColumnName="ContentTypeDescription" />
+          <ScalarProperty Name="ContentTypeID" ColumnName="ContentTypeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteContentRecords">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.SiteContentRecord">
+        <MappingFragment StoreEntitySet="SiteContentRecord">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="ContentTitle" ColumnName="ContentTitle" />
+          <ScalarProperty Name="ContentCategoryTitle" ColumnName="ContentCategoryTitle" />
+          <ScalarProperty Name="ContentTypeDescription" ColumnName="ContentTypeDescription" />
+          <ScalarProperty Name="ApplicationTitle" ColumnName="ApplicationTitle" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteContentEntryTemps">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.siteContentEntryTemp">
+        <MappingFragment StoreEntitySet="siteContentEntryTemp">
+          <ScalarProperty Name="introductoryText" ColumnName="introductoryText" />
+          <ScalarProperty Name="contentSubTitle" ColumnName="contentSubTitle" />
+          <ScalarProperty Name="contentParentID" ColumnName="contentParentID" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="contentRemarks" ColumnName="contentRemarks" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="contentDescription" ColumnName="contentDescription" />
+          <ScalarProperty Name="contentImageURL" ColumnName="contentImageURL" />
+          <ScalarProperty Name="contentImage" ColumnName="contentImage" />
+          <ScalarProperty Name="contentTitle" ColumnName="contentTitle" />
+          <ScalarProperty Name="contentID" ColumnName="contentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spInitiateSecurityCodeForgotPassword" FunctionName="dbERPSolutionModel.Store.spInitiateSecurityCodeForgotPassword" />
+    <EntitySetMapping Name="blogContentCategories">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogContentCategory">
+        <MappingFragment StoreEntitySet="blogContentCategory">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ContentCategoryImage" ColumnName="ContentCategoryImage" />
+          <ScalarProperty Name="ContentCategoryDescription" ColumnName="ContentCategoryDescription" />
+          <ScalarProperty Name="ContentCategoryTitle" ColumnName="ContentCategoryTitle" />
+          <ScalarProperty Name="ContentCategoryID" ColumnName="ContentCategoryID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogContentRelatedToes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogContentRelatedTo">
+        <MappingFragment StoreEntitySet="blogContentRelatedTo">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ContentRelatedToImage" ColumnName="ContentRelatedToImage" />
+          <ScalarProperty Name="ContentRelatedToDescription" ColumnName="ContentRelatedToDescription" />
+          <ScalarProperty Name="ContentRelatedToTitle" ColumnName="ContentRelatedToTitle" />
+          <ScalarProperty Name="ContentRelatedToID" ColumnName="ContentRelatedToID" />
+          <ScalarProperty Name="ContentCategoryID" ColumnName="ContentCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogActionTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogActionType">
+        <MappingFragment StoreEntitySet="blogActionType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ActionTypeTitle" ColumnName="ActionTypeTitle" />
+          <ScalarProperty Name="ActionTypeID" ColumnName="ActionTypeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uRoleTypeSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uRoleTypeSetup">
+        <MappingFragment StoreEntitySet="uRoleTypeSetup">
+          <ScalarProperty Name="NodeCheckValue" ColumnName="NodeCheckValue" />
+          <ScalarProperty Name="PRoleTypeID" ColumnName="PRoleTypeID" />
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="RoleTypeTitle" ColumnName="RoleTypeTitle" />
+          <ScalarProperty Name="RoleTypeID" ColumnName="RoleTypeID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suDefaultNodeLists">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.suDefaultNodeList">
+        <MappingFragment StoreEntitySet="suDefaultNodeList">
+          <ScalarProperty Name="NodeCheckValue" ColumnName="NodeCheckValue" />
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ShowPosition" ColumnName="ShowPosition" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="FormDescription" ColumnName="FormDescription" />
+          <ScalarProperty Name="ActionTitle" ColumnName="ActionTitle" />
+          <ScalarProperty Name="ControllerTitle" ColumnName="ControllerTitle" />
+          <ScalarProperty Name="PNodeTypeID" ColumnName="PNodeTypeID" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uDefaultNodeLists">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uDefaultNodeList">
+        <MappingFragment StoreEntitySet="uDefaultNodeList">
+          <ScalarProperty Name="NodeCheckValue" ColumnName="NodeCheckValue" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ShowPosition" ColumnName="ShowPosition" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="FormDescription" ColumnName="FormDescription" />
+          <ScalarProperty Name="ActionTitle" ColumnName="ActionTitle" />
+          <ScalarProperty Name="ControllerTitle" ColumnName="ControllerTitle" />
+          <ScalarProperty Name="PNodeTypeID" ColumnName="PNodeTypeID" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uNodePositions">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uNodePosition">
+        <MappingFragment StoreEntitySet="uNodePosition">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="NodePositionTitle" ColumnName="NodePositionTitle" />
+          <ScalarProperty Name="NodePositionID" ColumnName="NodePositionID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uNodeTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uNodeType">
+        <MappingFragment StoreEntitySet="uNodeType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="NodeTypeTitle" ColumnName="NodeTypeTitle" />
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uRoleSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uRoleSetup">
+        <MappingFragment StoreEntitySet="uRoleSetup">
+          <ScalarProperty Name="PRoleID" ColumnName="PRoleID" />
+          <ScalarProperty Name="NodeCheckValue" ColumnName="NodeCheckValue" />
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleTypeID" ColumnName="RoleTypeID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uUserTypeSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.uUserTypeSetup">
+        <MappingFragment StoreEntitySet="uUserTypeSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogAuthorTypeSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogAuthorTypeSetup">
+        <MappingFragment StoreEntitySet="blogAuthorTypeSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="AuthorTypeTitle" ColumnName="AuthorTypeTitle" />
+          <ScalarProperty Name="AuthorTypeID" ColumnName="AuthorTypeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogFamousForSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogFamousForSetup">
+        <MappingFragment StoreEntitySet="blogFamousForSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FamousForURL" ColumnName="FamousForURL" />
+          <ScalarProperty Name="FamousForTitle" ColumnName="FamousForTitle" />
+          <ScalarProperty Name="FamousForID" ColumnName="FamousForID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataUsedSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.DataUsedSetup">
+        <MappingFragment StoreEntitySet="DataUsedSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.GenderSetup">
+        <MappingFragment StoreEntitySet="GenderSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaritalStatusSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.MaritalStatusSetup">
+        <MappingFragment StoreEntitySet="MaritalStatusSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orgBranches">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.orgBranch">
+        <MappingFragment StoreEntitySet="orgBranch">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="EntityOpeningDate" ColumnName="EntityOpeningDate" />
+          <ScalarProperty Name="EntityCategoryID" ColumnName="EntityCategoryID" />
+          <ScalarProperty Name="HeadID" ColumnName="HeadID" />
+          <ScalarProperty Name="GroupEmailAddress" ColumnName="GroupEmailAddress" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="AddressTag" ColumnName="AddressTag" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orgDepartments">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.orgDepartment">
+        <MappingFragment StoreEntitySet="orgDepartment">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="EntityOpeningDate" ColumnName="EntityOpeningDate" />
+          <ScalarProperty Name="EntityCategoryID" ColumnName="EntityCategoryID" />
+          <ScalarProperty Name="HeadID" ColumnName="HeadID" />
+          <ScalarProperty Name="GroupEmailAddress" ColumnName="GroupEmailAddress" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="AddressTag" ColumnName="AddressTag" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orgSections">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.orgSection">
+        <MappingFragment StoreEntitySet="orgSection">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="EntityOpeningDate" ColumnName="EntityOpeningDate" />
+          <ScalarProperty Name="EntityCategoryID" ColumnName="EntityCategoryID" />
+          <ScalarProperty Name="HeadID" ColumnName="HeadID" />
+          <ScalarProperty Name="GroupEmailAddress" ColumnName="GroupEmailAddress" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="AddressTag" ColumnName="AddressTag" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orgTeams">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.orgTeam">
+        <MappingFragment StoreEntitySet="orgTeam">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="EntityOpeningDate" ColumnName="EntityOpeningDate" />
+          <ScalarProperty Name="EntityCategoryID" ColumnName="EntityCategoryID" />
+          <ScalarProperty Name="HeadID" ColumnName="HeadID" />
+          <ScalarProperty Name="GroupEmailAddress" ColumnName="GroupEmailAddress" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="AddressTag" ColumnName="AddressTag" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="ParentEntityID" ColumnName="ParentEntityID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.PaymentType">
+        <MappingFragment StoreEntitySet="PaymentType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReligionSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.ReligionSetup">
+        <MappingFragment StoreEntitySet="ReligionSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleTypeSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.RoleTypeSetup">
+        <MappingFragment StoreEntitySet="RoleTypeSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceCategoryTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.ServiceCategoryType">
+        <MappingFragment StoreEntitySet="ServiceCategoryType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blogQuoteAuthors">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.blogQuoteAuthor">
+        <MappingFragment StoreEntitySet="blogQuoteAuthor">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="DateDied" ColumnName="DateDied" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="FamousForID" ColumnName="FamousForID" />
+          <ScalarProperty Name="ReligionID" ColumnName="ReligionID" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="AuthorFullName" ColumnName="AuthorFullName" />
+          <ScalarProperty Name="AuthorTypeID" ColumnName="AuthorTypeID" />
+          <ScalarProperty Name="QuoteAuthorID" ColumnName="QuoteAuthorID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrowserNameSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.BrowserNameSetup">
+        <MappingFragment StoreEntitySet="BrowserNameSetup">
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="LoginInfoID" ColumnName="LoginInfoID" />
+          <ScalarProperty Name="BrowserID" ColumnName="BrowserID" />
+          <ScalarProperty Name="BrowserName" ColumnName="BrowserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryNameSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.CountryNameSetup">
+        <MappingFragment StoreEntitySet="CountryNameSetup">
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="LoginInfoID" ColumnName="LoginInfoID" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceTypeSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.DeviceTypeSetup">
+        <MappingFragment StoreEntitySet="DeviceTypeSetup">
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="LoginInfoID" ColumnName="LoginInfoID" />
+          <ScalarProperty Name="DeviceTypeID" ColumnName="DeviceTypeID" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllUsers">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.AllUser">
+        <MappingFragment StoreEntitySet="AllUsers">
+          <ScalarProperty Name="UserProfileTypeID" ColumnName="UserProfileTypeID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UserIdentifier" ColumnName="UserIdentifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageEmailCategories">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.MessageEmailCategory">
+        <MappingFragment StoreEntitySet="MessageEmailCategory">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="MessageCategoryTitle" ColumnName="MessageCategoryTitle" />
+          <ScalarProperty Name="MessageCategoryID" ColumnName="MessageCategoryID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageEmailSubCategories">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.MessageEmailSubCategory">
+        <MappingFragment StoreEntitySet="MessageEmailSubCategory">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="MessageSubCategoryTitle" ColumnName="MessageSubCategoryTitle" />
+          <ScalarProperty Name="MessageSubCategoryID" ColumnName="MessageSubCategoryID" />
+          <ScalarProperty Name="MessageCategoryID" ColumnName="MessageCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageEmailTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.MessageEmailType">
+        <MappingFragment StoreEntitySet="MessageEmailType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="MessageTypeTitle" ColumnName="MessageTypeTitle" />
+          <ScalarProperty Name="MessageTypeID" ColumnName="MessageTypeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageEmailActionTypes">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.MessageEmailActionType">
+        <MappingFragment StoreEntitySet="MessageEmailActionType">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="ActionTypeTitle" ColumnName="ActionTypeTitle" />
+          <ScalarProperty Name="ActionTypeID" ColumnName="ActionTypeID" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orgDesignations">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.orgDesignation">
+        <MappingFragment StoreEntitySet="orgDesignation">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessNatureSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.BusinessNatureSetup">
+        <MappingFragment StoreEntitySet="BusinessNatureSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistrictSetupViews">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.DistrictSetupView">
+        <MappingFragment StoreEntitySet="DistrictSetupView">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OwnershipSetups">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.OwnershipSetup">
+        <MappingFragment StoreEntitySet="OwnershipSetup">
+          <ScalarProperty Name="LastUpdateUserID" ColumnName="LastUpdateUserID" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="EntryUserID" ColumnName="EntryUserID" />
+          <ScalarProperty Name="DataUsed" ColumnName="DataUsed" />
+          <ScalarProperty Name="FieldOfName" ColumnName="FieldOfName" />
+          <ScalarProperty Name="FieldOfID" ColumnName="FieldOfID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

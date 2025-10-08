@@ -1,0 +1,82 @@
+﻿@model BootstrapERP.Models.UserProfile
+@{
+    ViewBag.Title = "Profile update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            @using (Html.BeginForm("Index", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Title</label>
+                        @Html.DropDownList("UserTitleID", null, new { type = "text", @class = "form-control" })
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Full Name</label><br />
+                        @Html.TextBoxFor(model => model.FullName, new { style = "width:100%;", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Display Name</label><br />
+                        @Html.TextBoxFor(model => model.DisplayName, new { style = "width:100%;", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DisplayName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Mobile Number</label><br />
+                        @Html.TextBoxFor(model => model.MobilePIN, new { style = "width:100%;", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MobilePIN, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Date of Birth</label><br />
+                        @Html.TextBoxFor(model => model.BirthDate, new { @type = "date", @class = "form-control datepicker", @Value = Convert.ToDateTime( Model.BirthDate).ToString("yyyy-MM-dd"), data_date_format = "yyyy-MM-dd" })
+                        @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                        @*<div class='input-group date' id='datetimepicker1'>
+                            @Html.TextBoxFor(model => model.BirthDate, new { id = "datepicker", style = "width:100%;", @class = "form-control datepicker", data_date_format = "MM/DD/YYYY" })
+                            @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>*@
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+                @*<br />*@
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <button type="submit" name="profileUpdate" class="btn btn-success btn-anim"><i class="fa fa-pencil-square-o"></i><span class="btn-text">Update</span> </button>
+                        
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:100px"></div>
+
+</div>
+
