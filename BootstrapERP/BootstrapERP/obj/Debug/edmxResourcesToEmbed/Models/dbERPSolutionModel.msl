@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbERPSolutionModelStoreContainer" CdmEntityContainer="dbERPSolutionEntities">
+    <EntitySetMapping Name="tblStartLearnings">
+      <EntityTypeMapping TypeName="dbERPSolutionModel.tblStartLearning">
+        <MappingFragment StoreEntitySet="tblStartLearning">
+          <ScalarProperty Name="NodeTypeID" ColumnName="NodeTypeID" />
+          <ScalarProperty Name="PNodeTypeID" ColumnName="PNodeTypeID" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

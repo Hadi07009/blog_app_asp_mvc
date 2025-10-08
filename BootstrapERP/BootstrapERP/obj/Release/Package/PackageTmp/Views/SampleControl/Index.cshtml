@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_LayoutLoginUser.cshtml";
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+
+}
+@*<link href="~/css/fancy-buttons.css" rel="stylesheet" />*@
+<div class="container">
+    <div class="row">
+        <br />
+        <br />
+        <div class="fileupload btn btn-info btn-anim">
+            <i class="fa fa-upload"></i><span class="btn-text">Upload</span>
+            <input type="file" class="upload">
+        </div>
+        <br />
+        <br />
+        <div class="dropdown">
+            <button aria-expanded="false" data-toggle="dropdown" class="btn btn-info dropdown-toggle " type="button">Dropdown <span class="caret"></span></button>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="panel panel-default card-view panel-refresh">
+                <div class="refresh-container">
+                    <div class="la-anim-1"></div>
+                </div>
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h6 class="panel-title txt-dark">Panel with action</h6>
+                    </div>
+                    <div class="pull-right">
+                        <a class="pull-left inline-block mr-15" data-toggle="collapse" href="#collapse_1" aria-expanded="true">
+                            <i class="zmdi zmdi-chevron-down"></i>
+                            <i class="zmdi zmdi-chevron-up"></i>
+                        </a>
+                        <div class="pull-left inline-block dropdown mr-15">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>option 1</a></li>
+                                <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>option 2</a></li>
+                                <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>option 3</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="pull-left inline-block refresh mr-15">
+                            <i class="zmdi zmdi-replay"></i>
+                        </a>
+                        <a href="#" class="pull-left inline-block full-screen mr-15">
+                            <i class="zmdi zmdi-fullscreen"></i>
+                        </a>
+                        <a class="pull-left inline-block close-panel" href="#" data-effect="fadeOut">
+                            <i class="zmdi zmdi-close"></i>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div id="collapse_1" class="panel-wrapper collapse in">
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="panel panel-default card-view">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h6 class="panel-title txt-dark">Custom Tab 2</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper collapse in">
+                    <div class="panel-body">
+                        <p class="text-muted">Default version of tab add <code>tab-struct custom-tab-2</code> class.</p>
+                        <div class="tab-struct custom-tab-2 mt-40">
+                            <ul role="tablist" class="nav nav-tabs" id="myTabs_15">
+                                <li class="active" role="presentation"><a aria-expanded="true" data-toggle="tab" role="tab" id="home_tab_15" href="#home_15">active</a></li>
+                                <li role="presentation" class=""><a data-toggle="tab" id="profile_tab_15" role="tab" href="#profile_15" aria-expanded="false">inactive</a></li>
+                                <li class="dropdown" role="presentation">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop_15" href="#" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <ul id="myTabDrop_15_contents" class="dropdown-menu">
+                                        <li class=""><a data-toggle="tab" id="dropdown_29_tab" role="tab" href="#dropdown_29" aria-expanded="true">fat</a></li>
+                                        <li class=""><a data-toggle="tab" id="dropdown_30_tab" role="tab" href="#dropdown_30" aria-expanded="false">mdo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent_15">
+                                <div id="home_15" class="tab-pane fade active in" role="tabpanel">
+                                    <p>Lorem ipsum dolor sit amet, et pertinax ocurreret scribentur sit, eum euripidis assentior ei. In qui quodsi maiorum, dicta clita duo ut. Fugit sonet quo te. Ad vel quando causae signiferumque. Aperiam luptatum senserit eu vis, eu ius purto torquatos vituperatoribus.An nec fastidii eligendi molestiae.</p>
+                                </div>
+                                <div id="profile_15" class="tab-pane fade" role="tabpanel">
+                                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.</p>
+                                </div>
+                                <div id="dropdown_29" class="tab-pane fade " role="tabpanel">
+                                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                                </div>
+                                <div id="dropdown_30" class="tab-pane fade" role="tabpanel">
+                                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="panel panel-default card-view">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h6 class="panel-title txt-dark">With remove link</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper collapse in">
+                    <div class="panel-body">
+                        <div class="">
+                            <form action="#" class="dropzone" id="my-awesome-dropzone">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="form-group">
+                <label class="control-label mb-10 text-left">Date Range Pick</label>
+                <input class="form-control input-daterange-datepicker" type="text" name="daterange" value="01/01/2016 - 01/31/2016" />
+            </div>
+            @*<div class="form-group mb-0">
+                <label class="control-label mb-10 text-left">Date Range With Time</label>
+                <input type="text" class="form-control input-daterange-timepicker" name="daterange" value="01/01/2016 1:30 PM - 01/01/2016 2:00 PM" />
+            </div>*@
+        </div>
+
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="form-group">
+                <label class="control-label mb-10 text-left">date time pick</label>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            <div class="form-group">
+                <label class="control-label mb-10 text-left">Time pick</label>
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-8">
+            @*<div class="form-group">
+                <label class="control-label mb-10 text-left">Date Range Pick</label>
+                <input class="form-control input-daterange-datepicker" type="text" name="daterange" value="01/01/2016 - 01/31/2016" />
+            </div>*@
+
+
+            <div class="form-group">
+                <label class="control-label mb-10 text-left">Date pick</label>
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        @*<br />
+        <br />
+        <div class="col-lg-8">
+            <label class="control-label mb-10 text-left">inline date pick</label>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'></div>
+            </div>
+        </div>*@
+
+
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,158 @@
+﻿
+/*#region sidebar */
+/* make sidebar nav vertical min-width: 768px */
+@media (min-width: 768px) {
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+        color: black;
+        line-height: 23px;
+        min-width: 215px;
+        min-height: 575px;
+        background-color: #F3F3F3;
+        margin-top: 25px;
+        font-family: Verdana,Geneva,sans-serif;
+        font-weight: 300;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+        line-height: 23px;
+        background-color: #F3F3F3;
+        border-bottom: solid 1px #E0E0E0;
+        font-family: Verdana,Geneva,sans-serif;
+        font-weight: 300;
+    }
+    .sidebar-nav .navbar li a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: black;
+            line-height: 23px;
+            display: block;
+            border-bottom: solid 1px #E0E0E0;
+            font-family: Verdana,Geneva,sans-serif;
+            font-weight: 300;
+        }
+    .sidebar-nav .navbar li a:hover {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                background-color: rgba(73,155,234,1);
+                background-color: #2A91E1;
+                color: white;
+                line-height: 23px;
+                display: block;
+                padding-left: 5px;
+                margin-left: -15px;
+                margin-right: 0px;
+                font-family: Verdana,Geneva,sans-serif;
+                font-weight: 300;
+            }
+
+
+    
+}
+
+.sidebarMinimize {
+    line-height: 25px;
+    color: black;
+    margin-top: 25px;
+    min-width: 215px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F3F3F3;
+    border-bottom: solid 1px #E0E0E0;
+    font-family: Verdana,Geneva,sans-serif;
+    font-weight: 300;
+}
+
+    .sidebarMinimize:hover {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        color: white;
+        line-height: 25px;
+        background-color: rgba(73,155,234,1);
+        background-color: #2A91E1;
+        min-width: 215px;
+        display: block;
+        padding-left: 5px;
+        font-family: Verdana,Geneva,sans-serif;
+        font-weight: 300;
+    }
+
+
+/*#endregion */
+
+
+
+/*#region label css */
+
+.labelcss {
+    color: #333333;
+    color: rgb(51, 51, 51);
+    background-color: #000000;
+    /*background-color: rgba(0, 0, 0, 0);*/
+    background-color: rgba(0, 86, 179, 0);
+    font-family: Lato,Corbel,'McKinsey Theinhardt', 'Helvetica Neue', Droid, sans-serif, Calibri, Helvetica, Roboto;
+    font-size: 17px;
+}
+
+/*#endregion label css */
+
+/*#region blog detail css */
+
+.blogDetailcss {
+    color: #333333;
+    color: rgb(51, 51, 51);
+    background-color: #000000;
+    background-color: rgba(0, 86, 179, 0);
+    font-family: Lato,"Freight Sans", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+}
+
+/*#endregion blog detail css */
+
+/*#region Create an account css */
+
+.createAccount {
+    color: #333333;
+    color: rgb(51, 51, 51);
+    background-color: #000000;
+    background-color: rgba(0, 86, 179, 0);
+    font-family: Lato,"Freight Sans", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.forgotPassword {
+    color: #333333;
+    color: rgb(51, 51, 51);
+    background-color: #000000;
+    background-color: rgba(0, 86, 179, 0);
+    font-family: Lato,"Freight Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.footerText {
+    font-family: Lato,"Freight Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #333333;
+}
+
+/*#endregion Create an account css */
+
+
+/*#region shonowcss css */
+
+.shonowcss {    
+    background-color: #000000;    
+    background-color: rgba(0, 86, 179, 0);
+    font-family: Lato,Corbel,'McKinsey Theinhardt', 'Helvetica Neue', Droid, sans-serif, Calibri, Helvetica, Roboto;
+    font-size: 17px;
+}
+
+/*#endregion shonowcss css */
+

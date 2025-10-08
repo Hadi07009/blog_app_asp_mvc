@@ -1,0 +1,90 @@
+﻿@model BootstrapERP.Models.uUserProfileTemp
+
+@{
+    ViewBag.Title = "Identify";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> Forgot password</span> <small></small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">
+                        @Html.ActionLink("Home", "Index", "BlogPosts")
+                    </li>
+                    <li class="hapText">Forgot password</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                if (@ViewBag.Message != null)
+                {
+                    <div id="popupdiv" style="border: 1px solid red; display: none;">
+                        @ViewBag.Message
+                    </div>
+                }
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true)
+
+                    <div class="form-group col-lg-12">
+                        <label class="labelcss">Please enter your email address to search for your account.</label><br />
+                        @Html.TextBoxFor(model => model.UserEmail, new { placeholder = "User Email Address", type = "email", @class = "form-control", @required = true, pattern = "^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" })
+                        @Html.ValidationMessageFor(model => model.UserEmail)
+                    </div>
+
+                    <div class="form-group" style="min-height:15px"></div>
+
+                    <div class="form-group">
+                        <div class="col-md-10 ">
+                            <div style="display:inline;float:left">
+                                <input type="submit" value="Next" class="btn btn-success" />
+                            </div>
+                            <div style="display:inline;padding-top:3px;float:left;padding-left:25px">
+                                <ul class="nav">
+                                    <li id="Createanaccount" class="createAccount">
+                                        @Html.ActionLink("Create an account", "CreateUserHome", "UserProfileHome")
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="display:inline;padding-top:10px;float:left;width:5px">
+                                <ul class="nav navbar-left">
+                                    <li id="separetor">
+                                        |
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div style="display:inline;padding-top:3px;float:left">
+                                <ul class="nav navbar-left">
+                                    <li id="Signin" class="forgotPassword">
+                                        @Html.ActionLink("Sign in", "GetLogin", "HomePageLogin", new { caseNo = 1, targetURL = "" }, htmlAttributes: null)
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+        <div class="col-md-6">
+            <img src="~/Images/SignIn.jpg" class="img-responsive">
+
+        </div>
+    </div>
+    <div class="row" style="min-height:150px">
+        <div class="col-lg-12">
+        </div>
+    </div>
+</div>
+

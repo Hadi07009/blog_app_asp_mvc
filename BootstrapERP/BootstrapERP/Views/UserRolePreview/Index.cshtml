@@ -1,0 +1,197 @@
+﻿@model BootstrapERP.Models.UserProfile
+@using System.Data;
+@{
+    ViewBag.Title = "User Permission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:450px">
+            @using (Html.BeginForm("Index", "UserRolePreview"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label for="input2" class="labelcss">User Email</label>
+                        @Html.TextBoxFor(model => model.Email, new { style = "width:100%;", type = "email", @class = "form-control", @disabled = "disabled", id = "userCode", @required = true, pattern = "^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="areaRoleTypeList" class="form-group col-lg-6" style="overflow-x: auto;overflow-y: auto;display:block">
+                        <label for="input2"  class="labelcss">Current Role type list :</label>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6" style="overflow-x: auto;overflow-y: auto;">
+                        <div id="treeRoleType" class="checkboxes"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-6 col-md-6">
+                        <div id="areaRoleList" style="overflow-x: auto;overflow-y: auto;display:block">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">Available Roles : You may add more from this list</div>
+                                <div class="panel-body">
+                                    <div id="tree" class="checkboxesStyle"></div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6" id="areaSaveButton" style="display:block">
+                        <button id="saveUserRole" class="btn btn-primary btn-anim"><i class="fa fa-pencil"></i><span class="btn-text">Save</span></button>
+                        &nbsp;&nbsp; | &nbsp;&nbsp; @Html.ActionLink("Back to User List", "Index", "UserAccount")
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            }
+        </div>
+
+    </div>
+
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Gijgo/gijgo.js"></script>
+    <script src="~/Scripts/conditional-validation.js"></script>
+    <link href="~/http://code.gijgo.com/1.3.0/css/gijgo.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            try {
+                var Usertree = "";
+                var treeRoleType = "";
+                var treeRoleType = $('#treeRoleType').tree();
+                treeRoleType.destroy();
+                var tree = "";
+                var tree = $('#tree').tree();
+                tree.destroy();
+
+
+                $.ajax({
+                type: "POST",
+                data: { Message: $("#userCode").val() },
+                url: '@Url.Action("GetAllRoleType", "UserRole")',
+                dataType: 'json',
+                success: function (records, textStatus, jqXHR, state) {
+                    treeRoleType = $('#treeRoleType').tree({
+                        primaryKey: 'Id',
+                        checkedField: 'nodeCheckValue',
+                        dataSource: records,
+                        checkboxes: true,
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+                        });
+                    },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+                });
+
+                $.ajax({
+                type: "POST",
+                data: { Message: $("#userCode").val() },
+                url: '@Url.Action("GetAllRoles", "UserRole")',
+                dataType: 'json',
+                success: function (records, textStatus, jqXHR, state) {
+                    tree = $('#tree').tree({
+                        primaryKey: 'Id',
+                        checkedField: 'nodeCheckValue',
+                        dataSource: records,
+                        checkboxes: true,
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+                    });
+
+                    $('#saveUserRole').click(function (e) {
+                        e.preventDefault();
+                        var blogRoleType = treeRoleType.getCheckedNodes();
+                        var userCodeTemp = $('#userCode').val();
+                        var result = tree.getCheckedNodes();
+                        if (userCodeTemp != "") {
+                                if (blogRoleType != "") {
+                                    if (result != "") {
+                                        blogRoleType = userCodeTemp + "," + blogRoleType + "," + "flagType" + "," + result;
+                                        $.ajax({
+                                        type: "POST",
+                                        url: '@Url.Action("UserRole", "UserRolePreview")',
+                                        data: { values: blogRoleType.toString() },
+                                        dataType: "json",
+                                        success: function (data) {
+                                            alert("Role Created successfully ");
+                                            window.location.reload();
+                                        },
+                                    });
+                                }
+                                else {
+                                    alert("Please select role from List ");
+                                    }
+                                }
+                                else {
+                                    alert("Please select role type from List ");
+                                    }
+                            }
+                            else {
+                                alert("Please type user email ");
+                            }
+
+                    });
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error - ' + errorThrown);
+                }
+                });
+
+                } catch (e) {
+                    alert(e);
+
+            }
+        });
+
+
+    </script>
+    <style>
+
+        .checkboxesStyle {
+            float: none;
+            display: block;
+            line-height: 23px;
+            font-family: Helvetica;
+            color: red !important;
+            font-weight: 300;
+        }
+
+            .checkboxesStyle input {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .checkboxesStyle label {
+                margin: 7px 5px 0px 0px;
+            }
+    </style>
+
+}
+
+

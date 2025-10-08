@@ -1,0 +1,260 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+@using System.Data;
+
+@{
+    ViewBag.Title = "Content Entry 3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title<small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-12">
+
+            @using (Html.BeginForm("Index", "SiteContentRecord"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-10 col-md-10">
+                                <p>For build your web site with Bootstrap!, Please add content and build your site.........,For build your web site with Bootstrap!, Please add content and build your</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2" style="text-align:right">
+                                <a style="text-decoration:none;" href="@Url.Action("ContentEntry", "SiteContentEntry")">
+                                    <span style="width:150px;margin-left:0px" class="btnDancing btn-green fancy-button btn-0">New Content</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2">Category</label>
+                                @Html.DropDownList("ContentCategory", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2">Related To</label>
+                                @Html.DropDownList("ContentRelatedTo", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2">Status</label>
+                                @Html.DropDownList("BlogActionType", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2">Author Name</label>
+                                @Html.TextBoxFor(model => model.AuthorsName, new { style = "width:100%;", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AuthorsName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1">From Date</label><br />
+                                <div class='input-group date' id='datetimepicker2'>
+                                    @Html.TextBoxFor(model => model.FromDate, new { id = "datepicker", style = "width:100%;", @class = "form-control datepicker", data_date_format = "MM/DD/YYYY" })
+                                    @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1">To Date</label><br />
+                                <div class='input-group date' id='datetimepicker2_1'>
+                                    @Html.TextBoxFor(model => model.ToDate, new { id = "datepicker", style = "width:100%;", @class = "form-control datepicker", data_date_format = "MM/DD/YYYY" })
+                                    @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                <button class="btn btn-success" type="submit" style="width:100%" name="actionSearch">Search</button>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="overflow-x: auto;overflow-y: auto;">
+                        <table id="customers">
+                            <tr>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Category</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Related To</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Content Title</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Status</label>
+                                </th>
+                                <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                    <label for="input1">Action</label>
+                                </th>
+                                <th nowrap="nowrap" style="vertical-align:middle;text-align:left">
+                                    <label for="input1">Remarks</label>
+                                </th>
+                            </tr>
+                            @foreach (DataRow rowNo in Model.DtContentUser.Rows)
+                            {
+                                var @ContentID = rowNo["ContentID"].ToString();
+                                var @ContentCategoryTitle = rowNo["ContentCategoryTitle"].ToString() == null ? "" : rowNo["ContentCategoryTitle"].ToString();
+                                var @ContentRelatedToTitle = rowNo["ContentRelatedToTitle"].ToString() == null ? "" : rowNo["ContentRelatedToTitle"].ToString();
+                                var @ContentDetailTitle = rowNo["ContentDetailTitle"].ToString() == null ? "" : rowNo["ContentDetailTitle"].ToString();
+                                @ContentDetailTitle = @ContentDetailTitle.Length > 50 ? @ContentDetailTitle.Substring(0, 50) + " . . ." : @ContentDetailTitle;
+                                var @ActionTypeTitle = rowNo["ActionTypeTitle"].ToString() == null ? "" : rowNo["ActionTypeTitle"].ToString();
+                                var @remarks = rowNo["Remarks"].ToString() == null ? "" : rowNo["Remarks"].ToString();
+                                <tr>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @ContentCategoryTitle)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @ContentRelatedToTitle)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @ContentDetailTitle)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @if (@ActionTypeTitle == "Approved" || @ActionTypeTitle == "Submitted")
+                                        {
+                                            @Html.ActionLink(@ActionTypeTitle, "ShowBlogRecord", new { id = @ContentID })
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink(@ActionTypeTitle, "EditBlogRecord", new { id = @ContentID })
+
+                                        }
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        @if (@ActionTypeTitle == "Approved" || @ActionTypeTitle == "Submitted")
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Delete", "DeleteContentRecord", new { id = @ContentID })
+
+                                        }
+
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @remarks)
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                </div>
+            }
+        </div>
+        <div class="col-sm-12" style="min-height:400px">
+        </div>
+    </div>
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //Dropdownlist Selectedchange event
+
+        $("#ContentCategory").change(function () {
+            $("#ContentRelatedTo").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentRelatedTo", "BlogContentApproval")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { id: $("#ContentCategory").val() },
+               // here we are get value of selected ContentCategory and passing same value as inputto json method GetStates.
+
+                success: function (queryContentRelatedTo) {
+                    // states contains the JSON formatted list
+                    // of states passed from the controller
+
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#ContentRelatedTo").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+                    // here we are adding option for States
+
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+    @*$('#badd').click(function () {
+        var applicationTitle = $('#ApplicationTitle').val();
+        var contentType = $('#ContentType').val();
+        var contentCategory = $('#ContentCategory').val();
+        var contentRelatedTo = $('#ContentRelatedTo').val();
+        var path = '@Url.Content("~/SiteContentEntry/CreateContent")' + "?ApplicationTitle=" + applicationTitle + "+&ContentType=" + contentType + "+&ContentCategory=" + contentCategory + "+&ContentRelatedTo=" + contentRelatedTo
+        $(this).attr("href", path);
+    });*@
+
+
+    //function Test(link) {
+    //    var comboBox = $(link).siblings("select");
+    //    return false;
+    //}
+
+    var snoValueTemp = document.getElementById('snoValue').value;
+    if (snoValueTemp != "0") {
+        var hook = true;
+        window.onbeforeunload = function () {
+            if (hook) {
+
+                return "Changes you made may not be saved."
+            }
+        }
+    }
+
+    function unhook() {
+        hook = false;
+    }
+
+    function myFunction() {
+        var x = document.getElementById("divcontentIDExists");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        }
+    }
+
+</script>  

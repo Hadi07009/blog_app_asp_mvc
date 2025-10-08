@@ -1,0 +1,248 @@
+﻿@model BootstrapERP.Models.LRNContentDetail
+
+@{
+    ViewBag.Title = "CreateCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="float:left;display:inline-block">
+                <h4 class="page-header">Courses <small>How We Can Learn!</small></h4>
+            </div>
+            <div style="float:right;margin-top:35px">
+                <ol class="breadcrumb" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">Courses</li>
+                </ol>
+            </div>
+        </div>
+        </div><!-- /.row -->
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="courseInformation" style="display:none;">
+                <div class="row">
+                    <div id="courseInformationHeader">
+                        <h3 style="margin-left:15px">Course Information</h3>
+                        <div class="form-group col-lg-4">
+                            <label>Course Type</label>
+                            @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Course Category</label>
+                            @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input3">Learning Path</label>
+                            @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-4">
+                            <label for="input1">Course Name</label>
+                            <input type="text" id="input1" class="form-control" name="contact_name">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input2">Course Price</label>
+                            <input type="number" id="input2" style="text-align:right" class="form-control" name="course_price">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input3">Provider Name</label>
+                            @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <button id="btnSaveCourse" class="btn btn-primary" type="submit">Save Course</button>   <button id="btnAddContent" class="btn btn-primary" type="submit" onclick="functionCourseDetail();">Add Content</button>
+                    </div>
+                </div>
+            </div>
+            <div id="courseContentInformation" style="display:none;">
+                <h3>Course Content Information</h3>
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="input1">Course Content Type</label>
+                        @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select Course Content", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input2">Parent Content Type</label>
+                        @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Please Select Parent Content", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input3"></label><br />
+                        <input type="checkbox" id="checkboxMyDiv"> Login Required?
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="input11">Content Title</label>
+                        <input type="text" id="input11" class="form-control" name="contact_name">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="input22">Author's Email</label>
+                        <input type="email" id="input22" class="form-control" name="author_email">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label for="input4">Description</label>
+                        @Html.TextAreaFor(m => m.ContentDescription, new { rows = "20", style = "resize:none;width:100%;", placeholder = Html.DisplayNameFor(m => m.ContentDescription), @class = "form-control input-lg textarea-editor" })
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <input type="hidden" value="contact" name="save">
+                        <button class="btn btn-primary" type="submit">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" style="display:none" id="divShowSearch" >
+            <div class="form-group col-lg-12">
+                <button id="showSearch" class="btn btn-primary" type="submit" onclick="functionCourseSearch();">Search</button>
+            </div>
+        </div>
+            <div class="col-sm-4" id="rightSideSearch">
+                <div class="form-group col-lg-12">
+                    <button class="btn btn-primary" type="submit" onclick="functionCourseEntry();">Add New Course</button>
+                </div>
+                <div class="form-group col-lg-12">
+                    <h3><label for="inputSearch">Search a Course</label></h3>
+                    <input type="text" id="inputSearch" class="form-control" name="contact_search">
+                </div>
+                <div class="form-group col-lg-12">
+                    <h4>Advanced Search</h4>
+                </div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Course Type", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Course Category", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Learning Path", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Provider", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Status", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    @Html.DropDownList("UserTitle", new SelectList(new Dictionary<string, int> { { "Select Level", -1 }, { "Eng.", 1136001 }, { "Mr.", 1136002 } }, "Value", "Key"), new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-12">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div>
+
+<script type="text/javascript">
+    function myFunction() {
+        var x = document.getElementById("courseHeader");
+        //var y = document.getElementById("courseDetail");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            //y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            //y.style.display = "block";
+        }
+    }
+    function functionCourseDetail() {
+        var x = document.getElementById("courseContentInformation");
+        var y = document.getElementById("courseInformationHeader");
+        var elem = document.getElementById('btnAddContent');
+        var txt = elem.textContent || elem.innerText;
+        var elemSaveCourse = document.getElementById('btnSaveCourse');
+        if (txt == "Add Content") {
+            x.style.display = "block";
+            y.style.display = "none";
+            elem.textContent = "Back";
+            elem.innerText = "Back";
+            elemSaveCourse.style.display = "none";
+        }
+        else {
+            elemSaveCourse.style.display = "inline-block";
+            elem.textContent = "Add Content";
+            elem.innerText = "Add Content";
+            x.style.display = "none";
+            y.style.display = "block";
+            
+        }
+
+        //if (elem.value == "Close Curtain") elem.value = "Open Curtain";
+        //else elem.value = "Close Curtain";
+
+        
+        //if (x.style.display === "none") {
+        //    x.style.display = "block";
+        //    y.style.display === "none"
+        //} else {
+        //    x.style.display = "none";
+        //    y.style.display = "none";
+        //}
+    }
+    function functionCourseEntry() {
+        var x = document.getElementById("courseInformation");
+        var y = document.getElementById("courseContentInformation");
+        var z = document.getElementById("courseInformationHeader");
+        var elemSaveCourse = document.getElementById('btnSaveCourse');
+        var a = document.getElementById("rightSideSearch");
+        var b = document.getElementById("divShowSearch");
+        
+
+        var elem = document.getElementById('btnAddContent');
+        x.style.display = "block";
+        z.style.display = "block";
+        y.style.display = "none";
+        a.style.display = "none";
+        b.style.display = "block";
+        elem.textContent = "Add Content";
+        elem.innerText = "Add Content";
+        elemSaveCourse.style.display = "inline-block";
+        //if (x.style.display === "none") {
+        //    x.style.display = "block";
+        //    y.style.display === "none"
+        //} else {
+        //    x.style.display = "none";
+        //    y.style.display = "none";
+        //}
+    }
+
+    
+    function functionCourseSearch() {
+        var x = document.getElementById("courseInformation");
+        var y = document.getElementById("courseContentInformation");
+        var z = document.getElementById("courseInformationHeader");
+        var elemSaveCourse = document.getElementById('btnSaveCourse');
+        var a = document.getElementById("rightSideSearch");
+        var b = document.getElementById("divShowSearch");
+
+
+        var elem = document.getElementById('btnAddContent');
+        x.style.display = "block";
+        z.style.display = "block";
+        y.style.display = "none";
+        a.style.display = "block";
+        b.style.display = "none";
+        elem.textContent = "Add Content";
+        elem.innerText = "Add Content";
+        elemSaveCourse.style.display = "inline-block";
+    }
+
+</script>
+
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+

@@ -1,0 +1,175 @@
+﻿@model BootstrapERP.Models.UserProfile
+@using System.Data;
+
+
+@using GridMvc.Html
+@{
+    ViewBag.Title = "Session Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span> <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            @using (Html.BeginForm("Index", "UserSession"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row" style="padding-top:5px; padding-left:10px">
+                    <label for="input2" class="labelcss">Select and click search for find login information</label>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">From Date</label><br />
+                                @Html.TextBoxFor(model => model.FromDate, new { @type = "date", style = "width:100%;", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">To Date</label><br />
+                                @Html.TextBoxFor(model => model.ToDate, new { @type = "date", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">User</label>
+                                @Html.DropDownList("UserList", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Browser</label>
+                                @Html.DropDownList("BrowserName", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Device type</label>
+                                @Html.DropDownList("DeviceType", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Country</label>
+                                @Html.DropDownList("CountryName", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                <button class="btn  btn-info" type="submit" name="actionSearch">Search</button>
+                                <button class="btn btn-danger" type="submit" name="actionClear">Clear</button>
+                            </div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+
+                            </div>
+                        </div>
+
+                        <!-- /.row -->
+                    </div>
+                    @if (Model.DtLoginRecord.Rows.Count > 0)
+                    {
+                        <div style="overflow-x: auto;overflow-y: auto;padding-top:5px">
+                            <label for="input2" class="labelcss">Search results</label>
+                        </div>
+                        <div style="overflow-x: auto;overflow-y: auto;">
+                            <table id="customers">
+                                <tr>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Device IP</label>
+                                    </th>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Browser name</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="text-align:center">
+                                        <label for="input1">Device type</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="text-align:center">
+                                        <label for="input1">Country</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Login Date</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Login time</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Logout Date</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Logout time</label>
+                                    </th>
+                                </tr>
+                                @foreach (DataRow rowNo in Model.DtLoginRecord.Rows)
+                                {
+                                    var @loginInfoID = rowNo["LoginInfoID"].ToString();
+                                    var @sessionID = rowNo["SessionID"].ToString();
+                                    var @loginIP = rowNo["LoginIP"].ToString() == null ? "" : rowNo["LoginIP"].ToString();
+                                    var @browserName = rowNo["BrowserName"].ToString() == null ? "" : rowNo["BrowserName"].ToString();
+                                    var @deviceType = rowNo["DeviceType"].ToString() == null ? "" : rowNo["DeviceType"].ToString();
+                                    var @countryName = rowNo["CountryName"].ToString() == null ? "" : rowNo["CountryName"].ToString();
+                                    var @userWiseLoginTimeValue = rowNo["UserWiseLoginTime"].ToString() == null ? "" : rowNo["UserWiseLoginTime"].ToString();
+                                    var @userWiseLoginDateValue = rowNo["UserWiseLoginDate"].ToString() == null ? "" : rowNo["UserWiseLoginDate"];
+                                    var @userWiseLogoutTimeValue = rowNo["UserWiseLogOutTime"].ToString() == null ? "" : rowNo["UserWiseLogOutTime"].ToString();
+                                    var @userWiseLogoutDateValue = rowNo["UserWiseLogOutDate"].ToString() == null ? "" : rowNo["UserWiseLogOutDate"];
+                                <tr>
+                                    <td nowrap="nowrap" style="vertical-align:central;text-align:center">
+                                        @Html.DisplayFor(modelItem => @loginIP)
+                                    </td>
+                                    <td nowrap="nowrap" style="vertical-align:central;text-align:left">
+                                        @Html.DisplayFor(modelItem => @browserName)
+                                    </td>
+                                    <td nowrap="nowrap" style="vertical-align:central;text-align:center">
+                                        @Html.DisplayFor(modelItem => @deviceType)
+                                    </td>
+                                    <td nowrap="nowrap" style="vertical-align:central;text-align:center">
+                                        @Html.DisplayFor(modelItem => @countryName)
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        @Convert.ToString(string.Format("{0:dd/MM/yyyy}", @userWiseLoginDateValue))
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @userWiseLoginTimeValue)
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        @Convert.ToString(string.Format("{0:dd/MM/yyyy}", @userWiseLogoutDateValue))
+                                    </td>
+                                    <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @userWiseLogoutTimeValue)
+                                    </td>
+                                </tr>
+                                }
+
+                            </table>
+                        </div>
+
+                    }
+
+
+                </div>
+            }
+        </div>
+        <div class="col-sm-12" style="min-height:300px">
+        </div>
+    </div>
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+
+@section Scripts {
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>

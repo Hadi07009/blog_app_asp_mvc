@@ -1,0 +1,119 @@
+﻿<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+        <li id="contentEntry">
+            @Html.ActionLink("Content Approval", "Index", "BlogContentApproval")
+        </li>
+        <li id="contentEntry">
+            @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
+        </li>
+
+        @*Now need to use Partial View*@
+
+        @*@foreach (var item in collection)
+            {
+                <li id="contentEntry">
+                    @Html.ActionLink("Content Approval", "Index", "BlogContentApproval")
+                </li>
+                <li id="contentEntry">
+                    @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
+                </li>
+            }*@
+
+
+
+        @*<li id="services">
+                @Html.ActionLink("Services", "Index", "Services")
+            </li>
+            <li id="contact">
+                @Html.ActionLink("Contact", "Index", "Contact")
+            </li>*@
+        @*<li id="portfolio" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li id="1columnportfolio">
+                        @Html.ActionLink("1 Column Portfolio", "OneColumn", "Portfolio")
+                    </li>
+                    <li id="2columnportfolio">
+                        @Html.ActionLink("2 Column Portfolio", "TwoColumn", "Portfolio")
+                    </li>
+                    <li id="3columnportfolio">
+                        @Html.ActionLink("3 Column Portfolio", "ThreeColumn", "Portfolio")
+                    </li>
+                    <li id="4columnportfolio">
+                        @Html.ActionLink("4 Column Portfolio", "FourColumn", "Portfolio")
+                    </li>
+                    <li id="singleportfolioitem">
+                        @Html.ActionLink("Single Portfolio Item", "SingleItem", "Portfolio")
+                    </li>
+                </ul>
+            </li>
+            <li id="blog" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li id="bloghome1">
+                        @Html.ActionLink("Blog Home 1", "Home1", "Blog")
+                    </li>
+                    <li id="bloghome2">
+                        @Html.ActionLink("Blog Home 2", "Home2", "Blog")
+                    </li>
+                    <li id="blogpost">
+                        @Html.ActionLink("Blog Post", "Post", "Blog")
+                    </li>
+                </ul>
+            </li>
+            <li id="other" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li id="fullwidthpage">
+                        @Html.ActionLink("Full Width Page", "FullWidth", "Other")
+                    </li>
+                    <li id="sidebarpage">
+                        @Html.ActionLink("Sidebar Page", "Sidebar", "Other")
+                    </li>
+                    <li id="faq">
+                        @Html.ActionLink("FAQ", "Faq", "Other")
+                    </li>
+                    <li id="404">
+                        @Html.ActionLink("404", "FourOhFour", "Other")
+                    </li>
+
+                </ul>
+            </li>*@
+        <li id="myAccount" class="dropdown auth-drp">
+            <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="~/Images/logo_120_100.png" alt="user_auth" class="user-auth-img img-circle" /><span class="user-online-status"></span></a>
+            <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                <li>
+                    <a href="@Url.Action("Index", "Profile")"><i class="zmdi zmdi-account"></i><span>&nbsp;&nbsp; Profile update</span></a>
+                </li>
+                <li>
+                    <a href="@Url.Action("ChangePassword", "HomePageLogin")"><i class="zmdi zmdi-card"></i><span>&nbsp;&nbsp; Change Password</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="zmdi zmdi-email"></i><span>&nbsp;&nbsp; Inbox</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="zmdi zmdi-settings"></i><span>&nbsp;&nbsp; Settings</span></a>
+                </li>
+                <li class="divider"></li>
+                <li class="sub-menu show-on-hover">
+                    <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="zmdi zmdi-check text-success"></i>&nbsp;&nbsp; available</a>
+                    <ul class="dropdown-menu open-left-side">
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-check text-success"></i><span>&nbsp;&nbsp; available</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-circle-o text-warning"></i><span>&nbsp;&nbsp; busy</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-minus-circle-outline text-danger"></i><span>&nbsp;&nbsp; offline</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="@Url.Action("Index", "BlogPosts")"><i class="zmdi zmdi-power"></i><span>&nbsp;&nbsp; Log Out</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

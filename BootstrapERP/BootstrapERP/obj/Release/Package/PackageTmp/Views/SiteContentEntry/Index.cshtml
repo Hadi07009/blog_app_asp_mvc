@@ -1,0 +1,237 @@
+﻿@model BootstrapERP.Models.BlogContentDetail
+
+@using BootstrapERP.Models
+
+@using System.Collections
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Content Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+
+            @using (Html.BeginForm("Index", "SiteContentEntry", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div style="display:block;" id="addContentHeader" runat="server">
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label for="input2">Category</label>
+                            @Html.DropDownList("ContentCategory", null, new { type = "text", @class = "form-control" })
+
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="input2">Related To</label>
+                            @Html.DropDownList("ContentRelatedTo", null, new { type = "text", @class = "form-control" })
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div style="display:block;" id="addContent" runat="server">
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-9">
+                            <label for="input1">Title</label><br />
+                            @Html.TextBoxFor(model => model.ContentDetailTitle, new { style = "width:100%;", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ContentDetailTitle, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label for="input4">Image</label>
+                            <input name="file" type="file" />
+                            @Html.ValidationMessageFor(model => model.ContentDetailImageURL, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label for="input1">Sub Title</label><br />
+                            @Html.TextBoxFor(model => model.ContentDetailSubTitle, new { style = "width:100%;", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ContentDetailSubTitle, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label for="input1">Introductory Content</label><br />
+                            @Html.TextBoxFor(model => model.ContentIntroductoryText, new { style = "width:100%;", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ContentIntroductoryText, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label for="input4">Description</label>
+                            @Html.TextAreaFor(model => model.ContentDetailDescription, new { rows = "20", style = "resize:none;width:100%;", placeholder = Html.DisplayNameFor(model => model.ContentDetailDescription), @class = "form-control input-lg textarea-editor" })
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-8">
+                            <button class="btn btn-success" type="submit" name="contentSave" onclick="unhook()">Save</button>&nbsp;&nbsp;<button class="btn btn-success" type="submit" name="addtoSubmitList">Save & Submit</button>&nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Back to List", "Index", "SiteContentRecord")
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
+    </div><!-- /.row -->
+
+
+    <div class="row" style="min-height:250px"></div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/bootstrap-file")
+    @Styles.Render("~/Content/Bootstrap-file/css")
+    <script src="~/Scripts/summernote/summernote.js"></script>
+    <link href="~/Scripts/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Scripts/script-custom-editor.js"></script>
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#ApplicationTitle").change(function () {
+            $("#ContentType").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentType")',
+
+                dataType: 'json',
+
+                data: { id: $("#ApplicationTitle").val() },
+
+
+                success: function (queryContentType) {
+
+
+                    $.each(queryContentType, function (i, state) {
+                        $("#ContentType").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+
+
+                    });
+                },
+
+            });
+            return false;
+        })
+
+        $("#ContentType").change(function () {
+            $("#ContentCategory").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentCategory")',
+
+                dataType: 'json',
+
+                data: { id: $("#ContentType").val() },
+
+
+                success: function (queryContentCategory) {
+
+
+                    $.each(queryContentCategory, function (i, state) {
+                        $("#ContentCategory").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+
+
+                    });
+                },
+
+            });
+            return false;
+        })
+
+        $("#ContentCategory").change(function () {
+            $("#ContentRelatedTo").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentRelatedTo")',
+
+                dataType: 'json',
+
+                data: { id: $("#ContentCategory").val() },
+
+
+                success: function (queryContentRelatedTo) {
+
+
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#ContentRelatedTo").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+
+
+
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+    $('#badd').click(function () {
+        var applicationTitle = $('#ApplicationTitle').val();
+        var contentType = $('#ContentType').val();
+        var contentCategory = $('#ContentCategory').val();
+        var contentRelatedTo = $('#ContentRelatedTo').val();
+        var path = '@Url.Content("~/SiteContentEntry/CreateContent")' + "?ApplicationTitle=" + applicationTitle + "+&ContentType=" + contentType + "+&ContentCategory=" + contentCategory + "+&ContentRelatedTo=" + contentRelatedTo
+        $(this).attr("href", path);
+    });
+
+
+
+
+    var snoValueTemp = document.getElementById('snoValue').value;
+    if (snoValueTemp != "0") {
+        var hook = true;
+        window.onbeforeunload = function () {
+            if (hook) {
+
+                return "Changes you made may not be saved."
+            }
+        }
+    }
+
+    function unhook() {
+        hook = false;
+    }
+
+    function myFunction() {
+        var x = document.getElementById("divcontentIDExists");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        }
+    }
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+
+<script src="../../Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+
+

@@ -1,0 +1,1171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbERPSolutionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="blogActionType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ActionTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="ActionTypeID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ActionTypeTitle" Type="varchar" MaxLength="150" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="blogAuthorTypeSetup">
+    <Key>
+      <PropertyRef Name="AuthorTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="AuthorTypeID" Type="int" Nullable="false" />
+    <Property Name="AuthorTypeTitle" Type="varchar" MaxLength="150" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="blogContentCategory">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ContentCategoryID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="ContentCategoryID" Type="int" Nullable="false" />
+    <Property Name="ContentCategoryTitle" Type="varchar" MaxLength="150" />
+    <Property Name="ContentCategoryDescription" Type="varchar(max)" />
+    <Property Name="ContentCategoryImage" Type="nvarchar(max)" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="blogContentRelatedTo">
+    <Key>
+      <PropertyRef Name="ContentCategoryID" />
+      <PropertyRef Name="ContentRelatedToID" />
+    </Key>
+    <Property Name="ContentCategoryID" Type="int" Nullable="false" />
+    <Property Name="ContentRelatedToID" Type="int" Nullable="false" />
+    <Property Name="ContentRelatedToTitle" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContentRelatedToDescription" Type="varchar(max)" />
+    <Property Name="ContentRelatedToImage" Type="nvarchar(max)" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="blogFamousForSetup">
+    <Key>
+      <PropertyRef Name="FamousForID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="FamousForID" Type="int" Nullable="false" />
+    <Property Name="FamousForTitle" Type="varchar" MaxLength="150" />
+    <Property Name="FamousForURL" Type="varchar" MaxLength="250" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="blogQuoteAuthor">
+    <Key>
+      <PropertyRef Name="QuoteAuthorID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="QuoteAuthorID" Type="int" Nullable="false" />
+    <Property Name="AuthorTypeID" Type="int" />
+    <Property Name="AuthorFullName" Type="varchar" MaxLength="255" />
+    <Property Name="GenderID" Type="int" />
+    <Property Name="ReligionID" Type="int" />
+    <Property Name="FamousForID" Type="int" />
+    <Property Name="Nationality" Type="varchar" MaxLength="250" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="DateDied" Type="datetime" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnCourseCategory">
+    <Key>
+      <PropertyRef Name="CourseCategoryID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="ApplicationID" Type="tinyint" />
+    <Property Name="CourseCategoryID" Type="int" Nullable="false" />
+    <Property Name="CourseCategoryTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnCourseContentType">
+    <Key>
+      <PropertyRef Name="CourseContentTypeID" />
+    </Key>
+    <Property Name="CourseContentTypeID" Type="int" Nullable="false" />
+    <Property Name="CourseContentTypeTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnCourseLevel">
+    <Key>
+      <PropertyRef Name="CourseLevelID" />
+    </Key>
+    <Property Name="CourseLevelID" Type="int" Nullable="false" />
+    <Property Name="CourseLevelTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnCourseType">
+    <Key>
+      <PropertyRef Name="CourseTypeID" />
+    </Key>
+    <Property Name="CourseTypeID" Type="int" Nullable="false" />
+    <Property Name="CourseTypeTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnLearningPath">
+    <Key>
+      <PropertyRef Name="LearningPathID" />
+    </Key>
+    <Property Name="LearningPathID" Type="int" Nullable="false" />
+    <Property Name="LearningPathTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="lrnProviderName">
+    <Key>
+      <PropertyRef Name="ProviderID" />
+    </Key>
+    <Property Name="ProviderID" Type="int" Nullable="false" />
+    <Property Name="ProviderName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MessageEmailActionType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="ActionTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="ActionTypeID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ActionTypeTitle" Type="varchar" MaxLength="150" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MessageEmailCategory">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="MessageCategoryID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="MessageCategoryID" Type="int" Nullable="false" />
+    <Property Name="MessageCategoryTitle" Type="varchar" MaxLength="150" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MessageEmailSubCategory">
+    <Key>
+      <PropertyRef Name="MessageCategoryID" />
+      <PropertyRef Name="MessageSubCategoryID" />
+    </Key>
+    <Property Name="MessageCategoryID" Type="int" Nullable="false" />
+    <Property Name="MessageSubCategoryID" Type="int" Nullable="false" />
+    <Property Name="MessageSubCategoryTitle" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="MessageEmailType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="ApplicationID" />
+      <PropertyRef Name="MessageTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="MessageTypeID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="MessageTypeTitle" Type="varchar" MaxLength="150" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="orgDesignation">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="FieldOfID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldDescription" Type="varchar" MaxLength="35" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="siteApplicationSetup">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="int" Nullable="false" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="ApplicationTitle" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="siteContentCategory">
+    <Key>
+      <PropertyRef Name="ContentCategoryID" />
+    </Key>
+    <Property Name="ContentCategoryID" Type="int" Nullable="false" />
+    <Property Name="ContentTypeID" Type="int" />
+    <Property Name="ContentCategoryTitle" Type="varchar" MaxLength="150" />
+    <Property Name="ContentCategoryDescription" Type="varchar(max)" />
+    <Property Name="ContentCategoryImage" Type="nvarchar(max)" />
+    <Property Name="ContentRelatedToID" Type="int" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="siteContentEntryTemp">
+    <Key>
+      <PropertyRef Name="contentID" />
+    </Key>
+    <Property Name="contentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contentTitle" Type="varchar" MaxLength="250" />
+    <Property Name="contentSubTitle" Type="varchar" MaxLength="250" />
+    <Property Name="contentImage" Type="varbinary(max)" />
+    <Property Name="contentImageURL" Type="varchar" MaxLength="250" />
+    <Property Name="introductoryText" Type="varchar" MaxLength="250" />
+    <Property Name="contentDescription" Type="varchar(max)" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" />
+    <Property Name="contentRemarks" Type="varchar(max)" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" />
+    <Property Name="contentParentID" Type="int" />
+  </EntityType>
+  <EntityType Name="siteContentRelatedTo">
+    <Key>
+      <PropertyRef Name="ContentRelatedToID" />
+    </Key>
+    <Property Name="ContentRelatedToID" Type="int" Nullable="false" />
+    <Property Name="ContentCategoryID" Type="int" Nullable="false" />
+    <Property Name="ContentTitle" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContentDescription" Type="varchar(max)" />
+    <Property Name="ContentImage" Type="nvarchar(max)" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="siteContentType">
+    <Key>
+      <PropertyRef Name="ContentTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="ApplicationID" Type="int" />
+    <Property Name="ContentTypeID" Type="int" Nullable="false" />
+    <Property Name="ContentTypeDescription" Type="varchar(max)" Nullable="false" />
+    <Property Name="ContentImage" Type="nvarchar(max)" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="suDefaultNodeList">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ActivityID" Type="int" Nullable="false" />
+    <Property Name="ActivityName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SeqNo" Type="int" Nullable="false" />
+    <Property Name="NodeTypeID" Type="int" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="int" Nullable="false" />
+    <Property Name="ControllerTitle" Type="varchar" MaxLength="255" />
+    <Property Name="ActionTitle" Type="varchar" MaxLength="255" />
+    <Property Name="FormDescription" Type="varchar" MaxLength="800" />
+    <Property Name="FormName" Type="varchar" MaxLength="500" />
+    <Property Name="ShowPosition" Type="int" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+    <Property Name="NodeCheckValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStartLearning">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+      <PropertyRef Name="PNodeTypeID" />
+    </Key>
+    <Property Name="NodeTypeID" Type="int" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="int" Nullable="false" />
+    <Property Name="ActivityName" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="uDefaultNodeList">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="ActivityID" Type="int" Nullable="false" />
+    <Property Name="ActivityName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SeqNo" Type="int" Nullable="false" />
+    <Property Name="NodeTypeID" Type="int" Nullable="false" />
+    <Property Name="PNodeTypeID" Type="int" Nullable="false" />
+    <Property Name="ControllerTitle" Type="varchar" MaxLength="255" />
+    <Property Name="ActionTitle" Type="varchar" MaxLength="255" />
+    <Property Name="FormDescription" Type="varchar" MaxLength="800" />
+    <Property Name="FormName" Type="varchar" MaxLength="500" />
+    <Property Name="ShowPosition" Type="int" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+    <Property Name="UserID" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="NodeCheckValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="uNodePosition">
+    <Key>
+      <PropertyRef Name="NodePositionID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="NodePositionID" Type="int" Nullable="false" />
+    <Property Name="NodePositionTitle" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="uNodeType">
+    <Key>
+      <PropertyRef Name="NodeTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="NodeTypeID" Type="int" Nullable="false" />
+    <Property Name="NodeTypeTitle" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="uRoleSetup">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleTypeID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+    <Property Name="NodeCheckValue" Type="varchar" MaxLength="50" />
+    <Property Name="PRoleID" Type="int" />
+  </EntityType>
+  <EntityType Name="uRoleTypeSetup">
+    <Key>
+      <PropertyRef Name="RoleTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="RoleTypeID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="RoleTypeTitle" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+    <Property Name="PRoleTypeID" Type="int" />
+    <Property Name="NodeCheckValue" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="uUserProfileTemp">
+    <Key>
+      <PropertyRef Name="UserProfileID" />
+    </Key>
+    <Property Name="UserProfileID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyEmail" Type="varchar" MaxLength="50" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="UserTitle" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="uUserTypeSetup">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="BranchID" />
+      <PropertyRef Name="UserTypeID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+    <Property Name="UserType" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="800" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.AllUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AllUsers">
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+      <PropertyRef Name="EntryDate" />
+      <PropertyRef Name="UserProfileID" />
+    </Key>
+    <Property Name="UserIdentifier" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="UserProfileID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="256" />
+    <Property Name="UserProfileTypeID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.BrowserNameSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BrowserNameSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="BrowserName" Type="varchar" MaxLength="50" />
+    <Property Name="BrowserID" Type="varchar" MaxLength="50" />
+    <Property Name="LoginInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SessionID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.BusinessNatureSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BusinessNatureSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.CountryNameSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CountryNameSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="50" />
+    <Property Name="LoginInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SessionID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.DataUsedSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DataUsedSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.DeviceTypeSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DeviceTypeSetup">
+    <Key>
+      <PropertyRef Name="LoginInfoID" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="DeviceType" Type="varchar" MaxLength="50" />
+    <Property Name="DeviceTypeID" Type="varchar" MaxLength="50" />
+    <Property Name="LoginInfoID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SessionID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.DistrictSetupView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DistrictSetupView">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.EmployeeTitle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmployeeTitle">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldDescription" Type="varchar" MaxLength="35" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.GenderSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GenderSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.MaritalStatusSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MaritalStatusSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.orgBranch' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orgBranch">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="AddressTag" Type="varchar" MaxLength="1" />
+    <Property Name="AddressID" Type="int" />
+    <Property Name="EntityName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="20" />
+    <Property Name="GroupEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="HeadID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityCategoryID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityOpeningDate" Type="date" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.orgDepartment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orgDepartment">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="AddressTag" Type="varchar" MaxLength="1" />
+    <Property Name="AddressID" Type="int" />
+    <Property Name="EntityName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="20" />
+    <Property Name="GroupEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="HeadID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityCategoryID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityOpeningDate" Type="date" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.orgSection' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orgSection">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="AddressTag" Type="varchar" MaxLength="1" />
+    <Property Name="AddressID" Type="int" />
+    <Property Name="EntityName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="20" />
+    <Property Name="GroupEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="HeadID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityCategoryID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityOpeningDate" Type="date" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.orgTeam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orgTeam">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="ParentEntityID" />
+      <PropertyRef Name="EntityID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="ParentEntityID" Type="int" Nullable="false" />
+    <Property Name="EntityID" Type="int" Nullable="false" />
+    <Property Name="AddressTag" Type="varchar" MaxLength="1" />
+    <Property Name="AddressID" Type="int" />
+    <Property Name="EntityName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="10" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="20" />
+    <Property Name="GroupEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="HeadID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityCategoryID" Type="varchar" MaxLength="50" />
+    <Property Name="EntityOpeningDate" Type="date" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.OwnershipSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OwnershipSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.PaymentType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.ReligionSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ReligionSetup">
+    <Key>
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.RoleTypeSetup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RoleTypeSetup">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldDescription" Type="varchar" MaxLength="35" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.ServiceCategoryType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ServiceCategoryType">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+      <PropertyRef Name="FieldOfID" />
+      <PropertyRef Name="DataUsed" />
+      <PropertyRef Name="EntryUserID" />
+      <PropertyRef Name="EntryDate" />
+    </Key>
+    <Property Name="CompanyID" Type="tinyint" Nullable="false" />
+    <Property Name="FieldOfID" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="FieldOfName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldDescription" Type="varchar" MaxLength="35" />
+    <Property Name="DataUsed" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="LastUpdateUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbERPSolution.dbo.SiteContentRecord' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SiteContentRecord">
+    <Key>
+      <PropertyRef Name="ContentID" />
+      <PropertyRef Name="ApplicationTitle" />
+      <PropertyRef Name="ContentTypeDescription" />
+      <PropertyRef Name="ContentTitle" />
+      <PropertyRef Name="EntryUserID" />
+    </Key>
+    <Property Name="ContentID" Type="int" Nullable="false" />
+    <Property Name="ApplicationTitle" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContentTypeDescription" Type="varchar(max)" Nullable="false" />
+    <Property Name="ContentCategoryTitle" Type="varchar" MaxLength="150" />
+    <Property Name="ContentTitle" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EntryUserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApplicationID" Type="int" />
+  </EntityType>
+  <Function Name="spInitiateSecurityCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserProfileID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="EntryUserID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="SecurityCode" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInitiateSecurityCodeForgotPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserProfileID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="EntryUserID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="SecurityCode" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="dbERPSolutionModelStoreContainer">
+    <EntitySet Name="blogActionType" EntityType="Self.blogActionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blogAuthorTypeSetup" EntityType="Self.blogAuthorTypeSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blogContentCategory" EntityType="Self.blogContentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blogContentRelatedTo" EntityType="Self.blogContentRelatedTo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blogFamousForSetup" EntityType="Self.blogFamousForSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="blogQuoteAuthor" EntityType="Self.blogQuoteAuthor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnCourseCategory" EntityType="Self.lrnCourseCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnCourseContentType" EntityType="Self.lrnCourseContentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnCourseLevel" EntityType="Self.lrnCourseLevel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnCourseType" EntityType="Self.lrnCourseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnLearningPath" EntityType="Self.lrnLearningPath" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lrnProviderName" EntityType="Self.lrnProviderName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageEmailActionType" EntityType="Self.MessageEmailActionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageEmailCategory" EntityType="Self.MessageEmailCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageEmailSubCategory" EntityType="Self.MessageEmailSubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageEmailType" EntityType="Self.MessageEmailType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orgDesignation" EntityType="Self.orgDesignation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="siteApplicationSetup" EntityType="Self.siteApplicationSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="siteContentCategory" EntityType="Self.siteContentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="siteContentEntryTemp" EntityType="Self.siteContentEntryTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="siteContentRelatedTo" EntityType="Self.siteContentRelatedTo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="siteContentType" EntityType="Self.siteContentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="suDefaultNodeList" EntityType="Self.suDefaultNodeList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStartLearning" EntityType="Self.tblStartLearning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uDefaultNodeList" EntityType="Self.uDefaultNodeList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uNodePosition" EntityType="Self.uNodePosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uNodeType" EntityType="Self.uNodeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uRoleSetup" EntityType="Self.uRoleSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uRoleTypeSetup" EntityType="Self.uRoleTypeSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uUserProfileTemp" EntityType="Self.uUserProfileTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uUserTypeSetup" EntityType="Self.uUserTypeSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AllUsers" EntityType="Self.AllUsers" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AllUsers].[UserIdentifier] AS [UserIdentifier], 
+    [AllUsers].[EntryDate] AS [EntryDate], 
+    [AllUsers].[UserProfileID] AS [UserProfileID], 
+    [AllUsers].[Email] AS [Email], 
+    [AllUsers].[UserProfileTypeID] AS [UserProfileTypeID]
+    FROM [dbo].[AllUsers] AS [AllUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BrowserNameSetup" EntityType="Self.BrowserNameSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BrowserNameSetup].[BrowserName] AS [BrowserName], 
+    [BrowserNameSetup].[BrowserID] AS [BrowserID], 
+    [BrowserNameSetup].[LoginInfoID] AS [LoginInfoID], 
+    [BrowserNameSetup].[SessionID] AS [SessionID]
+    FROM [dbo].[BrowserNameSetup] AS [BrowserNameSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BusinessNatureSetup" EntityType="Self.BusinessNatureSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BusinessNatureSetup].[FieldOfID] AS [FieldOfID], 
+    [BusinessNatureSetup].[FieldOfName] AS [FieldOfName], 
+    [BusinessNatureSetup].[DataUsed] AS [DataUsed], 
+    [BusinessNatureSetup].[EntryUserID] AS [EntryUserID], 
+    [BusinessNatureSetup].[EntryDate] AS [EntryDate], 
+    [BusinessNatureSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [BusinessNatureSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[BusinessNatureSetup] AS [BusinessNatureSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CountryNameSetup" EntityType="Self.CountryNameSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CountryNameSetup].[CountryName] AS [CountryName], 
+    [CountryNameSetup].[CountryCode] AS [CountryCode], 
+    [CountryNameSetup].[LoginInfoID] AS [LoginInfoID], 
+    [CountryNameSetup].[SessionID] AS [SessionID]
+    FROM [dbo].[CountryNameSetup] AS [CountryNameSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DataUsedSetup" EntityType="Self.DataUsedSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DataUsedSetup].[FieldOfID] AS [FieldOfID], 
+    [DataUsedSetup].[FieldOfName] AS [FieldOfName], 
+    [DataUsedSetup].[DataUsed] AS [DataUsed], 
+    [DataUsedSetup].[EntryUserID] AS [EntryUserID], 
+    [DataUsedSetup].[EntryDate] AS [EntryDate], 
+    [DataUsedSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [DataUsedSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[DataUsedSetup] AS [DataUsedSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DeviceTypeSetup" EntityType="Self.DeviceTypeSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DeviceTypeSetup].[DeviceType] AS [DeviceType], 
+    [DeviceTypeSetup].[DeviceTypeID] AS [DeviceTypeID], 
+    [DeviceTypeSetup].[LoginInfoID] AS [LoginInfoID], 
+    [DeviceTypeSetup].[SessionID] AS [SessionID]
+    FROM [dbo].[DeviceTypeSetup] AS [DeviceTypeSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DistrictSetupView" EntityType="Self.DistrictSetupView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DistrictSetupView].[FieldOfID] AS [FieldOfID], 
+    [DistrictSetupView].[FieldOfName] AS [FieldOfName], 
+    [DistrictSetupView].[DataUsed] AS [DataUsed], 
+    [DistrictSetupView].[EntryUserID] AS [EntryUserID], 
+    [DistrictSetupView].[EntryDate] AS [EntryDate], 
+    [DistrictSetupView].[LastUpdateDate] AS [LastUpdateDate], 
+    [DistrictSetupView].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[DistrictSetupView] AS [DistrictSetupView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmployeeTitle" EntityType="Self.EmployeeTitle" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EmployeeTitle].[CompanyID] AS [CompanyID], 
+    [EmployeeTitle].[FieldOfID] AS [FieldOfID], 
+    [EmployeeTitle].[FieldOfName] AS [FieldOfName], 
+    [EmployeeTitle].[FieldDescription] AS [FieldDescription], 
+    [EmployeeTitle].[DataUsed] AS [DataUsed], 
+    [EmployeeTitle].[EntryUserID] AS [EntryUserID], 
+    [EmployeeTitle].[EntryDate] AS [EntryDate], 
+    [EmployeeTitle].[LastUpdateDate] AS [LastUpdateDate], 
+    [EmployeeTitle].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[EmployeeTitle] AS [EmployeeTitle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GenderSetup" EntityType="Self.GenderSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GenderSetup].[FieldOfID] AS [FieldOfID], 
+    [GenderSetup].[FieldOfName] AS [FieldOfName], 
+    [GenderSetup].[DataUsed] AS [DataUsed], 
+    [GenderSetup].[EntryUserID] AS [EntryUserID], 
+    [GenderSetup].[EntryDate] AS [EntryDate], 
+    [GenderSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [GenderSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[GenderSetup] AS [GenderSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MaritalStatusSetup" EntityType="Self.MaritalStatusSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MaritalStatusSetup].[FieldOfID] AS [FieldOfID], 
+    [MaritalStatusSetup].[FieldOfName] AS [FieldOfName], 
+    [MaritalStatusSetup].[DataUsed] AS [DataUsed], 
+    [MaritalStatusSetup].[EntryUserID] AS [EntryUserID], 
+    [MaritalStatusSetup].[EntryDate] AS [EntryDate], 
+    [MaritalStatusSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [MaritalStatusSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[MaritalStatusSetup] AS [MaritalStatusSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orgBranch" EntityType="Self.orgBranch" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orgBranch].[CompanyID] AS [CompanyID], 
+    [orgBranch].[ParentEntityID] AS [ParentEntityID], 
+    [orgBranch].[EntityID] AS [EntityID], 
+    [orgBranch].[AddressTag] AS [AddressTag], 
+    [orgBranch].[AddressID] AS [AddressID], 
+    [orgBranch].[EntityName] AS [EntityName], 
+    [orgBranch].[ShortName] AS [ShortName], 
+    [orgBranch].[DisplayName] AS [DisplayName], 
+    [orgBranch].[GroupEmailAddress] AS [GroupEmailAddress], 
+    [orgBranch].[HeadID] AS [HeadID], 
+    [orgBranch].[EntityCategoryID] AS [EntityCategoryID], 
+    [orgBranch].[EntityOpeningDate] AS [EntityOpeningDate], 
+    [orgBranch].[DataUsed] AS [DataUsed], 
+    [orgBranch].[EntryUserID] AS [EntryUserID], 
+    [orgBranch].[EntryDate] AS [EntryDate], 
+    [orgBranch].[LastUpdateDate] AS [LastUpdateDate], 
+    [orgBranch].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[orgBranch] AS [orgBranch]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orgDepartment" EntityType="Self.orgDepartment" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orgDepartment].[CompanyID] AS [CompanyID], 
+    [orgDepartment].[ParentEntityID] AS [ParentEntityID], 
+    [orgDepartment].[EntityID] AS [EntityID], 
+    [orgDepartment].[AddressTag] AS [AddressTag], 
+    [orgDepartment].[AddressID] AS [AddressID], 
+    [orgDepartment].[EntityName] AS [EntityName], 
+    [orgDepartment].[ShortName] AS [ShortName], 
+    [orgDepartment].[DisplayName] AS [DisplayName], 
+    [orgDepartment].[GroupEmailAddress] AS [GroupEmailAddress], 
+    [orgDepartment].[HeadID] AS [HeadID], 
+    [orgDepartment].[EntityCategoryID] AS [EntityCategoryID], 
+    [orgDepartment].[EntityOpeningDate] AS [EntityOpeningDate], 
+    [orgDepartment].[DataUsed] AS [DataUsed], 
+    [orgDepartment].[EntryUserID] AS [EntryUserID], 
+    [orgDepartment].[EntryDate] AS [EntryDate], 
+    [orgDepartment].[LastUpdateDate] AS [LastUpdateDate], 
+    [orgDepartment].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[orgDepartment] AS [orgDepartment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orgSection" EntityType="Self.orgSection" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orgSection].[CompanyID] AS [CompanyID], 
+    [orgSection].[ParentEntityID] AS [ParentEntityID], 
+    [orgSection].[EntityID] AS [EntityID], 
+    [orgSection].[AddressTag] AS [AddressTag], 
+    [orgSection].[AddressID] AS [AddressID], 
+    [orgSection].[EntityName] AS [EntityName], 
+    [orgSection].[ShortName] AS [ShortName], 
+    [orgSection].[DisplayName] AS [DisplayName], 
+    [orgSection].[GroupEmailAddress] AS [GroupEmailAddress], 
+    [orgSection].[HeadID] AS [HeadID], 
+    [orgSection].[EntityCategoryID] AS [EntityCategoryID], 
+    [orgSection].[EntityOpeningDate] AS [EntityOpeningDate], 
+    [orgSection].[DataUsed] AS [DataUsed], 
+    [orgSection].[EntryUserID] AS [EntryUserID], 
+    [orgSection].[EntryDate] AS [EntryDate], 
+    [orgSection].[LastUpdateDate] AS [LastUpdateDate], 
+    [orgSection].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[orgSection] AS [orgSection]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orgTeam" EntityType="Self.orgTeam" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orgTeam].[CompanyID] AS [CompanyID], 
+    [orgTeam].[ParentEntityID] AS [ParentEntityID], 
+    [orgTeam].[EntityID] AS [EntityID], 
+    [orgTeam].[AddressTag] AS [AddressTag], 
+    [orgTeam].[AddressID] AS [AddressID], 
+    [orgTeam].[EntityName] AS [EntityName], 
+    [orgTeam].[ShortName] AS [ShortName], 
+    [orgTeam].[DisplayName] AS [DisplayName], 
+    [orgTeam].[GroupEmailAddress] AS [GroupEmailAddress], 
+    [orgTeam].[HeadID] AS [HeadID], 
+    [orgTeam].[EntityCategoryID] AS [EntityCategoryID], 
+    [orgTeam].[EntityOpeningDate] AS [EntityOpeningDate], 
+    [orgTeam].[DataUsed] AS [DataUsed], 
+    [orgTeam].[EntryUserID] AS [EntryUserID], 
+    [orgTeam].[EntryDate] AS [EntryDate], 
+    [orgTeam].[LastUpdateDate] AS [LastUpdateDate], 
+    [orgTeam].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[orgTeam] AS [orgTeam]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OwnershipSetup" EntityType="Self.OwnershipSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OwnershipSetup].[FieldOfID] AS [FieldOfID], 
+    [OwnershipSetup].[FieldOfName] AS [FieldOfName], 
+    [OwnershipSetup].[DataUsed] AS [DataUsed], 
+    [OwnershipSetup].[EntryUserID] AS [EntryUserID], 
+    [OwnershipSetup].[EntryDate] AS [EntryDate], 
+    [OwnershipSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [OwnershipSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[OwnershipSetup] AS [OwnershipSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PaymentType" EntityType="Self.PaymentType" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PaymentType].[FieldOfID] AS [FieldOfID], 
+    [PaymentType].[FieldOfName] AS [FieldOfName], 
+    [PaymentType].[DataUsed] AS [DataUsed], 
+    [PaymentType].[EntryUserID] AS [EntryUserID], 
+    [PaymentType].[EntryDate] AS [EntryDate], 
+    [PaymentType].[LastUpdateDate] AS [LastUpdateDate], 
+    [PaymentType].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[PaymentType] AS [PaymentType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ReligionSetup" EntityType="Self.ReligionSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ReligionSetup].[FieldOfID] AS [FieldOfID], 
+    [ReligionSetup].[FieldOfName] AS [FieldOfName], 
+    [ReligionSetup].[DataUsed] AS [DataUsed], 
+    [ReligionSetup].[EntryUserID] AS [EntryUserID], 
+    [ReligionSetup].[EntryDate] AS [EntryDate], 
+    [ReligionSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [ReligionSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[ReligionSetup] AS [ReligionSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RoleTypeSetup" EntityType="Self.RoleTypeSetup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RoleTypeSetup].[CompanyID] AS [CompanyID], 
+    [RoleTypeSetup].[FieldOfID] AS [FieldOfID], 
+    [RoleTypeSetup].[FieldOfName] AS [FieldOfName], 
+    [RoleTypeSetup].[FieldDescription] AS [FieldDescription], 
+    [RoleTypeSetup].[DataUsed] AS [DataUsed], 
+    [RoleTypeSetup].[EntryUserID] AS [EntryUserID], 
+    [RoleTypeSetup].[EntryDate] AS [EntryDate], 
+    [RoleTypeSetup].[LastUpdateDate] AS [LastUpdateDate], 
+    [RoleTypeSetup].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[RoleTypeSetup] AS [RoleTypeSetup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServiceCategoryType" EntityType="Self.ServiceCategoryType" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ServiceCategoryType].[CompanyID] AS [CompanyID], 
+    [ServiceCategoryType].[FieldOfID] AS [FieldOfID], 
+    [ServiceCategoryType].[FieldOfName] AS [FieldOfName], 
+    [ServiceCategoryType].[FieldDescription] AS [FieldDescription], 
+    [ServiceCategoryType].[DataUsed] AS [DataUsed], 
+    [ServiceCategoryType].[EntryUserID] AS [EntryUserID], 
+    [ServiceCategoryType].[EntryDate] AS [EntryDate], 
+    [ServiceCategoryType].[LastUpdateDate] AS [LastUpdateDate], 
+    [ServiceCategoryType].[LastUpdateUserID] AS [LastUpdateUserID]
+    FROM [dbo].[ServiceCategoryType] AS [ServiceCategoryType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SiteContentRecord" EntityType="Self.SiteContentRecord" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SiteContentRecord].[ContentID] AS [ContentID], 
+    [SiteContentRecord].[ApplicationTitle] AS [ApplicationTitle], 
+    [SiteContentRecord].[ContentTypeDescription] AS [ContentTypeDescription], 
+    [SiteContentRecord].[ContentCategoryTitle] AS [ContentCategoryTitle], 
+    [SiteContentRecord].[ContentTitle] AS [ContentTitle], 
+    [SiteContentRecord].[EntryUserID] AS [EntryUserID], 
+    [SiteContentRecord].[ApplicationID] AS [ApplicationID]
+    FROM [dbo].[SiteContentRecord] AS [SiteContentRecord]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

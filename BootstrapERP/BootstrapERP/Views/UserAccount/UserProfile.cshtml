@@ -1,0 +1,77 @@
+﻿@model BootstrapERP.Models.UserProfile
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            @using (Html.BeginForm("UserProfile", "UserAccount", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Title</label>
+                        @Html.DropDownList("UserTitleID", null, new { type = "text", @class = "form-control", @disabled = "disabled" })
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Full Name</label><br />
+                        @Html.TextBoxFor(model => model.FullName, new { style = "width:100%;", @class = "form-control", @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Display Name</label><br />
+                        @Html.TextBoxFor(model => model.DisplayName, new { style = "width:100%;", @class = "form-control", @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.DisplayName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Mobile Number</label><br />
+                        @Html.TextBoxFor(model => model.MobilePIN, new { style = "width:100%;", @class = "form-control", @disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.MobilePIN, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Date of Birth</label><br />
+                        @Html.TextBoxFor(model => model.BirthDate, new { @type = "date", @class = "form-control datepicker", @disabled = "disabled", @Value = Convert.ToDateTime(Model.BirthDate).ToString("yyyy-MM-dd"), data_date_format = "yyyy-MM-dd" })
+                        @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                        
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+                @*<br />*@
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        @Html.ActionLink("Back to User List", "Index", "UserAccount")
+                        @*<button class="btn btn-success" type="submit" name="profileUpdate">Update</button>*@
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    <div class="row" style="min-height:143px"></div>
+
+</div>
+
+

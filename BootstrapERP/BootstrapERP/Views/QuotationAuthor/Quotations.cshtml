@@ -1,0 +1,68 @@
+﻿@model BootstrapERP.Models.QuoteAuthor
+@using System.Data;
+@{
+    ViewBag.Title = "Quotations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-12" >
+            <div >
+                <ol class="breadcrumbLine" style="float:left;display:inline-block">
+                    <li><h4>@ViewBag.authorName</h4></li>
+                    <li class="active">Quotes</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-9" style="display:inline-block">
+
+            @foreach (DataRow rowNo in Model.DtQuotation.Rows)
+            {
+                var @QuoteID = rowNo["QuoteID"].ToString();
+                var @QuoteDescription = rowNo["QuoteDescription"].ToString() == null ? "" : rowNo["QuoteDescription"].ToString();
+                var @QuoteRemarks = rowNo["QuoteRemarks"].ToString() == null ? "" : rowNo["QuoteRemarks"].ToString();
+                var @AuthorFullName = rowNo["AuthorFullName"].ToString() == null ? "" : rowNo["AuthorFullName"].ToString();
+
+                var @QuoteAuthorID = rowNo["QuoteAuthorID"].ToString() == null ? "" : rowNo["QuoteAuthorID"].ToString();
+
+                <div class="row">
+                    @if (Convert.ToInt32(@QuoteID) != 0)
+                    {
+                        <div class="col-md-12">
+                            <h4>
+                                @Html.Raw("'"+@QuoteDescription+"'")
+                            </h4>
+                            <p style="padding-left:15px;padding-right:15px">@Html.Raw(@QuoteRemarks)</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            }
+
+        </div>
+        <div class="col-md-3" style="display:inline-block">
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+            </div>
+            <div>
+                <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+

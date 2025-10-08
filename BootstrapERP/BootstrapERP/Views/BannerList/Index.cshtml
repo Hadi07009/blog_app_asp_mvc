@@ -1,0 +1,126 @@
+﻿@model BootstrapERP.Models.SiteBanner
+
+@using System.Data;
+
+@{
+    ViewBag.Title = "Banner List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:450px">
+
+            @using (Html.BeginForm("Index", "BannerList"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-10 col-md-10">
+                                <p>For build your web site with Bootstrap!, Please add content and build your site.........,For build your web site with Bootstrap!, Please add content and build your</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2" style="text-align:right">
+                                <a style="text-decoration:none;" class="btn btn-primary btn-anim" href="@Url.Action("Index", "Banner")">
+                                    <i class="fa fa-pencil"></i><span class="btn-text">New Banner</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9" style="display:inline-block">
+
+                        @foreach (DataRow rowNo in Model.DtBanner.Rows)
+                        {
+                            var @bannerID = rowNo["BannerID"].ToString();
+                            var @bannerImageURL = rowNo["BannerImageURL"].ToString() == "" ? "~/ImagesUploaded/750x500.png" : rowNo["BannerImageURL"].ToString();
+                            var @bannerTitle = rowNo["BannerTitle"].ToString() == null ? "" : rowNo["BannerTitle"].ToString();
+                            var @bannerRemarks = rowNo["BannerRemarks"].ToString() == null ? "" : rowNo["BannerRemarks"].ToString();
+                            var @entryDate = Convert.ToDateTime(rowNo["EntryDate"].ToString());
+                            string @hiphenUrl = @bannerTitle.ToString().Replace(" ", "-").Replace(",", "").Replace(":", "");
+                            var @dataUsed = rowNo["DataUsed"].ToString();
+                            <div class="row">
+                            @if (Convert.ToInt32(@bannerID) != 0)
+                            {
+                                <div class="col-md-3">
+                                    <p>
+                                        <img src="@Url.Content(@bannerImageURL)" class="img-responsive" />
+                                    </p>
+
+                                </div>
+                                <div class="col-md-9">
+                                    <h3>
+                                        @*<a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@bannerID),@ctitle =(@hiphenUrl)})">@Html.Raw(@bannerTitle)</a>*@
+                                        <a >@Html.Raw(@bannerTitle)</a>
+                                    </h3>
+                                    <p >
+                                        @Html.Raw(@entryDate.ToString("D"))
+                                    </p>
+                                    @if (@dataUsed == "A")
+                                    {
+                                        <p style="font-size:large;font:bold;color:green">
+                                            @Html.Raw("Active")
+                                        </p>
+                                        <div class="clearfix">
+                                            <a style="text-decoration:none;" class="btn btn-danger" href="@Url.Action("BannerSelect", "BannerList",new { @selectedBannerID =Convert.ToInt32(@bannerID), @selectionType = "I" })">
+                                                <span style="margin-left:0px">Inactive</span>
+                                            </a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <p style="font-size:large;font:bold;color:darkorange">
+                                            @Html.Raw("Inactive")
+                                        </p>
+                                        <div class="clearfix">
+                                            <a style="text-decoration:none;" class="btn btn-success" href="@Url.Action("BannerSelect", "BannerList",new { @selectedBannerID =Convert.ToInt32(@bannerID), @selectionType = "A" })">
+                                                <span style="margin-left:0px" >Active</span>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        }
+
+                    </div>
+                    <div class="col-md-3" style="display:inline-block">
+                        <div>
+                            <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+                        </div>
+                        <div>
+                            <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+                        </div>
+                        <div>
+                            <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+        @*<div class="col-sm-12" style="min-height:400px"></div>*@
+    </div>
+</div>
+
+

@@ -1,0 +1,73 @@
+﻿@model BootstrapERP.Models.UserProfile
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span> <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:550px">
+            @using (Html.BeginForm("Index", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Title</label>
+                        @Html.DropDownList("UserTitle", (SelectList)ViewBag.CategoryId, new { type = "text", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Title)
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Full Name</label><br />
+                        @Html.TextBoxFor(model => model.FullName, new { style = "width:100%;", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Email</label><br />
+                        @Html.TextBoxFor(model => model.Email, new { style = "width:100%;", @class = "form-control", @required = true, pattern = "^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Profile Type</label>
+                        @Html.DropDownList("userType", (SelectList)ViewBag.userTypeId, new { type = "text", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Title)
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="input1" class="labelcss">Display Name</label><br />
+                        @Html.TextBoxFor(model => model.DisplayName, new { style = "width:100%;", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DisplayName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <button type="submit" name="profileSave" class="btn btn-primary btn-anim"><i class="fa fa-pencil"></i><span class="btn-text">Save</span></button>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+
+    
+
+</div>
+
+

@@ -1,0 +1,177 @@
+﻿@model BootstrapERP.Models.SiteContentDetails
+@using System.Data;
+@{
+    ViewBag.Title = "Search Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-12">
+
+            @using (Html.BeginForm("Index", "SearchArticle"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="container">
+                        <div class="row well">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Category</label>
+                                @Html.DropDownList("ContentCategory", null, new { type = "text", @class = "form-control" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Related To</label>
+                                @Html.DropDownList("ContentRelatedTo", null, htmlAttributes: new { type = "text", @class = "form-control" })
+
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Title</label>
+                                @Html.TextBoxFor(model => model.ContentTitle, new { style = "width:100%;", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ContentTitle, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input2" class="labelcss">Author Name</label>
+                                @Html.TextBoxFor(model => model.AuthorsName, new { style = "width:100%;", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.AuthorsName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">From Date</label><br />
+                                @Html.TextBoxFor(model => model.FromDate, new { @type = "date", style = "width:100%;", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="input1" class="labelcss">To Date</label><br />
+                                @Html.TextBoxFor(model => model.ToDate, new { @type = "date", @class = "form-control datepicker", data_date_format = "yyyy-MM-dd" })
+                                @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                <button class="btn  btn-info" type="submit" name="actionSearch">Search</button>
+                                <button class="btn btn-danger" type="submit" name="actionClear">Clear</button>
+                                @*<button class="btn btn-success" type="submit" style="width:100%" name="actionSearch">Search</button>*@
+                            </div>
+                            <div class="col-lg-4 col-md-4" style="margin-top:20px">
+                                @*<button class="btn btn-success" type="submit" style="width:100%" name="actionClear">Clear</button>*@
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="min-height:315px">
+        <div class="col-md-9" style="display:inline-block">
+
+            @if (Model.DtBlogPostsTopStories != null)
+            {
+                foreach (DataRow rowNo in Model.DtBlogPostsTopStories.Rows)
+                {
+                    var @ContentID = rowNo["ContentID"].ToString();
+                    var @contentDetailImageURL = rowNo["ContentDetailImageURL"].ToString() == "" ? "~/ImagesUploaded/750x500.png" : rowNo["ContentDetailImageURL"].ToString();
+                    var @contentTitle = rowNo["ContentDetailTitle"].ToString() == null ? "" : rowNo["ContentDetailTitle"].ToString();
+                    var @fullName = rowNo["FullName"].ToString() == null ? "" : rowNo["FullName"].ToString();
+                    var @contentEntryDate = Convert.ToDateTime(rowNo["EntryDate"].ToString());
+                    var @contentIntroductoryText = rowNo["ContentIntroductoryText"].ToString() == null ? "" : rowNo["ContentIntroductoryText"].ToString();
+                    string @hiphenUrl = @contentTitle.ToString().Replace(" ", "-").Replace(",", "").Replace(":", "");
+                    var @ContentCategoryTitle = rowNo["ContentCategoryTitle"].ToString() == null ? "" : rowNo["ContentCategoryTitle"].ToString();
+                    <div class="row">
+                        @if (Convert.ToInt32(@ContentID) != 0)
+                        {
+                            <div class="col-md-3">
+                                <p>
+                                    <img src="@Url.Content(@contentDetailImageURL)" class="img-responsive" />
+                                </p>
+
+                            </div>
+                            <div class="col-md-9">
+                                <h3>
+                                    <a href="@Url.Action("BlogDescription", "SiteContentDisplay",new { @contentDetailID =Convert.ToInt32(@ContentID),@ctitle =(@hiphenUrl)})">@Html.Raw(@contentTitle)</a>
+
+                                </h3>
+                                <p>
+                                    @Html.Raw(@fullName) | @Html.Raw(@contentEntryDate.ToString("D")) | @Html.Raw(@ContentCategoryTitle)
+                                </p>
+                                <p>@Html.Raw(@contentIntroductoryText)</p>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <hr>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                }
+            }
+
+        </div>
+        <div class="col-md-3" style="display:inline-block">
+            @if (Model.DtBlogPostsTopStories != null)
+            {
+                <div>
+                    <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/javascript.jpg">
+                </div>
+                <div>
+                    <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/webapi.png">
+                </div>
+                <div>
+                    <img style="height: 200px; width: 100%;" class="img-responsive img-home-portfolio" src="~/Images/jquery.png">
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.0.min.js"
+        integrity="sha256-2+LznWeWgL7AJ1ciaIG5rFP7GKemzzl+K75tRyTByOE="
+        crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ContentCategory").change(function () {
+            $("#ContentRelatedTo").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetContentRelatedTo", "BlogContentApproval")',
+                dataType: 'json',
+                data: { id: $("#ContentCategory").val() },
+                success: function (queryContentRelatedTo) {
+                    $.each(queryContentRelatedTo, function (i, state) {
+                        $("#ContentRelatedTo").append('<option value="' + state.Value + '">' +
+                            state.Text + '</option>');
+                    });
+                },
+
+            });
+            return false;
+        })
+    });
+
+
+</script>
+
+

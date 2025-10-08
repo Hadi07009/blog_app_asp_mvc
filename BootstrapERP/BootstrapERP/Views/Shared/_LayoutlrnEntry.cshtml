@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Time Study Online ERP - @ViewBag.Title</title>
+
+
+    <link href="@Url.Content("~/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/css/modern-business.css")" rel="stylesheet">
+    <link href="@Url.Content("~/css/StyleSheetCSS.css")" rel="stylesheet">
+
+</head>
+<body>
+    @*<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">*@
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div display:inline-block; class="navbar-header pull-left">
+                    <a style="width:60px" class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="~/Images/logo_120_100.png" alt="Site Logo" style="height:25px; width: 40px" />
+                    </a>
+                </div>
+                @Html.ActionLink("AllTimeStudy", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="about">
+                        @Html.ActionLink("About", "Index", "About")
+                    </li>
+                    <li id="services">
+                        @Html.ActionLink("Services", "Index", "Services")
+                    </li>
+                    <li id="contact">
+                        @Html.ActionLink("Contact", "Index", "Contact")
+                    </li>
+                    <li id="portfolio" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="1columnportfolio">
+                                @Html.ActionLink("1 Column Portfolio", "OneColumn", "Portfolio")
+                            </li>
+                            <li id="2columnportfolio">
+                                @Html.ActionLink("2 Column Portfolio", "TwoColumn", "Portfolio")
+                            </li>
+                            <li id="3columnportfolio">
+                                @Html.ActionLink("3 Column Portfolio", "ThreeColumn", "Portfolio")
+                            </li>
+                            <li id="4columnportfolio">
+                                @Html.ActionLink("4 Column Portfolio", "FourColumn", "Portfolio")
+                            </li>
+                            <li id="singleportfolioitem">
+                                @Html.ActionLink("Single Portfolio Item", "SingleItem", "Portfolio")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="blog" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="bloghome1">
+                                @Html.ActionLink("Blog Home 1", "Home1", "Blog")
+                            </li>
+                            <li id="bloghome2">
+                                @Html.ActionLink("Blog Home 2", "Home2", "Blog")
+                            </li>
+                            <li id="blogpost">
+                                @Html.ActionLink("Blog Post", "Post", "Blog")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="other" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="fullwidthpage">
+                                @Html.ActionLink("Full Width Page", "FullWidth", "Other")
+                            </li>
+                            <li id="sidebarpage">
+                                @Html.ActionLink("Sidebar Page", "Sidebar", "Other")
+                            </li>
+                            <li id="faq">
+                                @Html.ActionLink("FAQ", "Faq", "Other")
+                            </li>
+                            <li id="404">
+                                @Html.ActionLink("404", "FourOhFour", "Other")
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <div class="container">
+        <hr>
+        <div class="row" style="float:right">
+            <div class="col-lg-12">
+                <span style="display:inline" class="x-weight-semibold">Follow Office</span>
+                <ul style="list-style-type:none;display:inline;padding-left:5px">
+                    <li style="display:inline;padding-left:10px">
+                        <a itemprop="sameAs" target="_blank" href="https://go.microsoft.com/fwlink/p/?linkid=2002403" aria-label="Follow Office on Linkedin">
+                            <picture>
+                                <img style="padding-bottom:10px" src="~/Images/LinkedIn.png" alt="LinkedIn Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li style="display:inline;padding-left:10px">
+                        <a itemprop="sameAs" target="_blank" href="https://go.microsoft.com/fwlink/p/?LinkID=506743" aria-label="Follow Office on Facebook">
+                            <picture>
+                                <img style="padding-bottom:10px" src="~/Images/Facebook.png" alt="Facebook Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li style="display:inline;padding-left:10px">
+                        <a itemprop="sameAs" target="_blank" href="https://go.microsoft.com/fwlink/p/?LinkId=506744" aria-label="Follow Office on Twitter">
+                            <picture>
+                                <img style="padding-bottom:10px" src="~/Images/Twitter.png" alt="Twitter Logo">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="footerBottom">
+                        <div id="footerbottom1" style="display:inline-block;min-width:250px; max-width:725px;text-align:justify;vertical-align:top;padding-right:30px">
+                            <h5>About Us</h5>
+                            <a style="text-decoration:none;text-align:justify">All Time Study.</a><br />
+
+                        </div>
+                        <div id="footerbottom3" style="display:inline-block;min-width:200px;text-align:left;vertical-align:top">
+                            <h5>Developer</h5>
+                            <a href="@Url.Action("Index", "HomePageLogo")">Microsoft Visual Studio</a><br />
+                            <a href="@Url.Action("Index", "HomePageLogo")">Windows Dev Center</a><br />
+                            <a href="@Url.Action("Index", "HomePageLogo")">Developer Network</a>
+                        </div>
+                        <div id="footerbottom4" style="display:inline-block;min-width:200px;text-align:left;vertical-align:top">
+                            <h5>Company</h5>
+                            <a href="@Url.Action("Index", "HomePageLogo")">Careers</a><br />
+                            <a href="@Url.Action("Index", "HomePageLogo")">About Microsoft</a><br />
+                            <a href="@Url.Action("Index", "HomePageLogo")">Buy online, pick up in</a><br />
+                            <a href="@Url.Action("Index", "HomePageLogo")">Buy online, pick up in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="row" style="padding-top:15px">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Company 2013</p>
+                    </div>
+                </div>*@
+        </footer>
+
+    </div>
+    <div class="section" style=" border-top: 4px solid #e6e6e6;">
+        <div class="container">
+            <div class="row" style="padding-top:15px">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="@Url.Content("~/js/bootstrap.js")"></script>
+    <script src="@Url.Content("~/js/modern-business.js")"></script>
+    <script src="~/Scripts/JQuery/jquery.js"></script>
+    @*<script src="~/Scripts/MvcGrid/mvc-grid.js"></script>*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundle/Scripts/js")
+    @RenderSection("scripts", required: false)
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    
+</script>
+
+

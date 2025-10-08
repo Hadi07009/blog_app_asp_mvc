@@ -1,0 +1,41 @@
+﻿.module-anchor-statement__header-one {
+    height: calc(65vh - 57px);
+    max-height: 500px;
+    min-height: 400px;
+}
+
+.module-anchor-statement {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.module-anchor-statement .blue {
+    color: #4285f4;
+}
+.module-anchor-statement .red {
+    color: #ea4335;
+}
+.module-anchor-statement .green {
+    color: #34a853;
+}
+.module-anchor-statement .yellow {
+    color: #f9ab00;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}

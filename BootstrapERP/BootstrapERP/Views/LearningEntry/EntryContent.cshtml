@@ -1,0 +1,55 @@
+﻿@*@model IEnumerable<MVCTestSample.Controllers.tblStartLearning>*@
+@model IEnumerable<BootstrapERP.Models.tblStartLearning>
+
+@{
+    ViewBag.Title = "EntryContent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>EntryContent</h2>*@
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+        $(function () {
+            $(".note").click(function () {
+                var currentNode = $(this); //get current node.
+                var value = currentNode.attr("data-id");  //get current node id
+                $.ajax({
+                    url: '@Url.Action("FilterNode", "JQCountDown")', //
+                    dataType: "json",
+                    data: JSON.stringify({ parentid: value }),
+                    type: "Post",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (result) {
+                        if (result.success = "true") {
+                            if (result.length > 0) {
+                                var newnode = "<ul>"  //popute child node
+                                $.each(result, function (index, item) {
+
+                                    newnode += "<li class='note' data-id =" + item.NodeTypeID + " >" + item.ActivityName + " </li>"
+                                })
+                                newnode += "</ul>";
+
+                                $(newnode).appendTo(currentNode);
+                            }
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("error");
+                    }
+                });
+            });
+        });
+</script>
+
+<ul>
+    @*@foreach (var item in Model)
+    {
+    <li>
+        <a class="note" style="text-decoration:none;" href="@Url.Action("NodeDetails", "StartLearning", new { @id = (item.NodeTypeID),@parentID=(item.PNodeTypeID)})">@item.ActivityName.ToString()</a>
+        
+    </li>
+
+        
+    }*@
+</ul>

@@ -1,0 +1,125 @@
+﻿@model BootstrapERP.Models.UserProfile
+@using System.Data;
+@{
+    ViewBag.Title = "All User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:550px">
+            @using (Html.BeginForm("Index", "UserAccount", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                if (Model.DtUser.Rows.Count > 0)
+                {
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by email" title="Type in an email" , style="width:100%;" class="form-control">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div style="overflow-x: auto;overflow-y: auto;">
+                            <table id="customers">
+                                <tr>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Name</label>
+                                    </th>
+                                    <th nowrap="nowrap">
+                                        <label for="input1">Email</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1">Active Date & Time</label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1"></label>
+                                    </th>
+                                    <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                        <label for="input1"></label>
+                                    </th>
+                                </tr>
+                                @foreach (DataRow rowNo in Model.DtUser.Rows)
+                                {
+                                    var @UserProfileID = rowNo["UserProfileID"].ToString();
+                                    var @UserIdentifier = rowNo["UserIdentifier"].ToString() == null ? "" : rowNo["UserIdentifier"].ToString();
+                                    var @EntryDate = rowNo["EntryDate"].ToString() == null ? "" : rowNo["EntryDate"].ToString();
+                                    var @Email = rowNo["Email"].ToString() == null ? "" : rowNo["Email"].ToString();
+                                    var tempEmail = @UserIdentifier.Split(':');
+                                    <tr>
+                                        <td nowrap="nowrap">
+                                            <p>
+                                                <a style="text-decoration:none" href="@Url.Action("UserProfile", "UserAccount",new { @userProfile =@UserProfileID })">@Html.DisplayFor(modelItem => tempEmail[0])</a>
+                                            </p>
+                                        </td>
+                                        <td nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => tempEmail[1]).ToString()
+                                        </td>
+                                        <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                            @Html.DisplayFor(modelItem => @EntryDate)
+                                        </td>
+                                        <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                            <p>
+                                                <a style="text-decoration:none" href="@Url.Action("Index", "UserRolePreview",new { @userEmail =@Email })">@Html.Raw("Permission")</a>
+                                            </p>
+                                        </td>
+                                        <td style="vertical-align:middle;text-align:center" nowrap="nowrap">
+                                            <p>
+                                                <a style="text-decoration:none" href="@Url.Action("UserSuspend", "UserAccount",new { @userProfile =@UserProfileID })">@Html.Raw("Suspend")</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>  
+                        
+                    </div>
+                    <div class="clearfix"></div>
+                }
+
+            }
+        </div>
+
+    </div><!-- /.row -->
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("customers");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,219 @@
+﻿@model BootstrapERP.Models.AddNode
+@using System.Data;
+@{
+    ViewBag.Title = "Update Role";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block">@ViewBag.Title <small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li>@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12">
+            @using (Html.BeginForm("Nodes", "UserPermission"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <input type="hidden" name="selectedItems" id="selectedItems" />
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Node List</div>
+
+                            <div class="panel-body">
+                                @Html.Hidden("checkedNodes")
+                                @Html.Hidden("uncheckedNodes")
+                                <div id="tree" class="checkboxes" style="min-height:270px"></div>
+
+                                <div class="clearfix">
+                                </div>
+
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <label for="input2" class="labelcss">Role Type</label>
+                        @Html.DropDownList("BlogRoleType", null, new { type = "text", @class = "form-control" })
+                    </div>
+
+                    <div class="col-lg-1 col-md-1">
+                    </div>
+                    <div class="col-lg-5 col-md-5" style="padding-top:5px">
+                        <label for="input2" class="labelcss">Role Title</label>
+                        @Html.TextBoxFor(modelitem => Model.NodeName, new { style = "width:100%;", @class = "form-control", id = "roleTitle" })
+                        @Html.ValidationMessageFor(modelitem => Model.NodeName, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(modelitem => Model.RoleID, new { style = "width:100%;", @class = "form-control", id = "roleID" })
+                    </div>
+                    <br />
+                    <div class="col-lg-5 col-md-5" style="float:right;margin-top:5px;margin-bottom:5px">
+                        <button id="updateRole" class="btn btn-success btn-anim"><i class="fa fa-pencil-square-o"></i><span class="btn-text">Update</span> </button>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;@Html.ActionLink("Cancel", "Index", "UserPermission")
+                        <br />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            }
+        </div>
+
+    </div>
+    <div style="min-height:360px"></div>
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Gijgo/gijgo.js"></script>
+    <script src="~/Scripts/conditional-validation.js"></script>
+    <link href="~/http://code.gijgo.com/1.3.0/css/gijgo.css" rel="stylesheet" type="text/css" />
+   
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var Usertree = "";
+            var tree = "";
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                cache: false,
+                url: '@Url.Action("GetExistingNodes", "UserPermission")',
+                success: function (records, textStatus, jqXHR) {
+                    tree = $('#tree').tree({
+                        primaryKey: 'Id',
+                        checkboxes: true,
+                        checkedField: 'nodeCheckValue',
+                        dataSource: records,
+                        dragAndDrop: true,
+
+                        //iconsLibrary: 'glyphicons',
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+                        'data': [
+                            'Activity',
+                            {
+                                'text': 'Activity',
+                                'state': { 'checked': true, 'opened': false }
+                            }
+                        ]
+                    });
+
+                    Usertree = $('#Usertree').tree({
+                        primaryKey: 'Id',
+                        checkedField: 'nodeCheckValue',
+                        dataSource: records,
+                        dragAndDrop: false,
+                        checkboxes: true,
+                        //iconsLibrary: 'glyphicons',
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+                        'data': [
+                            'Activity',
+                            {
+                                'text': 'Activity',
+                                'state': {
+                                    'opened': true,
+                                    'selected': true
+                                }
+                            }
+                        ],
+
+                    });
+
+                    //var tree = $('#tree').tree({
+                    //    dataSource: '/UserPermission/GetHierarchy',
+                    //    checkboxes: true
+                    //});
+
+                    //$("#tree input:checkbox").prop("checked", true);
+
+
+                    //if (records[0].Id == 11001) {
+                    //    $(':checkbox').prop("checked", true);
+
+                    //}
+
+
+                    //Create Role node
+                    $('#updateRole').click(function (e) {
+                        e.preventDefault();
+                        var blogRoleType = $('#BlogRoleType').val();
+                        var roleTitleTemp = $('#roleTitle').val();
+                        var roleIDTemp = $('#roleID').val();
+
+                        var result = tree.getCheckedNodes();
+                        if (result != "") {
+                            blogRoleType = blogRoleType + "," + roleTitleTemp + "," + roleIDTemp + "," + result;
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("Nodes", "UserPermission")',
+                                data: { values: blogRoleType.toString() },
+                                dataType: "json",
+                                success: function (data) {
+                                    alert("Role Updated successfully ");
+                                    window.location.reload();
+                                },
+                            });
+                        }
+                        else {
+                            alert("Please select Node from List");
+                        }
+                    });
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error - ' + errorThrown);
+                }
+            });
+        });
+
+    </script>
+    <style>
+        .checkboxes {
+            float: none;
+            display: block;
+            line-height: 23px;
+            font-family: Helvetica;
+            color: black;
+            font-weight: 300;
+        }
+        .checkboxes input {
+                margin: 0px 0px 0px 0px;
+            }
+        .checkboxes label {
+                margin: 7px 5px 0px 0px;
+            }
+        
+    </style>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

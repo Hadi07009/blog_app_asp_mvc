@@ -1,0 +1,91 @@
+﻿@model BootstrapERP.Models.QuoteAuthor
+@using System.Data;
+
+@{
+    ViewBag.Title = "Quotation Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12" style="min-height:450px">
+
+            @using (Html.BeginForm("Index", "QuotationRecord"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="container">
+                    <div class="row well">
+                        <div class="col-lg-10 col-md-10">
+                            <p>For build your web site with Bootstrap!, Please add content and build your site.........,For build your web site with Bootstrap!, Please add content and build your</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2" style="text-align:right">
+                            <a style="text-decoration:none;" class="btn btn-primary btn-anim" href="@Url.Action("Index", "QuotationEntry")">
+                                <i class="fa fa-pencil"></i><span class="btn-text">New Quotation</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                @if (Model.DtQuotation.Rows.Count > 0)
+                {
+                    <div style="overflow-x: auto;overflow-y: auto;padding-top:5px;padding-left:10px;">
+                        <label for="input2" class="labelcss">A list of quotation</label>
+                    </div>
+                    <div style="overflow-x: auto;overflow-y: auto;height:425px">
+                        <table id="customers">
+                            <tr>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Author</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Quotation</label>
+                                </th>
+                            </tr>
+                            @foreach (DataRow rowNo in Model.DtQuotation.Rows)
+                            {
+                                var @QuoteID = rowNo["QuoteID"].ToString();
+                                var @QuoteDescription = rowNo["QuoteDescription"].ToString() == null ? "" : rowNo["QuoteDescription"].ToString();
+                                var @AuthorFullName = rowNo["AuthorFullName"].ToString() == null ? "" : rowNo["AuthorFullName"].ToString();
+                                var @QuoteAuthorID = rowNo["QuoteAuthorID"].ToString() == null ? "" : rowNo["QuoteAuthorID"].ToString();
+                                var @QuoteTypeID = rowNo["QuoteTypeID"].ToString() == null ? "" : rowNo["QuoteTypeID"].ToString();
+                                var @QuoteRemarks = rowNo["QuoteRemarks"].ToString() == null ? "" : rowNo["QuoteRemarks"].ToString();
+                                <tr>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @AuthorFullName)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        <p>
+                                            <a style="text-decoration:none" href="@Url.Action("Edit", "QuotationEntry",new { @quotationIndex =@QuoteID
+                                                    ,@quoteAuthorIndex = @QuoteAuthorID, @quoteTypeIndex = @QuoteTypeID
+                                                , @quotations = @QuoteDescription
+                                                ,remarks = @QuoteRemarks})">@Html.DisplayFor(modelItem => @QuoteDescription)</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                }
+
+                        </table>
+                    </div>
+                }
+
+            </div>
+            }
+        </div>
+        <div class="col-sm-12" style="min-height:100px"></div>
+    </div>
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />

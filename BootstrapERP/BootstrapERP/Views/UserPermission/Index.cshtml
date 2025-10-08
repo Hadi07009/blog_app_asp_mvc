@@ -1,0 +1,370 @@
+﻿@model BootstrapERP.Models.AddNode
+@using System.Data;
+@{
+    ViewBag.Title = "Create Role";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title </span><small> </small></h4>
+                <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                    <li class="hapText">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12">
+            @using (Html.BeginForm("Index", "UserPermission"))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        @*<div class="modal fade in" id="modalAddNode" role="dialog" aria-hidden="true">
+                              @Html.Partial("_AddNode");
+                            </div>*@
+                        <input type="hidden" name="selectedItems" id="selectedItems" />
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Node List</div>
+
+                            <div class="panel-body">
+                                <div id="tree" class="checkboxes" style="min-height:270px"></div>
+
+                                <div class="clearfix">
+                                </div>
+
+                                <br />
+                                @*<div>
+                                        <button id="btnDeleteNode" data-toggle="modal" class='btn btn-danger'> Delete Node <span class="glyphicon glyphicon-trash"></span> </button>
+                                        <button id="btnpopoverAddNode" data-toggle="modal" class='btn btn-warning'> Add Node <span class="glyphicon glyphicon-plus"></span>  </button>
+                                    </div>*@
+                            </div>
+                        </div>
+
+
+                        @*<div class="col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">Team owner -: [ Select team and players who will play ]</div>
+                                    <div class="panel-body">
+                                        <div id="Usertree"></div>
+                                        <div class="clearfix">
+                                        </div>
+
+                                        <br />
+                                        <div>
+                                            <button id="btnGetValue" class="btn btn-warning">Get Checked Value</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+
+
+
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <label for="input2" class="labelcss">Role Type</label>
+                        @Html.DropDownList("BlogRoleType", null, new { type = "text", @class = "form-control" })
+                    </div>
+
+                    <div class="col-lg-1 col-md-1">
+                    </div>
+                    <div class="col-lg-5 col-md-5" style="padding-top:5px">
+                        <label for="input2" class="labelcss">Role Title</label>
+
+                        @Html.TextBoxFor(modelitem => Model.NodeName, new { style = "width:100%;", @class = "form-control", id = "roleTitle", @required = true })
+                        @Html.ValidationMessageFor(modelitem => Model.NodeName, "", new { @class = "text-danger" })
+
+                    </div>
+                    <br />
+                    <div class="col-lg-5 col-md-5" style="float:right;margin-top:5px;margin-bottom:5px">
+                        <button id="saveRole" class="btn btn-primary btn-anim"><i class="fa fa-pencil"></i><span class="btn-text">Save</span></button>
+                        @*<button class="btn btn-success" type="submit" name="contentSave" onclick="unhook()">Save</button>*@
+                        <br />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div style="overflow-x: auto;overflow-y: auto;">
+                        <table id="customers">
+                            <tr>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Role Type</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Role Title</label>
+                                </th>
+                                <th nowrap="nowrap">
+                                    <label for="input1">Activity</label>
+                                </th>
+                                <th nowrap="nowrap" style="vertical-align:middle;text-align:center">
+                                    <label for="input1">Action</label>
+                                </th>
+
+                            </tr>
+                            @foreach (DataRow rowNo in Model.DtRoleDetails.Rows)
+                            {
+                                var @RoleID = rowNo["RoleID"].ToString();
+                                var @RoleTypeTitle = rowNo["RoleTypeTitle"].ToString() == null ? "" : rowNo["RoleTypeTitle"].ToString();
+                                var @RoleName = rowNo["RoleName"].ToString() == null ? "" : rowNo["RoleName"].ToString();
+                                var @ActivityName = rowNo["ActivityList"].ToString() == null ? "" : rowNo["ActivityList"].ToString();
+                                var @RoleTypeID = rowNo["RoleTypeID"].ToString();
+
+                                <tr>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @RoleTypeTitle)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @RoleName)
+                                    </td>
+                                    <td nowrap="nowrap">
+                                        @Html.DisplayFor(modelItem => @ActivityName)
+                                    </td>
+                                    <td nowrap="nowrap" style="text-align:center">
+                                        @Html.ActionLink("Edit", "Nodes", new { id = @RoleID, roleTypeID = @RoleTypeID, roleName = @RoleName }, new { style = "text-decoration:none" })
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+    <div style="min-height:360px"></div>
+</div>
+
+<link href="~/css/StyleSheetForTable.css" rel="stylesheet" />
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Gijgo/gijgo.js"></script>
+    <script src="~/Scripts/conditional-validation.js"></script>
+    <link href="~/http://code.gijgo.com/1.3.0/css/gijgo.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var Usertree = "";
+            var tree = "";
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                cache: false,
+                url: '@Url.Action("GetHierarchy", "UserPermission")',
+                success: function (records, textStatus, jqXHR) {
+                    tree = $('#tree').tree({
+                        primaryKey: 'Id',
+                        dataSource: records,
+                        dragAndDrop: true,
+                        checkboxes: true,
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+                    });
+                    Usertree = $('#Usertree').tree({
+                        primaryKey: 'Id',
+                        dataSource: records,
+                        dragAndDrop: false,
+                        checkboxes: true,
+                        icons: {
+                            expand: '<img src="http://27.147.194.136:82/Images/Expand.png" class="material-icons" />',
+                            collapse: '<img class="material-icons" src="http://27.147.194.136:82/Images/Collapse.png" />'
+                        },
+
+                    });
+                    tree.on('nodeDrop', function (e, Id, PerentId) {
+                        currentNode = Id ? tree.getDataById(Id) : {};
+                        console.log("current Node = " + currentNode);
+                        parentNode = PerentId ? tree.getDataById(PerentId) : {};
+                        console.log("parent Node = " + parentNode);
+                        if (currentNode.perentId === 111 && parentNode.perentId === 111) {
+                            alert("Parent node is not droppable..!!");
+                            return false;
+                        }
+                        // console.log(parent.HierarchyLevel);
+                        var params = { id: Id, parentId: PerentId };
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("ChangeNodePosition", "UserPermission")',
+                            data: params,
+                            dataType: "json",
+                            success: function (data) {
+                                $.ajax({
+                                    type: "Get",
+                                    url: '@Url.Action("GetHierarchy", "UserPermission")',
+                                    dataType: "json",
+                                    success: function (records) {
+                                        Usertree.destroy();
+                                        Usertree = $('#Usertree').tree({
+                                            primaryKey: 'Id',
+                                            dataSource: records,
+                                            dragAndDrop: false,
+                                            checkboxes: true,
+                                            iconsLibrary: 'glyphicons',
+                                            //uiLibrary: 'bootstrap'
+                                        });
+                                    }
+                                });
+
+                            }
+                        });
+                    });
+                    $('#btnGetValue').click(function (e) {
+                        var result = Usertree.getCheckedNodes();
+                        if (result == "") { alert("Please Select Node..!!") }
+                        else {
+                            alert("Selected Node id is= " + result.join());
+                        }
+                    });
+                    //delete node
+                    $('#btnDeleteNode').click(function (e) {
+                        e.preventDefault();
+                        var result = tree.getCheckedNodes();
+                        if (result != "") {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("DeleteNode", "UserPermission")',
+                                data: { values: result.toString() },
+                                dataType: "json",
+                                success: function (data) {
+                                    alert("Deleted successfully ");
+                                    window.location.reload();
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) {
+                                    alert('Error - ' + errorThrown);
+                                },
+                            });
+                        }
+                        else {
+                            alert("Please select Node to delete..!!");
+                        }
+                    });
+                    //Create Role node
+                    $('#saveRole').click(function (e) {
+                        e.preventDefault();
+
+                        var blogRoleType = $('#BlogRoleType').val();
+                        var roleTitleTemp = $('#roleTitle').val();
+                        if (roleTitleTemp == "") { alert("Please Type Role Title") }
+
+                        var result = tree.getCheckedNodes();
+                        if (result != "") {
+                            blogRoleType = blogRoleType + "," + roleTitleTemp + "," + result;
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("Index", "UserPermission")',
+                                //data: { values: result.toString() },
+                                data: { values: blogRoleType.toString() },
+                                dataType: "json",
+                                success: function (data) {
+                                    alert("Role Created successfully ");
+                                    window.location.reload();
+                                },
+                            });
+
+                        }
+                        else {
+                            alert("Please select Node..!!");
+                        }
+
+                    });
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error - ' + errorThrown);
+                }
+            });
+            // show model popup to add new node in Tree
+            $('#btnpopoverAddNode').click(function (e) {
+                e.preventDefault();
+                $("#modalAddNode").modal("show");
+            });
+            //Save data from PopUp
+            $(document).on("click", "#savenode", function (event) {
+                event.preventDefault();
+                $.validator.unobtrusive.parse($('#formaddNode'));
+                $('#formaddNode').validate();
+                if ($('#formaddNode').valid()) {
+                    var formdata = $('#formaddNode').serialize();
+                    // alert(formdata);
+                    $.ajax({
+                        type: "POST",
+                        //url: "/UserPermission/AddNewNode",
+                        url: '@Url.Action("AddNewNode", "UserPermission")',
+                        dataType: "json",
+                        data: formdata,
+                        success: function (response) {
+                            // $("#modalAddNode").modal("hide");
+                            window.location.reload();
+                        },
+                        error: function (response) {
+                            alert('Exception found');
+                            //  $("#modalAddNode").modal("hide");
+                            window.location.reload();
+                        },
+                        complete: function () {
+                            //  $('.ajax-loader').css("visibility", "hidden");
+                        }
+                    });
+                }
+
+            });
+            //Close PopUp
+            $(document).on("click", "#closePopup", function (e) {
+                e.preventDefault();
+                $("#modalAddNode").modal("hide");
+            });
+            $('.rbtnnodetype').click(function (e) {
+                if ($(this).val() == "Pn") {
+                    $('.petenddiv').attr("class", "petenddiv hidden");
+
+                    $("#ParentName").val("");
+                }
+                else {
+                    $('.petenddiv').attr("class", "petenddiv");
+                }
+            });
+        });
+
+    </script>
+    <style>
+        .checkboxes {
+            float: none;
+            display: block;
+            line-height: 23px;
+            font-family: Helvetica;
+            color: black;
+            font-weight: 300;
+        }
+
+            .checkboxes input {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .checkboxes label {
+                margin: 7px 5px 0px 0px;
+            }
+    </style>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
