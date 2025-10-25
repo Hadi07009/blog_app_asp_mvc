@@ -842,6 +842,7 @@
     <Content Include="Images\logoFormHeader.jpg" />
     <Content Include="Images\logo_120_100.png" />
     <Content Include="Images\Marketing .png" />
+    <Content Include="Images\MD_PROFILE.jpg" />
     <Content Include="Images\MSStore-Hero-1600x600.jpg" />
     <Content Include="Images\nodejs.jpg" />
     <Content Include="Images\Sales .png" />
@@ -955,6 +956,11 @@
     <Content Include="Images\about_3.webp" />
     <Content Include="Images\about_4.webp" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\hadi07009-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\hadi07009-001-site1 - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\hadi07009-001-site1 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\hadi07009-001-site1 - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\conditional-validation.js" />
