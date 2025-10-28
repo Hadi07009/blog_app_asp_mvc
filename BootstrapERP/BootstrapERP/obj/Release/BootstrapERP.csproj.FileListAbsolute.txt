@@ -617,8 +617,8 @@ D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Se
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Google.xml
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CoreCompileInputs.cache
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache
