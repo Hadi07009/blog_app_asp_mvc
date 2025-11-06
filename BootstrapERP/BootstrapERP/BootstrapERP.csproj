@@ -808,6 +808,7 @@
     <Content Include="ImagesUploaded\brazil-excellent-sky.jpg" />
     <Content Include="ImagesUploaded\cambridge_img.jpg" />
     <Content Include="ImagesUploaded\Gardening.jpg" />
+    <Content Include="Images\AboutAllTimeStudy.svg" />
     <Content Include="Images\ABOUTBLOG.jpeg" />
     <Content Include="Images\about_1.jpg" />
     <Content Include="Images\About_10.png" />
@@ -837,6 +838,7 @@
     <Content Include="Images\facebookShare_1.png" />
     <Content Include="Images\javascript.jpg" />
     <Content Include="Images\jquery.png" />
+    <Content Include="Images\license-banner.svg" />
     <Content Include="Images\LinkedIn.png" />
     <Content Include="Images\linq.jpg" />
     <Content Include="Images\logoFormHeader.jpg" />
@@ -5132,6 +5134,7 @@
     <Content Include="Views\RegistrationConfirmed\Index.cshtml" />
     <Content Include="Views\CompanyProfile\Cedit.cshtml" />
     <Content Include="Views\CompanyProfile\Index.cshtml" />
+    <Content Include="Views\AboutUs\Index - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

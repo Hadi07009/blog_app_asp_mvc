@@ -4,29 +4,73 @@
 <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
         @*<li id="contentEntry">
-                @Html.ActionLink("Content Approval", "Index", "BlogContentApproval")
-            </li>
-            <li id="contentEntry">
-                @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
-            </li>*@
-        <li id="Search" style="margin-top:-3px" class="hapText">
-            <a href="@Url.Action("Index", "SearchArticle")"><img src="~/Images/searchIcon.png" alt=""></a>
+            @Html.ActionLink("Content Approval", "Index", "BlogContentApproval")
         </li>
-        <li id="About" class="hapText">
+        <li id="contentEntry">
+            @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
+        </li>*@
+        <li id="Home" class="hapText">
+            @Html.ActionLink("Home", "Index", "BlogPosts")
+        </li>
+        <li id="Blog" class="hapText">
+            @Html.ActionLink("Blog", "", "")
+        </li>
+        <li id="Learn" class="hapText">
+            @Html.ActionLink("Learn", "", "")
+        </li>
+        <li id="ConnectMenue" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Connect </span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li id="About" class="hapText">
+                    @Html.ActionLink("About", "Index", "AboutUs")
+                </li>
+                <li id="Contact" class="hapText">
+                    @Html.ActionLink("Contact", "Index", "Contact")
+                </li>
+                <li id="Mentorship" class="hapText">
+                    @Html.ActionLink("Mentorship", "Index", "AboutUs")
+                </li>
+            </ul>
+        </li>
+
+        <li id="Store" class="hapText">
+            @Html.ActionLink("Store", "", "")
+        </li>        
+        <li id="JoinUs" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Join Us </span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li id="Newsletter" class="hapText">
+                    @Html.ActionLink("Newsletter", "Index", "AboutUs")
+                </li>
+                <li id="Membership" class="hapText">
+                    @Html.ActionLink("Membership", "Index", "AboutUs")
+                </li>
+                <li id="Community" class="hapText">
+                    @Html.ActionLink("Community", "Index", "AboutUs")
+                </li>
+            </ul>
+        </li>
+        <li id="Search" style="margin-top:-3px" class="hapText">
+            <a href="@Url.Action("Index", "SearchArticle")">
+                <img src="~/Images/searchIcon.png" alt="">
+            </a>
+        </li>
+        @*<li id="About" class="hapText">
             @Html.ActionLink("About", "Index", "AboutUs")
         </li>
         <li id="contact" class="hapText">
             @Html.ActionLink("Contact", "Index", "Contact")
-        </li>
+        </li>*@
         @if (ViewBag.LogginUserStatus == "")
         {
-            <li id="CreateAccount" class="hapText">
-                @Html.ActionLink("Create an account", "CreateUserHome", "UserProfileHome")
-            </li>
             <li id="Signin" class="hapText">
                 @Html.ActionLink("Sign in", "GetLogin", "HomePageLogin", new { caseNo = 1, targetURL = "" }, htmlAttributes: null)
 
             </li>
+            <li id="CreateAccount" class="hapText">
+                @Html.ActionLink("Create Account", "CreateUserHome", "UserProfileHome")
+            </li>
+
         }
         else
         {
@@ -63,7 +107,7 @@
                 </li>
             }
 
-            <li id="myAccount" class="dropdown auth-drp" style="margin-top:-10px;" >
+            <li id="myAccount" class="dropdown auth-drp" style="margin-top:-10px;">
                 <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="~/Images/MD_PROFILE.jpg" alt="user_auth" class="user-auth-img img-circle" /><span class="user-online-status"></span></a>
                 <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
                     <li>
