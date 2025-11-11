@@ -170,7 +170,7 @@ namespace BootstrapERP.AppClass.DataAccess
                 if (objsiteContentCategory.ContentCategoryID == 0)
                 {
                     storedProcedureComandText = @"
-                    select TOP 9 B.ContentDetailDescription,C.ContentCategoryTitle,D.ContentRelatedToTitle,B.ContentDetailImageURL,A.ContentImageURL,B.ContentDetailTitle,B.ContentDetailSubTitle,B.ContentID,B.ContentIntroductoryText,B.EntryDate, (E.FirstName+' ' + E.MiddleName+' '+ E.LastName) AS FullName from blogContentHeader A
+                    select DISTINCT TOP 9 B.ContentDetailDescription,C.ContentCategoryTitle,D.ContentRelatedToTitle,B.ContentDetailImageURL,A.ContentImageURL,B.ContentDetailTitle,B.ContentDetailSubTitle,B.ContentID,B.ContentIntroductoryText,B.EntryDate, (E.FirstName+' ' + E.MiddleName+' '+ E.LastName) AS FullName from blogContentHeader A
                      INNER JOIN blogContentDetail B ON A.ContentParentID=B.ContentParentID
                      INNER JOIN blogContentCategory C ON A.ContentCategoryID = C.ContentCategoryID
                      INNER JOIN blogContentRelatedTo D ON A.ContentRelatedToID=D.ContentRelatedToID
@@ -182,7 +182,7 @@ namespace BootstrapERP.AppClass.DataAccess
                 else
                 {
                     storedProcedureComandText = @"
-                    select TOP 9 B.ContentDetailDescription,C.ContentCategoryTitle,D.ContentRelatedToTitle,B.ContentDetailImageURL,A.ContentImageURL,B.ContentDetailTitle,B.ContentDetailSubTitle,B.ContentID,B.ContentIntroductoryText,B.EntryDate, (E.FirstName+' ' + E.MiddleName+' '+ E.LastName) AS FullName from blogContentHeader A
+                    select DISTINCT TOP 9 B.ContentDetailDescription,C.ContentCategoryTitle,D.ContentRelatedToTitle,B.ContentDetailImageURL,A.ContentImageURL,B.ContentDetailTitle,B.ContentDetailSubTitle,B.ContentID,B.ContentIntroductoryText,B.EntryDate, (E.FirstName+' ' + E.MiddleName+' '+ E.LastName) AS FullName from blogContentHeader A
                      INNER JOIN blogContentDetail B ON A.ContentParentID=B.ContentParentID
 					 INNER JOIN blogContentPublishMethod F ON B.ContentID = F.ContentID
                      INNER JOIN blogContentCategory C ON A.ContentCategoryID = C.ContentCategoryID
