@@ -846,6 +846,7 @@
     <Content Include="Images\Marketing .png" />
     <Content Include="Images\MD_PROFILE.jpg" />
     <Content Include="Images\MSStore-Hero-1600x600.jpg" />
+    <Content Include="Images\M_PROFILE_ABOUT.jpg" />
     <Content Include="Images\nodejs.jpg" />
     <Content Include="Images\Sales .png" />
     <Content Include="Images\search.png" />
