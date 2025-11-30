@@ -12,12 +12,12 @@
         <li id="Home" class="hapText">
             @Html.ActionLink("Home", "Index", "BlogPosts")
         </li>
-        <li id="Blog" class="hapText">
+        @*<li id="Blog" class="hapText">
             @Html.ActionLink("Blog", "", "")
-        </li>
-        <li id="Learn" class="hapText">
+        </li>*@
+        @*<li id="Learn" class="hapText">
             @Html.ActionLink("Learn", "", "")
-        </li>
+        </li>*@
         <li id="ConnectMenue" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Connect </span><b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -27,16 +27,16 @@
                 <li id="Contact" class="hapText">
                     @Html.ActionLink("Contact", "Index", "Contact")
                 </li>
-                <li id="Mentorship" class="hapText">
+                @*<li id="Mentorship" class="hapText">
                     @Html.ActionLink("Mentorship", "Index", "AboutUs")
-                </li>
+                </li>*@
             </ul>
         </li>
 
-        <li id="Store" class="hapText">
+        @*<li id="Store" class="hapText">
             @Html.ActionLink("Store", "", "")
-        </li>        
-        <li id="JoinUs" class="dropdown">
+        </li>*@        
+        @*<li id="JoinUs" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Join Us </span><b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li id="Newsletter" class="hapText">
@@ -49,12 +49,12 @@
                     @Html.ActionLink("Community", "Index", "AboutUs")
                 </li>
             </ul>
-        </li>
-        <li id="Search" style="margin-top:-3px" class="hapText">
+        </li>*@
+        @*<li id="Search" style="margin-top:-3px" class="hapText">
             <a href="@Url.Action("Index", "SearchArticle")">
                 <img src="~/Images/searchIcon.png" alt="">
             </a>
-        </li>
+        </li>*@
         @*<li id="About" class="hapText">
             @Html.ActionLink("About", "Index", "AboutUs")
         </li>
