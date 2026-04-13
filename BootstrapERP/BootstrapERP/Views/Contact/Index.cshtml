@@ -14,11 +14,11 @@
                 </ol>
             </div>
         </div>
-        <div class="col-sm-12" style="font-family:Lato, Calibri, Helvetica, Roboto">
+        @*<div class="col-sm-12" style="font-family:Lato, Calibri, Helvetica, Roboto">
             <input type="checkbox" id="checkboxMyDiv" class="checkbox-success" onclick="myFunction();"> Find location on Google map
-        </div>
+        </div>*@
         <div class="clearfix"></div>
-        <div id="myDIV" style="display:none;padding-top:15px" class="col-sm-12">
+        <div id="myDIV" style="display:block;padding-top:15px" class="col-sm-12">
             <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
             @*<iframe width="100%" scrolling="no" height="400px" frameborder="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed" marginwidth="0" marginheight="0"></iframe>*@
 
@@ -57,7 +57,7 @@
                         @*<input type="phone" id="input3" class="form-control" name="contact_phone" required>*@
                     </div>
                     <div class="clearfix"></div>
-                    <div class="form-group col-lg-4">
+                    @*<div class="form-group col-lg-4">
                         <label for="input1">Type <span style="color:red;font-weight:900">*</span></label>
                         @Html.DropDownList("messageEmailType", null, new { type = "text", @class = "form-control" })
                     </div>
@@ -69,7 +69,7 @@
                         <label for="input3">Sub Category<span style="color:red;font-weight:900">*</span></label>
                         @Html.DropDownList("messageEmailSubCategorie", null, htmlAttributes: new { type = "text", @class = "form-control" })
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>*@
                     <div class="form-group col-lg-12">
                         <label for="input4">Cc</label>
                         @Html.TextBoxFor(model => model.CcEmailAddress, new { style = "width:100%;", @class = "form-control", })

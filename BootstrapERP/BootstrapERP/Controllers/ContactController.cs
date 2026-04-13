@@ -35,19 +35,22 @@ namespace BootstrapERP.Controllers
             return View(_objVisitorsMessage);
         }
 
+
+        //[ValidateAntiForgeryToken]
+
+        //public ActionResult Index(VisitorsMessage objVisitorsMessage, string contact_message, string messageEmailType
+        //    , string messageEmailCategorie, string messageEmailSubCategorie)
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Index(VisitorsMessage objVisitorsMessage, string contact_message, string messageEmailType
-            , string messageEmailCategorie, string messageEmailSubCategorie)
+        public ActionResult Index(VisitorsMessage objVisitorsMessage, string contact_message)
         {
             objVisitorsMessage.MessageText = contact_message;
             objVisitorsMessage.CompanyID = 1;
             objVisitorsMessage.BranchID = 1;
             objVisitorsMessage.ApplicationID = 2;
             objVisitorsMessage.MessageChannel = "A";
-            objVisitorsMessage.MessageTypeID = messageEmailType;
-            objVisitorsMessage.MessageCategoryID = Convert.ToInt32( messageEmailCategorie);
-            objVisitorsMessage.MessageSubCategoryID = Convert.ToInt32(messageEmailSubCategorie);
+            objVisitorsMessage.MessageTypeID = "1";// messageEmailType;
+            objVisitorsMessage.MessageCategoryID = 1;// Convert.ToInt32( messageEmailCategorie);
+            objVisitorsMessage.MessageSubCategoryID = 1;// Convert.ToInt32(messageEmailSubCategorie);
             _objVMessageAccessController = new VMessageAccessController();
             _objVMessageAccessController.Save(objVisitorsMessage);
             return RedirectToAction("Index", "Contact");

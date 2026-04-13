@@ -58,7 +58,7 @@ namespace BootstrapERP.AppClass.DataAccess
                " );";
 
                 clsDataManipulation.StoredProcedureExecuteNonQuery(this.ConnectionString, storedProcedureComandText);
-                this.SendEmailToCompany(objVisitorsMessage);
+                //this.SendEmailToCompany(objVisitorsMessage);
 
             }
             catch (Exception msgException)

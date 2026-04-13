@@ -34,7 +34,7 @@ namespace BootstrapERP.Controllers
                 }
 
                 LoginUserInformation.CompanyID = 1; LoginUserInformation.BranchID = 1;
-                int applicationID = 2; int contentCategoryID = 2; int relatedToID = 1;
+                int applicationID = 2; int contentCategoryID = 0; int relatedToID = 1;
                 string viewTitle = "blog";
                 _objSiteContentDetails = new SiteContentDetails();
                 _objsiteApplicationSetup = new siteApplicationSetup();
@@ -55,6 +55,7 @@ namespace BootstrapERP.Controllers
                 DataTable dtContentTopStories = _objSiteContentAccessController.GetBlogContentTopStories(_objsiteApplicationSetup,
                     _objsiteContentCategory);
                 _objSiteContentDetails.DtBlogPostsTopStories = dtContentTopStories;
+                
                 DataTable dtContentUnique = _objSiteContentAccessController.GetBlogContent(_objsiteApplicationSetup,
                     _objsiteContentCategory);
                 _objSiteContentDetails.DtBlogUniqueCategory = dtContentUnique;
