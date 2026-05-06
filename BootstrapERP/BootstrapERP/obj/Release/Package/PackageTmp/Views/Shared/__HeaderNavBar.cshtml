@@ -9,15 +9,73 @@
         <li id="contentEntry">
             @Html.ActionLink("Content Entry", "Index", "SiteContentRecord")
         </li>*@
-        <li id="Home" class="hapText">
-            @Html.ActionLink("Home", "Index", "BlogPosts")
+        <li id="ConnectMenue" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Pre-primary </span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li id="PlayGroup" class="hapText">
+                    @Html.ActionLink("Play Group", "", "")
+                </li>
+                <li id="Contact" class="hapText">
+                    @Html.ActionLink("Nursery", "", "")
+                </li>
+                @*<li id="Mentorship" class="hapText">
+                    @Html.ActionLink("Mentorship", "Index", "AboutUs")
+                </li>*@
+            </ul>
         </li>
+        <li id="ConnectMenue" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Primary </span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li id="pclass1" class="hapText">
+                    @Html.ActionLink("১ম শ্রেণি", "", "")
+                </li>
+                <li id="pclass2" class="hapText">
+                    @Html.ActionLink("২য় শ্রেণি", "", "")
+                </li>
+                <li id="pclass3" class="hapText">
+                    @Html.ActionLink("৩য় শ্রেণি", "", "")
+                </li>
+                <li id="pclass4" class="hapText">
+                    @Html.ActionLink("৪র্থ শ্রেণি", "", "")
+                </li>
+                <li id="pclass5" class="hapText">
+                    @Html.ActionLink("৫ম শ্রেণি", "", "")
+                </li>
+            </ul>
+        </li>
+        <li id="ConnectMenue" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Secondary </span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li id="pclass6" class="hapText">
+                    @Html.ActionLink("৬ষ্ঠ শ্রেণি", "", "")
+                </li>
+                <li id="pclass7" class="hapText">
+                    @Html.ActionLink("৭ম শ্রেণি", "", "")
+                </li>
+                <li id="pclass8" class="hapText">
+                    @Html.ActionLink("৮ম শ্রেণি", "", "")
+                </li>
+                <li id="pclass9" class="hapText">
+                    @Html.ActionLink("৯ম-১০ম শ্রেণি", "", "")
+                </li>
+            </ul>
+        </li>
+        <li id="pclass11" class="hapText">
+            @Html.ActionLink("একাদশ-দ্বাদশ", "", "")
+        </li>
+        <li id="pclass12" class="hapText">
+            @Html.ActionLink("এডমিশন", "", "")
+        </li>
+        <li id="Learn" class="hapText">
+            @Html.ActionLink("Software Engineering", "", "")
+        </li>
+        @*<li id="Home" class="hapText">
+            @Html.ActionLink("Home", "Index", "BlogPosts")
+        </li>*@
         @*<li id="Blog" class="hapText">
             @Html.ActionLink("Blog", "", "")
         </li>*@
-        <li id="Learn" class="hapText">
-            @Html.ActionLink("Learn", "", "")
-        </li>
+
         <li id="ConnectMenue" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Connect </span><b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -35,8 +93,8 @@
 
         @*<li id="Store" class="hapText">
             @Html.ActionLink("Store", "", "")
-        </li>*@        
-        <li id="JoinUs" class="dropdown">
+        </li>*@
+        @*<li id="JoinUs" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Join Us </span><b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li id="Newsletter" class="hapText">
@@ -49,7 +107,7 @@
                     @Html.ActionLink("Community", "Index", "AboutUs")
                 </li>
             </ul>
-        </li>
+        </li>*@
         @*<li id="Search" style="margin-top:-3px" class="hapText">
             <a href="@Url.Action("Index", "SearchArticle")">
                 <img src="~/Images/searchIcon.png" alt="">
