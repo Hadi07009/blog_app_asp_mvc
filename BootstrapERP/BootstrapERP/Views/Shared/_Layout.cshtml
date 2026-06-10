@@ -15,6 +15,8 @@
     <link href="@Url.Content("~/css/StyleSheetCSS.css")" rel="stylesheet">
 
 
+
+
     @*User Account*@
 
     <script src="~/dist/js/init.js"></script>
@@ -23,7 +25,8 @@
     <link href="~/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="~/vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
     <link href="vendors/bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/Content/home-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBB7G3Y431"></script>
     <script>
@@ -260,6 +263,7 @@
 
         $('.input-daterange-timepicker').daterangepicker({
             timePicker: true,
+            format: 'MM/DD/YYYY h:mm A',
             format: 'MM/DD/YYYY h:mm A',
             timePickerIncrement: 30,
             timePicker12Hour: true,

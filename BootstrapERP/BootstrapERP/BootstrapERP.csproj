@@ -262,6 +262,7 @@
     <Compile Include="Controllers\ExamCenterController.cs" />
     <Compile Include="Controllers\HeaderNavBarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomepageController.cs" />
     <Compile Include="Controllers\HomePageLoginController.cs" />
     <Compile Include="Controllers\HomePageLogoutController.cs" />
     <Compile Include="Controllers\HomePageRegisterController.cs" />
@@ -520,6 +521,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Gridmvc.css" />
+    <Content Include="Content\home-styles.css" />
     <Content Include="Content\images\ui-icons_444444_256x240.png" />
     <Content Include="Content\images\ui-icons_555555_256x240.png" />
     <Content Include="Content\images\ui-icons_777620_256x240.png" />
@@ -836,6 +838,8 @@
     <Content Include="Images\Facebook.png" />
     <Content Include="Images\facebookShare.jpg" />
     <Content Include="Images\facebookShare_1.png" />
+    <Content Include="Images\hero-illustration.jpg" />
+    <Content Include="Images\hero-illustration.png" />
     <Content Include="Images\javascript.jpg" />
     <Content Include="Images\jquery.png" />
     <Content Include="Images\license-banner.svg" />
@@ -855,6 +859,7 @@
     <Content Include="Images\SignIn.jpg" />
     <Content Include="Images\siteTopPart.png" />
     <Content Include="Images\SmallBusiness .png" />
+    <Content Include="Images\student-1.jpg" />
     <Content Include="Images\temp_about.jpg" />
     <Content Include="Images\Twitter.png" />
     <Content Include="Images\up-arrow.png" />
@@ -5136,6 +5141,7 @@
     <Content Include="Views\CompanyProfile\Cedit.cshtml" />
     <Content Include="Views\CompanyProfile\Index.cshtml" />
     <Content Include="Views\AboutUs\Index - Copy.cshtml" />
+    <Content Include="Views\Homepage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

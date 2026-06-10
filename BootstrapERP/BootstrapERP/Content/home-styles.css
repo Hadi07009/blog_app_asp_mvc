@@ -1,0 +1,404 @@
+﻿/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    padding-top: 80px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-image {
+    padding: 20px;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 60px 0;
+}
+
+.stat-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-label {
+    color: #6c757d;
+    margin: 10px 0 0 0;
+}
+
+/* Search Section */
+.search-section {
+    padding: 60px 0;
+}
+
+    .search-section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .search-section .form-control-lg {
+        border-radius: 0.5rem;
+        border: 2px solid #e9ecef;
+        padding: 12px 20px;
+    }
+
+    .search-section .btn-lg {
+        padding: 12px 30px;
+        border-radius: 0.5rem;
+    }
+
+/* Learning Paths */
+.learning-paths {
+    padding: 60px 0;
+}
+
+.learning-path-card {
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+    .learning-path-card:hover {
+        border-left-color: #0d6efd;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+    }
+
+/* Categories Section */
+.categories-section {
+    padding: 60px 0;
+}
+
+.category-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem !important;
+}
+
+    .category-card:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+        transform: translateY(-3px);
+    }
+
+/* Featured Courses */
+.featured-courses {
+    padding: 60px 0;
+}
+
+.course-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    background: white;
+    height: 100%;
+}
+
+    .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+.course-header {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .course-header h6 {
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+.course-body {
+    background: white;
+}
+
+/* Upcoming Batches */
+.upcoming-batches {
+    padding: 60px 0;
+}
+
+.batch-card {
+    transition: all 0.3s ease;
+    background: white;
+    border-left: 4px solid;
+}
+
+    .batch-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .batch-card.border-success {
+        border-left-color: #198754 !important;
+    }
+
+    .batch-card.border-primary {
+        border-left-color: #0d6efd !important;
+    }
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 60px 0;
+}
+
+.feature-box {
+    background: white;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 2rem 1.5rem !important;
+}
+
+    .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h6 {
+        font-weight: 600;
+        margin: 15px 0 10px 0;
+    }
+
+/* Review Cards */
+.student-reviews {
+    padding: 60px 0;
+}
+
+.review-card {
+    background: white;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+    .review-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-color: #0d6efd;
+    }
+
+    .review-card .fa-star {
+        font-size: 0.9rem;
+    }
+
+/* Blog Cards */
+.latest-blogs {
+    padding: 60px 0;
+}
+
+.blog-card {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    background: white;
+    height: 100%;
+}
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+.blog-header {
+    background: #f8f9fa;
+    padding: 15px !important;
+}
+
+.blog-body {
+    padding: 20px !important;
+}
+
+    .blog-body h6 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+}
+
+    .cta-section h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .cta-section .lead {
+        font-size: 1.2rem;
+    }
+
+/* Utility Colors */
+.text-purple {
+    color: #6f42c1;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .course-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 20px !important;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .learning-path-card {
+        margin-bottom: 20px;
+    }
+
+    .category-card {
+        margin-bottom: 15px;
+    }
+
+    .course-card {
+        margin-bottom: 15px;
+    }
+
+    .batch-card {
+        margin-bottom: 20px;
+    }
+
+        .batch-card .row {
+            flex-direction: column;
+        }
+
+        .batch-card .col-md-5 {
+            margin-top: 20px;
+        }
+
+    .feature-box {
+        margin-bottom: 15px;
+    }
+
+    .review-card {
+        margin-bottom: 15px;
+    }
+
+    .blog-card {
+        margin-bottom: 15px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .category-card {
+        padding: 1rem !important;
+    }
+
+    .feature-box {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Additional Utility Classes */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.rounded {
+    border-radius: 0.375rem !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.gap-3 {
+    gap: 1rem !important;
+}
+
+.gap-2 {
+    gap: 0.5rem !important;
+}
+
+/* Button Styles */
+.btn-primary, .btn-success, .btn-info, .btn-danger {
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover, .btn-success:hover, .btn-info:hover, .btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+.btn-outline-primary:hover, .btn-outline-info:hover, .btn-outline-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* Badge Styles */
+.badge {
+    padding: 0.5rem 0.75rem !important;
+    font-weight: 500;
+    border-radius: 0.25rem;
+}

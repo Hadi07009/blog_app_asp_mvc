@@ -621,3 +621,4 @@ D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\Bootstrap
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csproj.CopyComplete
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.dll
 D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.pdb
+D:\Learning Hub\Blog_Application\BootstrapERP\BootstrapERP\obj\Release\BootstrapERP.csprojAssemblyReference.cache

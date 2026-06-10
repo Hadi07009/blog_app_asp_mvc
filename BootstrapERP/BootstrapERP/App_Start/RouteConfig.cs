@@ -22,14 +22,14 @@ namespace BootstrapERP
             routes.MapRoute(
                 name: "SiteContentDisplay",
                 url: "{controller}/{action}/{id}/{text}",
-                defaults: new { controller = "BlogPosts", action = "Index", id = UrlParameter.Optional, text = UrlParameter.Optional }
+                defaults: new { controller = "Homepage", action = "Index", id = UrlParameter.Optional, text = UrlParameter.Optional }
             );
 
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "BlogPosts", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Homepage", action = "Index", id = UrlParameter.Optional }
             );
 
             

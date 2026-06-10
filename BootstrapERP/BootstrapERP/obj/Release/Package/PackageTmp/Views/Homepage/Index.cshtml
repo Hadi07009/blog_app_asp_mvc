@@ -1,0 +1,609 @@
+﻿@{
+    ViewBag.Title = "Home | AllTimeStudy - Complete Learning Platform";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center" style="padding:10px">
+            <!-- Left Content -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <h1 class="hero-title mb-3">
+                    Learn Smarter.<br>
+                    <span class="text-primary">Build Your Future.</span>
+                </h1>
+                <p class="hero-subtitle text-muted mb-4">
+                    আমরা সর্বোচ্চ মানের শিক্ষা প্রদান করে ক্যারিয়ার গড়তে সাহায্য করি।<br>
+                    নিয়মিত লাইভ ক্লাস এবং প্র্যাক্টিক্যাল প্রশিক্ষণের মাধ্যমে আপনার দক্ষতা বৃদ্ধি করুন।
+                </p>
+
+                <!-- Features List -->
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Live Classes</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Recorded Courses</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Real Project Based Learning</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Career Guidance</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Industry Mentorship</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <span>Certificate of Completion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="@Url.Action("Index", "Courses")" class="btn btn-primary btn-lg">
+                        <i class="fas fa-play-circle me-2"></i>Start Learning Free
+                    </a>
+                    <a href="@Url.Action("Index", "Courses")" class="btn btn-info btn-lg">
+                        Browse Courses
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image/Illustration -->
+            <div class="col-lg-6 col-md-12 text-center">
+                <div class="hero-image">
+                    @*<img src="~/images/hero-illustration.jpg" alt="Student Learning" class="img-fluid" />*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-card">
+                    <h3 class="stat-number text-primary">13+</h3>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-card">
+                    <h3 class="stat-number text-primary">1000+</h3>
+                    <p class="stat-label">Students</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-card">
+                    <h3 class="stat-number text-primary">100+</h3>
+                    <p class="stat-label">Tutorials</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-card">
+                    <h3 class="stat-number text-primary">24/7</h3>
+                    <p class="stat-label">Learning Support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search & Explore Section -->
+<section class="search-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">What do you want to learn today?</h2>
+
+        <!-- Search Bar -->        
+
+        @*<div class="row mb-5">
+            <div class="col-lg-8 mx-auto" >
+                <form class="d-flex gap-2">
+                    <input type="text" class="form-control form-control-lg"
+                           placeholder="Search courses, notes, MCQ, blogs..." />
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </div>*@
+
+        <!-- Popular Tags -->
+        <div class="text-center mb-4">
+            <strong class="me-3">Popular:</strong>
+            <span class="badge bg-dark text-light me-2 p-2">ASP.NET</span>
+            <span class="badge bg-dark text-light me-2 p-2">HSC ICT</span>
+            <span class="badge bg-dark text-light me-2 p-2">MCQ</span>
+            <span class="badge bg-dark text-light me-2 p-2">SQL Server</span>
+            <span class="badge bg-dark text-light me-2 p-2">GitHub</span>
+        </div>
+    </div>
+    </section>
+
+
+
+
+<!-- Learning Paths Section -->
+<section class="learning-paths py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Choose Your Learning Path</h2>
+
+        <div class="row">
+            <!-- Academic Learning -->
+            <div class="col-lg-6 col-md-12 mb-4" >
+                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-graduation-cap text-primary me-3" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5 class="mb-1">Academic Learning</h5>
+                            <small class="text-muted">Primary | Secondary | HSC | Admission</small>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-3">
+                        সকল শ্রেণীর শিক্ষার্থীদের জন্য সম্পূর্ণ কারিকুলাম ভিত্তিক কোর্স এবং প্রশিক্ষণ।
+                    </p>
+                    <a href="@Url.Action("Index", "Courses")" class="btn btn-primary">
+                        Explore Academic Courses
+                    </a>
+                </div>
+            </div>
+
+            <!-- Software Engineering -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-code text-success me-3" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5 class="mb-1">Software Engineering</h5>
+                            <small class="text-muted">ASP.NET | .NET Core | SQL | GitHub</small>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-3">
+                        প্রফেশনাল সফটওয়্যার ডেভেলপমেন্ট কোর্স এবং রিয়েল প্রজেক্ট ভিত্তিক প্রশিক্ষণ।
+                    </p>
+                    <a href="@Url.Action("Index", "Courses")" class="btn btn-success">
+                        Start Your Tech Career
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Browse By Category</h2>
+            <a href="@Url.Action("Index", "Categories")" class="text-primary">View All Categories →</a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-book text-primary mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>Pre-Primary</strong></p>
+                    <small class="text-muted">Play Group-Nursery</small>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-pencil-alt text-success mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>Primary</strong></p>
+                    <small class="text-muted">Class 1-5</small>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-graduation-cap text-info mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>Secondary</strong></p>
+                    <small class="text-muted">Class 6-10</small>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-laptop text-warning mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>HSC</strong></p>
+                    <small class="text-muted">Class 11-12</small>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-university text-danger mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>Admission</strong></p>
+                    <small class="text-muted">Coaching</small>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-center">
+                <div class="category-card rounded">
+                    <i class="fas fa-code text-purple mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0"><strong>Programming</strong></p>
+                    <small class="text-muted">Tech Skills</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Courses Section -->
+<section class="featured-courses py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Featured Courses</h2>
+            <a href="@Url.Action("Index", "Courses")" class="text-primary">View All Courses →</a>
+        </div>
+
+        <div class="row">
+            <!-- Course Card 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden" >
+                    <div class="course-header bg-primary text-white p-3" style="padding:10px">
+                        <h6>ASP.NET MVC</h6>
+                        <p class="mb-0 small">Complete Course</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.8 (128)</span>
+                        </div>
+                        <p class="small mb-3">Learn ASP.NET MVC from basics to advanced with real-world projects.</p>
+                        <h5 class="text-primary">৳ 2,999</h5>
+                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-primary w-100">
+                            View Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-info text-white p-3" style="padding:10px">
+                        <h6>.NET Core</h6>
+                        <p class="mb-0 small">Bootcamp</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.9 (96)</span>
+                        </div>
+                        <p class="small mb-3">Master .NET Core development with hands-on projects and guidance.</p>
+                        <h5 class="text-info">৳ 3,999</h5>
+                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm  btn-info w-100">
+                            View Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-success text-white p-3" style="padding:10px">
+                        <h6>Git & GitHub</h6>
+                        <p class="mb-0 small">Beginner Guide</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.9 (205)</span>
+                        </div>
+                        <p class="small mb-3">Learn version control and collaboration with Git and GitHub.</p>
+                        <h5 class="text-success">FREE</h5>
+                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-success w-100">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-danger text-white p-3" style="padding:10px">
+                        <h6>SQL Server</h6>
+                        <p class="mb-0 small">Masterclass</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.7 (75)</span>
+                        </div>
+                        <p class="small mb-3">Database design and optimization with SQL Server expertise.</p>
+                        <h5 class="text-danger">৳ 2,499</h5>
+                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-danger w-100">
+                            View Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Batches Section -->
+<section class="upcoming-batches py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Upcoming Live Batches</h2>
+            <a href="@Url.Action("Index", "Batches")" class="text-primary">View All Batches →</a>
+        </div>
+
+        <div class="row">
+            <!-- Batch Card 1 -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="batch-card p-4 rounded shadow-sm border-success" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h5 class="mb-3">HSC ICT Batch 2027</h5>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-success"></i>Start Date: 26 June 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-success"></i>Duration: 1 Month</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-success"></i>Classes: 8 Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-success"></i>Seats: 100 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-success btn-sm">
+                                Enroll Now
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-1.png" alt="Batch" class="img-fluid" />*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Card 2 -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="batch-card p-4 rounded shadow-sm border-primary" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h5 class="mb-3">ASP.NET MVC Professional Batch</h5>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Start Date: 15 July 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-primary"></i>Duration: 3 Months</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-primary"></i>Classes: 24+ Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-primary"></i>Seats: 60 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-primary btn-sm">
+                                Enroll Now
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-2.png" alt="Batch" class="img-fluid" />*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose AllTimeStudy?</h2>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-video text-primary mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>Live Classes</h6>
+                    <p class="small text-muted">Interactive live sessions with experienced instructors</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-book text-info mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>Expert Learning</h6>
+                    <p class="small text-muted">Learn from industry professionals and mentors</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-certificate text-success mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>Certification</h6>
+                    <p class="small text-muted">Get verified certificates upon course completion</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-tag text-warning mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>Affordable Pricing</h6>
+                    <p class="small text-muted">Quality education at reasonable and flexible prices</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-headset text-danger mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>24/7 Support</h6>
+                    <p class="small text-muted">Round-the-clock support team ready to help you</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="feature-box rounded">
+                    <i class="fas fa-file-alt text-secondary mb-3" style="font-size: 2.5rem;"></i>
+                    <h6>Study Materials</h6>
+                    <p class="small text-muted">Comprehensive notes, MCQs, and learning resources</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Student Reviews Section -->
+<section class="student-reviews py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Student Review</h2>
+            <a href="@Url.Action("Reviews", "Home")" class="text-primary">View All</a>
+        </div>
+
+        <div class="row">
+            <!-- Review Card 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="review-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="mb-4">"AllTimeStudy করে আমি ASP.NET এ দক্ষতা অর্জন করতে পেরে অনেক খুশি। ক্লাস গুলো খুবই সহজ এবং ব্যবহারিক।"</p>
+                    <div class="d-flex align-items-center">
+
+                        <img src="~/images/student-1.jpg" alt="Student" class="rounded-circle me-3" width="50" />
+                        <div>
+                            <h6 class="mb-0">Farhan Ahmed</h6>
+                            <small class="text-muted">Software Engineer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="review-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="mb-4">"HSC ICT 2024 এ আমি ফুল মার্ক পেয়েছি। AllTimeStudy এর লাইভ ক্লাস এবং মেন্টরশিপ আমাকে সফল করেছে।"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="~/images/student-1.jpg" alt="Student" class="rounded-circle me-3" width="50" />
+                        <div>
+                            <h6 class="mb-0">Maria Jahan</h6>
+                            <small class="text-muted">HSC 2024, GPA 5.00</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="review-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="mb-4">"অনেক ভালো শিক্ষকদের কাছ থেকে শিখছি এবং নিজের ক্যারিয়ার এগিয়ে নিয়ে যেতে পারছি।"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="~/images/student-1.jpg" alt="Student" class="rounded-circle me-3" width="50" />
+                        <div>
+                            <h6 class="mb-0">Mahedi Hasan</h6>
+                            <small class="text-muted">Junior Developer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts Section -->
+<section class="latest-blogs py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Latest Blog Posts</h2>
+            <a href="@Url.Action("Index", "Blog")" class="text-primary">View All Posts →</a>
+        </div>
+
+        <div class="row">
+            <!-- Blog Card 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="blog-card rounded shadow-sm overflow-hidden">
+                    <div class="blog-header">
+                        <span class="badge bg-danger mb-2">ADO.NET</span>
+                    </div>
+                    <div class="blog-body">
+                        <h6>ADO.NET CRUD Operations in ASP.NET MVC Web Forms</h6>
+                        <p class="small text-muted mb-3">Learn how to implement CRUD operations using ADO.NET in ASP.NET MVC.</p>
+                        <small class="text-muted">May 12, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="blog-card rounded shadow-sm overflow-hidden">
+                    <div class="blog-header">
+                        <span class="badge bg-info mb-2">ASP.NET</span>
+                    </div>
+                    <div class="blog-body">
+                        <h6>Master Page in ASP.NET Web Forms</h6>
+                        <p class="small text-muted mb-3">Understand how to create and use master pages for consistent layout.</p>
+                        <small class="text-muted">May 9, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="blog-card rounded shadow-sm overflow-hidden">
+                    <div class="blog-header">
+                        <span class="badge bg-success mb-2">GIT & GITHUB</span>
+                    </div>
+                    <div class="blog-body">
+                        <h6>Git & GitHub Tutorial for Beginners</h6>
+                        <p class="small text-muted mb-3">Get started with version control and collaborative development.</p>
+                        <small class="text-muted">May 5, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="blog-card rounded shadow-sm overflow-hidden">
+                    <div class="blog-header">
+                        <span class="badge bg-warning text-dark mb-2">SQL SERVER</span>
+                    </div>
+                    <div class="blog-body">
+                        <h6>How to Become a Database Administrator</h6>
+                        <p class="small text-muted mb-3">Career path and skills needed for a DBA role in tech industry.</p>
+                        <small class="text-muted">Apr 28, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-3">Ready to Start Your Learning Journey?</h2>
+        <p class="mb-4 lead">Join thousands of students and transform your career today.</p>
+        <a href="@Url.Action("Index", "Courses")" class="btn btn-light btn-lg">
+            <i class="fas fa-play-circle me-2"></i>Explore All Courses
+        </a>
+    </div>
+</section>
