@@ -1,0 +1,203 @@
+@model BootstrapERP.Models.BatchEnrollmentViewModel
+
+@{
+    ViewBag.Title = "Enroll in " + Model.BatchName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Enrollment Section -->
+<section class="enrollment-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Batch Information -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="batch-info-card p-4 rounded shadow-sm" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <h4 class="mb-3">@Model.BatchName</h4>
+                    
+                    <div class="batch-details mb-3">
+                        <p class="mb-2">
+                            <strong><i class="fas fa-book me-2"></i>Topic:</strong>
+                            <br />@Model.BatchTopic
+                        </p>
+                        <p class="mb-2">
+                            <strong><i class="fas fa-user me-2"></i>Instructor:</strong>
+                            <br />@Model.InstructorName
+                        </p>
+                        <p class="mb-2">
+                            <strong><i class="fas fa-calendar-alt me-2"></i>Start Date:</strong>
+                            <br />@Model.StartDate.ToString("dd MMMM, yyyy")
+                        </p>
+                        <p class="mb-2">
+                            <strong><i class="fas fa-chalkboard me-2"></i>Total Classes:</strong>
+                            <br />@Model.TotalClasses Classes
+                        </p>
+                        <p class="mb-2">
+                            <strong><i class="fas fa-users me-2"></i>Available Seats:</strong>
+                            <br /><span class="badge bg-success" style="font-size: 16px;">@Model.AvailableSeats</span>
+                        </p>
+                    </div>
+
+                    <div class="alert alert-warning text-dark">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Limited seats available! Enroll now to secure your place.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enrollment Form -->
+            <div class="col-lg-8 col-md-12">
+                <div class="enrollment-form-card p-5 rounded shadow-sm">
+                    <h3 class="mb-4">Complete Your Enrollment</h3>
+                    
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @ViewBag.Error
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @using (Html.BeginForm("Enroll", "Batches", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        
+                        @Html.HiddenFor(model => model.BatchID)
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="StudentName" class="form-label"><strong>Full Name *</strong></label>
+                                    @Html.TextBoxFor(model => model.StudentName, new { @class = "form-control", @placeholder = "Enter your full name", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="StudentEmail" class="form-label"><strong>Email Address *</strong></label>
+                                    @Html.TextBoxFor(model => model.StudentEmail, new { @class = "form-control", @placeholder = "your@email.com", @type = "email", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.StudentEmail, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="StudentPhone" class="form-label"><strong>Phone Number *</strong></label>
+                                    @Html.TextBoxFor(model => model.StudentPhone, new { @class = "form-control", @placeholder = "+880 1XXXXXXXXX", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.StudentPhone, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="StudentAddress" class="form-label"><strong>Address</strong></label>
+                                    @Html.TextBoxFor(model => model.StudentAddress, new { @class = "form-control", @placeholder = "Your residential address" })
+                                    @Html.ValidationMessageFor(model => model.StudentAddress, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="StudentEducation" class="form-label"><strong>Current Education Level</strong></label>
+                                    @Html.TextBoxFor(model => model.StudentEducation, new { @class = "form-control", @placeholder = "e.g., HSC, Bachelor's Degree, etc." })
+                                    @Html.ValidationMessageFor(model => model.StudentEducation, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="SpecialRequests" class="form-label"><strong>Special Requests / Comments</strong></label>
+                                    @Html.TextAreaFor(model => model.SpecialRequests, new { @class = "form-control", @rows = "3", @placeholder = "Any special requests or queries?" })
+                                    @Html.ValidationMessageFor(model => model.SpecialRequests, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    @Html.CheckBoxFor(model => model.AgreedToTerms, new { @class = "form-check-input" })
+                                    <label class="form-check-label" for="AgreedToTerms">
+                                        I agree to the <a href="#" target="_blank">terms and conditions</a> and <a href="#" target="_blank">privacy policy</a> *
+                                    </label>
+                                    @Html.ValidationMessageFor(model => model.AgreedToTerms, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 d-flex gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-check-circle me-2"></i>Complete Enrollment
+                                </button>
+                                <a href="@Url.Action("Index", "Batches")" class="btn btn-secondary btn-lg">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Batches
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .enrollment-section {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+    }
+
+    .batch-info-card {
+        position: sticky;
+        top: 100px;
+    }
+
+    .batch-details p {
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+    }
+
+    .enrollment-form-card {
+        background-color: white;
+    }
+
+    .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
+
+    .form-check-input:checked {
+        background-color: #667eea;
+        border-color: #667eea;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .batch-info-card {
+            position: relative;
+            top: 0;
+        }
+
+        .enrollment-section {
+            padding: 2rem 0;
+        }
+    }
+</style>
