@@ -17,7 +17,7 @@
                 </li>
                 <li id="Contact" class="hapText">
                     @Html.ActionLink("Nursery", "", "")
-                </li>                
+                </li>
             </ul>
         </li>*@
         @*<li id="ConnectMenue" class="dropdown">
@@ -57,23 +57,23 @@
                 </li>
             </ul>
         </li>*@
+        <li id="Home" class="hapText">
+            @Html.ActionLink("Home", "Index", "Homepage")
+        </li>
         <li id="pclass11" class="hapText">
-            @Html.ActionLink("একাদশ-দ্বাদশ", "", "")
+            @Html.ActionLink("Courses", "", "")
         </li>
         <li id="pclass12" class="hapText">
-            @Html.ActionLink("এডমিশন", "", "")
+            @Html.ActionLink("Live Batches", "", "")
         </li>
         <li id="Learn" class="hapText">
-            @Html.ActionLink("Software Engineering", "", "")
+            @Html.ActionLink("Software Engineering", "Index", "BlogPosts")
         </li>
-        @*<li id="Home" class="hapText">
-            @Html.ActionLink("Home", "Index", "BlogPosts")
-        </li>*@
         @*<li id="Blog" class="hapText">
             @Html.ActionLink("Blog", "", "")
         </li>*@
 
-        <li id="ConnectMenue" class="dropdown">
+        @*<li id="ConnectMenue" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="hapText"> Connect </span><b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li id="About" class="hapText">
@@ -82,11 +82,11 @@
                 <li id="Contact" class="hapText">
                     @Html.ActionLink("Contact", "Index", "Contact")
                 </li>
-                @*<li id="Mentorship" class="hapText">
+                <li id="Mentorship" class="hapText">
                     @Html.ActionLink("Mentorship", "Index", "AboutUs")
-                </li>*@
+                </li>
             </ul>
-        </li>
+        </li>*@
 
         @*<li id="Store" class="hapText">
             @Html.ActionLink("Store", "", "")
@@ -110,12 +110,12 @@
                 <img src="~/Images/searchIcon.png" alt="">
             </a>
         </li>*@
-        @*<li id="About" class="hapText">
+        <li id="About" class="hapText">
             @Html.ActionLink("About", "Index", "AboutUs")
         </li>
         <li id="contact" class="hapText">
             @Html.ActionLink("Contact", "Index", "Contact")
-        </li>*@
+        </li>
         @if (ViewBag.LogginUserStatus == "")
         {
             <li id="Signin" class="hapText">

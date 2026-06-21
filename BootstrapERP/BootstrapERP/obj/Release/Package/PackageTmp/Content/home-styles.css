@@ -2,6 +2,7 @@
 .hero-section {
     background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
     padding-top: 80px;
+    min-height: 600px;
 }
 
 .hero-title {
@@ -16,8 +17,35 @@
 }
 
 .hero-image {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+    .hero-image img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
+/*.hero-image {
+    min-height: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .hero-image img {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        display: block;
+    }*/
+
+
+
+
 
 /* Stats Section */
 .stats-section {

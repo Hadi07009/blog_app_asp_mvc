@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using BootstrapERP.App_Start
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +26,10 @@
     <link href="~/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="~/vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
     <link href="vendors/bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/home-styles.css" rel="stylesheet" />
+    @*<link href="~/Content/home-styles.css" rel="stylesheet" />*@
+    
+    <link rel="stylesheet" href="@AssetHelper.VersionedContent(Url.Content("~/Content/home-styles.css"))" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBB7G3Y431"></script>
@@ -53,7 +57,7 @@
                 <div display:inline-block; class="navbar-header pull-left">
                     <a style="width:60px" class="navbar-brand" href="@Url.Action("Index", "BlogPosts")">
                         @*<img src="~/Images/logo_120_100.png" alt="Site Logo" style="height:35px; width: 40px" />*@
-                        @Html.ActionLink("AllTimeStudy", "Index", new { controller = "BlogPosts" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("AllTimeStudy", "Index", new { controller = "Homepage" }, new { @class = "navbar-brand" })
                     </a>
                 </div>
                 @*<div display:inline-block; class="navbar-header pull-left" style="vertical-align:bottom;padding-top:15px">|</div>*@
@@ -76,13 +80,13 @@
                     </li>
                 </ul>
                 @*<ul class="nav navbar-nav navbar-left">
-                    <li id="category1" style="background-color:#F1F3F4;min-height:64px;font-weight:bold;vertical-align:central;margin-right:1px;text-align:center;padding-top:5px">
-                        <a class="labelcss" style="min-width:100px;" href="@Url.Action("BlogCategory", "SiteContentDisplay",new {@contentCategoryID = 1})">@Html.Raw("Life")</a>
-                    </li>
-                    <li id="category2" style="background-color:#F1F3F4;min-height:64px;font-weight:bold;margin-right:1px;text-align:center;padding-top:5px">
-                        <a class="labelcss" style="min-width:100px;" href="@Url.Action("BlogCategory", "SiteContentDisplay",new {@contentCategoryID = 2})">@Html.Raw("Science")</a>
-                    </li>
-                </ul>*@
+                        <li id="category1" style="background-color:#F1F3F4;min-height:64px;font-weight:bold;vertical-align:central;margin-right:1px;text-align:center;padding-top:5px">
+                            <a class="labelcss" style="min-width:100px;" href="@Url.Action("BlogCategory", "SiteContentDisplay",new {@contentCategoryID = 1})">@Html.Raw("Life")</a>
+                        </li>
+                        <li id="category2" style="background-color:#F1F3F4;min-height:64px;font-weight:bold;margin-right:1px;text-align:center;padding-top:5px">
+                            <a class="labelcss" style="min-width:100px;" href="@Url.Action("BlogCategory", "SiteContentDisplay",new {@contentCategoryID = 2})">@Html.Raw("Science")</a>
+                        </li>
+                    </ul>*@
             </div>
         </div>
     </nav>
@@ -92,7 +96,7 @@
 
     <div style="min-height:475px">
         @RenderBody()
-        
+
     </div>
     @*@RenderBody()*@
     <div class="container">
@@ -137,13 +141,13 @@
                             <a style="text-decoration:none;text-align:justify"><span class="footerText">AllTimeStudy is a modern learning and career growth platform designed to help students and professionals reach their full potential. We provide reliable, easy-to-understand, and industry-relevant resources that make learning smarter, skills stronger, and careers more successful.</span> </a><br />
 
                         </div>
-                        
+
                         <div id="footerbottom4" style="display:inline-block;min-width:200px;text-align:left;vertical-align:top">
                             <h5>Company</h5>
                             <a href="@Url.Action("Index", "BlogPosts")">Home</a><br />
                             <a href="@Url.Action("Index", "AboutUs")">About</a><br />
                             <a href="@Url.Action("Index", "Contact")">Contact</a><br />
-                            
+
                         </div>
                     </div>
                 </div>

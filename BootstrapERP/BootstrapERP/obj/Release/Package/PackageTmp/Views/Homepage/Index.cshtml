@@ -6,16 +6,19 @@
 <!-- Hero Section -->
 <section class="hero-section py-5">
     <div class="container">
-        <div class="row align-items-center" style="padding:10px">
+        <div class="row align-items-center" style="padding:10px;min-height: 70vh; align-items: center;">
             <!-- Left Content -->
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
                 <h1 class="hero-title mb-3">
-                    Learn Smarter.<br>
-                    <span class="text-primary">Build Your Future.</span>
+                    Learn HSC ICT & <br>
+                    Professional<br>
+                    <span class="text-primary"> Software Engineering</span>
                 </h1>
                 <p class="hero-subtitle text-muted mb-4">
-                    আমরা সর্বোচ্চ মানের শিক্ষা প্রদান করে ক্যারিয়ার গড়তে সাহায্য করি।<br>
-                    নিয়মিত লাইভ ক্লাস এবং প্র্যাক্টিক্যাল প্রশিক্ষণের মাধ্যমে আপনার দক্ষতা বৃদ্ধি করুন।
+                    <h2>
+                        Build Real Projects. Gain In-Demand Skills.<br>
+                        Launch Your <span class="text-primary">Tech Career.</span>
+</h2>
                 </p>
 
                 <!-- Features List -->
@@ -61,18 +64,18 @@
                 <!-- Action Buttons -->
                 <div class="d-flex gap-3 flex-wrap">
                     <a href="@Url.Action("Index", "Courses")" class="btn btn-primary btn-lg">
-                        <i class="fas fa-play-circle me-2"></i>Start Learning Free
+                        <i class="fas fa-play-circle me-2"></i>Start Learning Today
                     </a>
                     <a href="@Url.Action("Index", "Courses")" class="btn btn-info btn-lg">
-                        Browse Courses
+                        Become a Software Engineer
                     </a>
                 </div>
             </div>
 
             <!-- Right Image/Illustration -->
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="hero-image">
-                    @*<img src="~/images/hero-illustration.jpg" alt="Student Learning" class="img-fluid" />*@
+            <div class="col-lg-6 col-md-12 text-center d-flex align-items-center justify-content-between">
+                <div class="hero-image text-center">
+                    <img src="~/images/hero-illustration.png" alt="Student Learning" class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -85,20 +88,20 @@
         <div class="row text-center">
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="stat-card">
-                    <h3 class="stat-number text-primary">13+</h3>
-                    <p class="stat-label">Years Experience</p>
+                    <h3 class="stat-number text-primary">14+</h3>
+                    <p class="stat-label">Years Teaching Experience</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="stat-card">
                     <h3 class="stat-number text-primary">1000+</h3>
-                    <p class="stat-label">Students</p>
+                    <p class="stat-label">Students Successfully Trained</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="stat-card">
                     <h3 class="stat-number text-primary">100+</h3>
-                    <p class="stat-label">Tutorials</p>
+                    <p class="stat-label">Premium Video Lessons</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
@@ -111,81 +114,154 @@
     </div>
 </section>
 
-<!-- Search & Explore Section -->
-<section class="search-section py-5">
+<!-- Upcoming Batches Section -->
+<section class="upcoming-batches py-5">
     <div class="container">
-        <h2 class="text-center mb-5">What do you want to learn today?</h2>
-
-        <!-- Search Bar -->        
-
-        @*<div class="row mb-5">
-            <div class="col-lg-8 mx-auto" >
-                <form class="d-flex gap-2">
-                    <input type="text" class="form-control form-control-lg"
-                           placeholder="Search courses, notes, MCQ, blogs..." />
-                    <button type="submit" class="btn btn-primary btn-lg">
-                        <i class="fas fa-search"></i> Search
-                    </button>
-                </form>
-            </div>
-        </div>*@
-
-        <!-- Popular Tags -->
-        <div class="text-center mb-4">
-            <strong class="me-3">Popular:</strong>
-            <span class="badge bg-dark text-light me-2 p-2">ASP.NET</span>
-            <span class="badge bg-dark text-light me-2 p-2">HSC ICT</span>
-            <span class="badge bg-dark text-light me-2 p-2">MCQ</span>
-            <span class="badge bg-dark text-light me-2 p-2">SQL Server</span>
-            <span class="badge bg-dark text-light me-2 p-2">GitHub</span>
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Upcoming Live Batches</h2>
+            <a href="@Url.Action("", "")" class="text-primary">View All Batches →</a>
         </div>
-    </div>
-    </section>
-
-
-
-
-<!-- Learning Paths Section -->
-<section class="learning-paths py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-5">Choose Your Learning Path</h2>
 
         <div class="row">
-            <!-- Academic Learning -->
-            <div class="col-lg-6 col-md-12 mb-4" >
-                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-graduation-cap text-primary me-3" style="font-size: 2rem;"></i>
-                        <div>
-                            <h5 class="mb-1">Academic Learning</h5>
-                            <small class="text-muted">Primary | Secondary | HSC | Admission</small>
+            <!-- Batch Card 1 -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="batch-card p-4 rounded shadow-sm green border-success" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h3 class="mb-3">HSC 27 অনলাইন ব্যাচ আইসিটি</h3>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-success"></i>Start Date: 26 June 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-success"></i>Duration: 1 Month</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-success"></i>Classes: 8 Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-success"></i>Seats: 100 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-success btn-sm">
+                                Reserve Your Seat
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-1.png" alt="Batch" class="img-fluid" />*@
                         </div>
                     </div>
-                    <p class="text-muted mb-3">
-                        সকল শ্রেণীর শিক্ষার্থীদের জন্য সম্পূর্ণ কারিকুলাম ভিত্তিক কোর্স এবং প্রশিক্ষণ।
-                    </p>
-                    <a href="@Url.Action("Index", "Courses")" class="btn btn-primary">
-                        Explore Academic Courses
-                    </a>
                 </div>
             </div>
 
-            <!-- Software Engineering -->
+            <!-- Batch Card 2 -->
             <div class="col-lg-6 col-md-12 mb-4">
-                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-code text-success me-3" style="font-size: 2rem;"></i>
-                        <div>
-                            <h5 class="mb-1">Software Engineering</h5>
-                            <small class="text-muted">ASP.NET | .NET Core | SQL | GitHub</small>
+                <div class="batch-card p-4 rounded shadow-sm border-primary" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h3 class="mb-3">Full Stack Web Development with ASP.NET Core and SQL Server</h3>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Start Date: 17 July 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-primary"></i>Duration: 3 Months</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-primary"></i>Classes: 24+ Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-primary"></i>Seats: 60 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-primary btn-sm">
+                                Reserve Your Seat
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-2.png" alt="Batch" class="img-fluid" />*@
                         </div>
                     </div>
-                    <p class="text-muted mb-3">
-                        প্রফেশনাল সফটওয়্যার ডেভেলপমেন্ট কোর্স এবং রিয়েল প্রজেক্ট ভিত্তিক প্রশিক্ষণ।
-                    </p>
-                    <a href="@Url.Action("Index", "Courses")" class="btn btn-success">
-                        Start Your Tech Career
-                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Courses Section -->
+<section class="featured-courses py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Featured Courses</h2>
+            <a href="@Url.Action("", "")" class="text-primary">View All Courses →</a>
+        </div>
+
+        <div class="row">
+            <!-- Course Card 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-primary text-white p-3" style="padding:10px">
+                        <h6>ASP.NET MVC</h6>
+                        <p class="mb-0 small">Complete Course</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.8 (128)</span>
+                        </div>
+                        <p class="small mb-3">Learn ASP.NET MVC from basics to advanced with real-world projects.</p>
+                        <h5 class="text-primary">৳ 2,999</h5>
+                        <a href="@Url.Action("", "")" class="btn btn-sm btn-primary w-100">
+                            View Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-info text-white p-3" style="padding:10px">
+                        <h6>.NET Core</h6>
+                        <p class="mb-0 small">Bootcamp</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.9 (96)</span>
+                        </div>
+                        <p class="small mb-3">Master .NET Core development with hands-on projects and guidance.</p>
+                        <h5 class="text-info">৳ 3,999</h5>
+                        <a href="@Url.Action("", "")" class="btn btn-sm  btn-info w-100">
+                            View Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-success text-white p-3" style="padding:10px">
+                        <h6>Git & GitHub</h6>
+                        <p class="mb-0 small">Beginner Guide</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.9 (205)</span>
+                        </div>
+                        <p class="small mb-3">Learn version control and collaboration with Git and GitHub.</p>
+                        <h5 class="text-success">FREE</h5>
+                        <a href="@Url.Action("", "")" class="btn btn-sm btn-success w-100">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="course-card rounded shadow-sm overflow-hidden">
+                    <div class="course-header bg-danger text-white p-3" style="padding:10px">
+                        <h6>SQL Server</h6>
+                        <p class="mb-0 small">Masterclass</p>
+                    </div>
+                    <div class="course-body p-3" style="padding:10px">
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">4.7 (75)</span>
+                        </div>
+                        <p class="small mb-3">Database design and optimization with SQL Server expertise.</p>
+                        <h5 class="text-danger">৳ 2,499</h5>
+                        <a href="@Url.Action("", "")" class="btn btn-sm btn-danger w-100">
+                            View Course
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,7 +273,7 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h2>Browse By Category</h2>
-            <a href="@Url.Action("Index", "Categories")" class="text-primary">View All Categories →</a>
+            <a href="@Url.Action("", "")" class="text-primary">View All Categories →</a>
         </div>
 
         <div class="row">
@@ -247,159 +323,92 @@
     </div>
 </section>
 
-<!-- Featured Courses Section -->
-<section class="featured-courses py-5 bg-light">
+<!-- Search & Explore Section -->
+@*<section class="search-section py-5">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <h2>Featured Courses</h2>
-            <a href="@Url.Action("Index", "Courses")" class="text-primary">View All Courses →</a>
+        <h2 class="text-center mb-5">What do you want to learn today?</h2>
+
+        <!-- Search Bar -->
+        <div class="row mb-5">
+                <div class="col-lg-8 mx-auto" >
+                    <form class="d-flex gap-2">
+                        <input type="text" class="form-control form-control-lg"
+                               placeholder="Search courses, notes, MCQ, blogs..." />
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        <!-- Popular Tags -->
+        <div class="text-center mb-4">
+            <strong class="me-3">Popular:</strong>
+            <span class="badge bg-dark text-light me-2 p-2">ASP.NET</span>
+            <span class="badge bg-dark text-light me-2 p-2">.NET Core</span>
+            <span class="badge bg-dark text-light me-2 p-2">SQL Server</span>
+            <span class="badge bg-dark text-light me-2 p-2">Git & GitHub</span>
+            <span class="badge bg-dark text-light me-2 p-2">HSC ICT</span>
+            <span class="badge bg-dark text-light me-2 p-2">Programming Fundamentals</span>
         </div>
+    </div>
+</section>*@
+
+
+
+
+<!-- Learning Paths Section -->
+<section class="learning-paths py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Choose Your Learning Path</h2>
 
         <div class="row">
-            <!-- Course Card 1 -->
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="course-card rounded shadow-sm overflow-hidden" >
-                    <div class="course-header bg-primary text-white p-3" style="padding:10px">
-                        <h6>ASP.NET MVC</h6>
-                        <p class="mb-0 small">Complete Course</p>
-                    </div>
-                    <div class="course-body p-3" style="padding:10px">
-                        <div class="mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <span class="ms-1">4.8 (128)</span>
+            <!-- Academic Learning -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-graduation-cap text-primary me-3" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5 class="mb-1">Academic Learning</h5>
+                            <small class="text-muted">Primary | Secondary | HSC | Admission</small>
                         </div>
-                        <p class="small mb-3">Learn ASP.NET MVC from basics to advanced with real-world projects.</p>
-                        <h5 class="text-primary">৳ 2,999</h5>
-                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-primary w-100">
-                            View Course
-                        </a>
                     </div>
+                    <p class="text-muted mb-3">
+                        সকল শ্রেণীর শিক্ষার্থীদের জন্য সম্পূর্ণ কারিকুলাম ভিত্তিক কোর্স এবং প্রশিক্ষণ।
+                    </p>
+                    <a href="@Url.Action("", "")" class="btn btn-primary">
+                        Explore Academic Courses
+                    </a>
                 </div>
             </div>
 
-            <!-- Course Card 2 -->
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="course-card rounded shadow-sm overflow-hidden">
-                    <div class="course-header bg-info text-white p-3" style="padding:10px">
-                        <h6>.NET Core</h6>
-                        <p class="mb-0 small">Bootcamp</p>
-                    </div>
-                    <div class="course-body p-3" style="padding:10px">
-                        <div class="mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <span class="ms-1">4.9 (96)</span>
+            <!-- Software Engineering -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="learning-path-card p-4 rounded shadow-sm" style="padding:10px">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-code text-success me-3" style="font-size: 2rem;"></i>
+                        <div>
+                            <h5 class="mb-1">Software Engineering</h5>
+                            <small class="text-muted">ASP.NET | .NET Core | SQL | GitHub</small>
                         </div>
-                        <p class="small mb-3">Master .NET Core development with hands-on projects and guidance.</p>
-                        <h5 class="text-info">৳ 3,999</h5>
-                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm  btn-info w-100">
-                            View Course
-                        </a>
                     </div>
-                </div>
-            </div>
-
-            <!-- Course Card 3 -->
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="course-card rounded shadow-sm overflow-hidden">
-                    <div class="course-header bg-success text-white p-3" style="padding:10px">
-                        <h6>Git & GitHub</h6>
-                        <p class="mb-0 small">Beginner Guide</p>
-                    </div>
-                    <div class="course-body p-3" style="padding:10px">
-                        <div class="mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <span class="ms-1">4.9 (205)</span>
-                        </div>
-                        <p class="small mb-3">Learn version control and collaboration with Git and GitHub.</p>
-                        <h5 class="text-success">FREE</h5>
-                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-success w-100">
-                            Enroll Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course Card 4 -->
-            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="course-card rounded shadow-sm overflow-hidden">
-                    <div class="course-header bg-danger text-white p-3" style="padding:10px">
-                        <h6>SQL Server</h6>
-                        <p class="mb-0 small">Masterclass</p>
-                    </div>
-                    <div class="course-body p-3" style="padding:10px">
-                        <div class="mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <span class="ms-1">4.7 (75)</span>
-                        </div>
-                        <p class="small mb-3">Database design and optimization with SQL Server expertise.</p>
-                        <h5 class="text-danger">৳ 2,499</h5>
-                        <a href="@Url.Action("Details", "Courses")" class="btn btn-sm btn-danger w-100">
-                            View Course
-                        </a>
-                    </div>
+                    <p class="text-muted mb-3">
+                        প্রফেশনাল সফটওয়্যার ডেভেলপমেন্ট কোর্স এবং রিয়েল প্রজেক্ট ভিত্তিক প্রশিক্ষণ।
+                    </p>
+                    <a href="@Url.Action("", "")" class="btn btn-success">
+                        Start Your Tech Career
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Upcoming Batches Section -->
-<section class="upcoming-batches py-5">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <h2>Upcoming Live Batches</h2>
-            <a href="@Url.Action("Index", "Batches")" class="text-primary">View All Batches →</a>
-        </div>
 
-        <div class="row">
-            <!-- Batch Card 1 -->
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="batch-card p-4 rounded shadow-sm border-success" style="padding:10px">
-                    <div class="row align-items-center">
-                        <div class="col-md-7">
-                            <h5 class="mb-3">HSC ICT Batch 2027</h5>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-success"></i>Start Date: 26 June 2026</li>
-                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-success"></i>Duration: 1 Month</li>
-                                <li class="mb-2"><i class="fas fa-users me-2 text-success"></i>Classes: 8 Live Sessions</li>
-                                <li class="mb-2"><i class="fas fa-chair me-2 text-success"></i>Seats: 100 Students</li>
-                            </ul>
-                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-success btn-sm">
-                                Enroll Now
-                            </a>
-                        </div>
-                        <div class="col-md-5 text-center">
-                            @*<img src="~/images/batch-illustration-1.png" alt="Batch" class="img-fluid" />*@
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Batch Card 2 -->
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="batch-card p-4 rounded shadow-sm border-primary" style="padding:10px">
-                    <div class="row align-items-center">
-                        <div class="col-md-7">
-                            <h5 class="mb-3">ASP.NET MVC Professional Batch</h5>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Start Date: 15 July 2026</li>
-                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-primary"></i>Duration: 3 Months</li>
-                                <li class="mb-2"><i class="fas fa-users me-2 text-primary"></i>Classes: 24+ Live Sessions</li>
-                                <li class="mb-2"><i class="fas fa-chair me-2 text-primary"></i>Seats: 60 Students</li>
-                            </ul>
-                            <a href="@Url.Action("Enroll", "Batches")" class="btn btn-primary btn-sm">
-                                Enroll Now
-                            </a>
-                        </div>
-                        <div class="col-md-5 text-center">
-                            @*<img src="~/images/batch-illustration-2.png" alt="Batch" class="img-fluid" />*@
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
+
 
 <!-- Why Choose Us Section -->
 <section class="why-choose-us py-5 bg-light">
@@ -458,7 +467,7 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h2>Student Review</h2>
-            <a href="@Url.Action("Reviews", "Home")" class="text-primary">View All</a>
+            <a href="@Url.Action("", "")" class="text-primary">View All</a>
         </div>
 
         <div class="row">
@@ -534,7 +543,7 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h2>Latest Blog Posts</h2>
-            <a href="@Url.Action("Index", "Blog")" class="text-primary">View All Posts →</a>
+            <a href="@Url.Action("Index", "BlogPosts")" class="text-primary">View All Posts →</a>
         </div>
 
         <div class="row">
@@ -602,7 +611,7 @@
     <div class="container text-center">
         <h2 class="mb-3">Ready to Start Your Learning Journey?</h2>
         <p class="mb-4 lead">Join thousands of students and transform your career today.</p>
-        <a href="@Url.Action("Index", "Courses")" class="btn btn-light btn-lg">
+        <a href="@Url.Action("", "")" class="btn btn-light btn-lg">
             <i class="fas fa-play-circle me-2"></i>Explore All Courses
         </a>
     </div>

@@ -241,6 +241,7 @@
     <Compile Include="AppClass\DataAccess\UserProfileOnlineController.cs" />
     <Compile Include="AppClass\DataAccess\UserSecurityCodeController.cs" />
     <Compile Include="AppClass\DataAccess\VMessageAccessController.cs" />
+    <Compile Include="App_Start\AssetHelper.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -840,6 +841,7 @@
     <Content Include="Images\facebookShare_1.png" />
     <Content Include="Images\hero-illustration.jpg" />
     <Content Include="Images\hero-illustration.png" />
+    <Content Include="Images\hero-illustration_600.png" />
     <Content Include="Images\javascript.jpg" />
     <Content Include="Images\jquery.png" />
     <Content Include="Images\license-banner.svg" />
