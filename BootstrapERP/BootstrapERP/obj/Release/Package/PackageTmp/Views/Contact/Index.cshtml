@@ -4,30 +4,8 @@
     ViewBag.Title = "Contact";
 }
 <div class="container">
-    <div class="row">
-        @*<div class="col-lg-12">
-            <div class="page-header">
-                <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span> <small> </small></h4>
-                <ol class="breadcrumbLine" style="float:right;display:inline-block">
-                    <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
-                    <li class="hapText">@ViewBag.Title</li>
-                </ol>
-            </div>
-        </div>*@
-        @*<div class="col-sm-12" style="font-family:Lato, Calibri, Helvetica, Roboto">
-            <input type="checkbox" id="checkboxMyDiv" class="checkbox-success" onclick="myFunction();"> Find location on Google map
-        </div>*@
-        <div class="clearfix"></div>
-        <div id="myDIV" style="display:block;padding-top:15px" class="col-sm-12">
-            <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-            @*<iframe width="100%" scrolling="no" height="400px" frameborder="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed" marginwidth="0" marginheight="0"></iframe>*@
 
-            @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6594066056623!2d90.40653601427985!3d23.795139878951847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c711f4f2f66f%3A0x3fcdf0c41c881427!2sLink3%20Technologies%20Limited%20(support)!5e0!3m2!1sen!2sbd!4v1590990153160!5m2!1sen!2sbd" width="100%" scrolling="no" height="400px" frameborder="0" marginwidth="0" marginheight="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>*@
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.4565180726253!2d90.43326393475492!3d23.824783096183374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sbd!4v1760348858773!5m2!1sen!2sbd" width="100%" scrolling="no" height="400" frameborder="0" marginwidth="0" marginheight="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-    </div><!-- /.row -->
-    <div class="row">
+    <div class="row" style="display:none">
         <div class="col-sm-12">
             <h3>We’re Here to Support You</h3>
             <p>Your questions and feedback matter to us. Whether you need help with courses, technical support, or institutional partnerships, our team is committed to providing timely and reliable assistance.</p>
@@ -58,18 +36,18 @@
                     </div>
                     <div class="clearfix"></div>
                     @*<div class="form-group col-lg-4">
-                        <label for="input1">Type <span style="color:red;font-weight:900">*</span></label>
-                        @Html.DropDownList("messageEmailType", null, new { type = "text", @class = "form-control" })
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label for="input2">Category<span style="color:red;font-weight:900">*</span></label>
-                        @Html.DropDownList("messageEmailCategorie", null, new { type = "text", @class = "form-control" })
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label for="input3">Sub Category<span style="color:red;font-weight:900">*</span></label>
-                        @Html.DropDownList("messageEmailSubCategorie", null, htmlAttributes: new { type = "text", @class = "form-control" })
-                    </div>
-                    <div class="clearfix"></div>*@
+                            <label for="input1">Type <span style="color:red;font-weight:900">*</span></label>
+                            @Html.DropDownList("messageEmailType", null, new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input2">Category<span style="color:red;font-weight:900">*</span></label>
+                            @Html.DropDownList("messageEmailCategorie", null, new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input3">Sub Category<span style="color:red;font-weight:900">*</span></label>
+                            @Html.DropDownList("messageEmailSubCategorie", null, htmlAttributes: new { type = "text", @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>*@
                     <div class="form-group col-lg-12">
                         <label for="input4">Cc</label>
                         @Html.TextBoxFor(model => model.CcEmailAddress, new { style = "width:100%;", @class = "form-control", })
@@ -85,7 +63,7 @@
                         <label for="input4">Message <span style="color:red;font-weight:900">*</span></label>
                         <textarea id="input4" rows="6" class="form-control" name="contact_message" required></textarea>
                     </div>
-                    <div class="form-group col-lg-12">
+                    <div class="form-group col-lg-12" >
                         <input type="hidden" value="contact" name="save">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
@@ -95,49 +73,72 @@
         </div>
 
     </div><!-- /.row -->
-    <div class="row">
-        <div class="col-sm-4">
+    <div class="row" style="text-align:center">
+        <h3>We’re Here to Support You</h3>
+        <p>Whether you are a student, fresh graduate, or aspiring software developer, we are here to help you choose the right learning path.</p>
+        <p>To reserve your seat or learn more about a course, please contact us via Email or WhatsApp and mention the course you are interested in.</p>
+        <div class="col-sm-12" style="padding-top:50px;padding-bottom:50px">
             <h3>All Time Study.</h3>
-            <h4>Software Department</h4>
+            <h4>Our headquarters</h4>
             <p>
                 Bashundhara R/A.<br>
                 Dhaka-1229, Bangladesh<br>
             </p>
             @*<p><i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (555) 984-3600</p>*@
-            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a href="mailto:info@alltimestudy.com">info@alltimestudy.com</a></p>
-            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Sunday - Thursday: 9:00 AM to 5:00 PM</p>
-            <ul class="list-inline social-icons">
-                <li class="list-inline-item">
-                    <a href="" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook fa-2x"></i>
-                    </a>
-                </li>
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">Email Us</abbr>: <a href="mailto:info@alltimestudy.com">info@alltimestudy.com</a></p>
+            <p><i class="fab fa-whatsapp"></i> <abbr title="WhatsApp">P</abbr>: +8801841893119</p>
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">Business Hours</abbr>: Sunday - Thursday: 9:00 AM to 5:00 PM</p>
+            @*<ul class="list-inline social-icons">
+            <li class="list-inline-item">
+                <a href="" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+            </li>
 
-                <li class="list-inline-item">
-                    <a href="" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                </li>
+            <li class="list-inline-item">
+                <a href="" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </li>
 
-                <li class="list-inline-item">
-                    <a href="" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-                </li>
+            <li class="list-inline-item">
+                <a href="" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </li>
 
-                <li class="list-inline-item">
-                    <a href="" target="_blank" aria-label="YouTube">
-                        <i class="fab fa-youtube fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-            @*<ul class="list-unstyled list-inline list-social-icons">
-            <li class="tooltip-social facebook-link"><a title="Facebook" data-placement="top" data-toggle="tooltip" href="#facebook-page"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-            <li class="tooltip-social linkedin-link"><a title="LinkedIn" data-placement="top" data-toggle="tooltip" href="#linkedin-company-page"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-            <li class="tooltip-social twitter-link"><a title="Twitter" data-placement="top" data-toggle="tooltip" href="#twitter-profile"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-            <li class="tooltip-social google-plus-link"><a title="Google+" data-placement="top" data-toggle="tooltip" href="#google-plus-page"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            <li class="list-inline-item">
+                <a href="" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </li>
         </ul>*@
+
         </div>
+        <p>We will be happy to provide detailed information about the course curriculum, class schedule, fees, and enrollment process.</p>
+    </div><!-- /.row -->
+    <div class="row">
+        @*<div class="col-lg-12">
+                <div class="page-header">
+                    <h4 style="display:inline-block"><span class="hapText"> @ViewBag.Title</span> <small> </small></h4>
+                    <ol class="breadcrumbLine" style="float:right;display:inline-block">
+                        <li class="hapText">@Html.ActionLink("Home", "Index", "BlogPosts")</li>
+                        <li class="hapText">@ViewBag.Title</li>
+                    </ol>
+                </div>
+            </div>*@
+        @*<div class="col-sm-12" style="font-family:Lato, Calibri, Helvetica, Roboto">
+                <input type="checkbox" id="checkboxMyDiv" class="checkbox-success" onclick="myFunction();"> Find location on Google map
+            </div>*@
+        <div class="clearfix"></div>
+        <div id="myDIV" style="display:block;padding-top:15px" class="col-sm-12">
+            <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+            @*<iframe width="100%" scrolling="no" height="400px" frameborder="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed" marginwidth="0" marginheight="0"></iframe>*@
+
+            @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.6594066056623!2d90.40653601427985!3d23.795139878951847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c711f4f2f66f%3A0x3fcdf0c41c881427!2sLink3%20Technologies%20Limited%20(support)!5e0!3m2!1sen!2sbd!4v1590990153160!5m2!1sen!2sbd" width="100%" scrolling="no" height="400px" frameborder="0" marginwidth="0" marginheight="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>*@
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.4565180726253!2d90.43326393475492!3d23.824783096183374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sbd!4v1760348858773!5m2!1sen!2sbd" width="100%" scrolling="no" height="400" frameborder="0" marginwidth="0" marginheight="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
     </div><!-- /.row -->
 </div>
 
