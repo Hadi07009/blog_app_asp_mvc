@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Live Batches | AllTimeStudy - Complete Learning Platform";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Upcoming Batches Section -->
+<section class="upcoming-batches py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2>Upcoming Live Batches</h2>
+            <a href="@Url.Action("", "")" class="text-primary">View All Batches →</a>
+        </div>
+
+        <div class="row">
+            <!-- Batch Card 1 -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="batch-card p-4 rounded shadow-sm green border-success" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h3 class="mb-3">HSC 27 অনলাইন ব্যাচ আইসিটি</h3>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-success"></i>Start Date: 26 September 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-success"></i>Duration: 3 Months</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-success"></i>Classes: 24 Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-success"></i>Seats: 100 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Index", "Contact")" class="btn btn-success btn-sm">
+                                Reserve Your Seat
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-1.png" alt="Batch" class="img-fluid" />*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Card 2 -->
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="batch-card p-4 rounded shadow-sm border-primary" style="padding:10px">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <h3 class="mb-3">Professional Software Engineering with ASP.NET Core, SQL Server & Oracle</h3>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Start Date: 17 September 2026</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half me-2 text-primary"></i>Duration: 4 Months</li>
+                                <li class="mb-2"><i class="fas fa-users me-2 text-primary"></i>Classes: 30+ Live Sessions</li>
+                                <li class="mb-2"><i class="fas fa-chair me-2 text-primary"></i>Seats: 60 Students</li>
+                            </ul>
+                            <a href="@Url.Action("Index", "Contact")" class="btn btn-primary btn-sm">
+                                Reserve Your Seat
+                            </a>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            @*<img src="~/images/batch-illustration-2.png" alt="Batch" class="img-fluid" />*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

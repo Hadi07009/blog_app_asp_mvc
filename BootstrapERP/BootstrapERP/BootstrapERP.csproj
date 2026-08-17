@@ -269,6 +269,7 @@
     <Compile Include="Controllers\HomePageRegisterController.cs" />
     <Compile Include="Controllers\LearningEntryController.cs" />
     <Compile Include="Controllers\LearningHubController.cs" />
+    <Compile Include="Controllers\LiveBatchesController.cs" />
     <Compile Include="Controllers\OtherController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\PremierContentController.cs" />
@@ -5144,6 +5145,7 @@
     <Content Include="Views\CompanyProfile\Index.cshtml" />
     <Content Include="Views\AboutUs\Index - Copy.cshtml" />
     <Content Include="Views\Homepage\Index.cshtml" />
+    <Content Include="Views\LiveBatches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
